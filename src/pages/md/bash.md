@@ -1,9 +1,7 @@
 ---
-path: "/blog/my-first-post"
-date: "2017-11-07"
-title: "My first blog post"
+title: "Bash"
+path: "/blog/bash"
 ---
-
 # Bash
 
 ## Изменение прав:
@@ -14,7 +12,7 @@ title: "My first blog post"
 
 `ls -l`
 
-## Старт службы:
+## Старт службы: 
 
 `sudo service <name> start`
 
