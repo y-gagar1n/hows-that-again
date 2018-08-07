@@ -24,6 +24,8 @@ const IndexPage = () => (
     <div><Link to="/blog/wget">wget</Link></div>
     <div><Link to="/blog/sql-recursive-cte">sql-recursive-cte</Link></div>
     <div><Link to="/blog/dotnet-monitor">dotnet-monitor</Link></div>
+    <div><Link to="/blog/dotnet">dotnet</Link></div>
+    <div><Link to="/blog/call-conventions">call-conventions</Link></div>
     <div><Link to="/blog/oauth">oauth</Link></div>
     <div><Link to="/blog/virtualenv">virtualenv</Link></div>
     <div><Link to="/blog/mvc-data-tampering">mvc-data-tampering</Link></div>
