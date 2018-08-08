@@ -11,5 +11,6 @@ module.exports = {
       }
     },
     'gatsby-transformer-remark'
-],
+  ],
+  pathPrefix: '/hows-that-again'
 }
