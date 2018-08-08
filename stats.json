@@ -36,10 +36,6 @@
       "path---blog-swig-2cbe0b7c6b6e1e3d1ec3.js",
       "path---blog-swig-2cbe0b7c6b6e1e3d1ec3.js.map"
     ],
-    "component---src-pages-index-js": [
-      "component---src-pages-index-js-0015ab60522cfc8f8fc8.js",
-      "component---src-pages-index-js-0015ab60522cfc8f8fc8.js.map"
-    ],
     "path---blog-web-components": [
       "path---blog-web-components-143a7e086a55de724af5.js",
       "path---blog-web-components-143a7e086a55de724af5.js.map"
@@ -113,8 +109,8 @@
       "path---blog-python-e95604c87370b3a19f6a.js.map"
     ],
     "path---blog-call-conventions": [
-      "path---blog-call-conventions-a4a211ca2244f86c6b59.js",
-      "path---blog-call-conventions-a4a211ca2244f86c6b59.js.map"
+      "path---blog-call-conventions-48d314a4cdd28c9411f0.js",
+      "path---blog-call-conventions-48d314a4cdd28c9411f0.js.map"
     ],
     "component---src-layouts-index-js": [
       "component---src-layouts-index-js-4fdc926114dbe9c625a8.js",
@@ -149,8 +145,8 @@
       "path---page-2-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---index": [
-      "path---index-a0e39f21c11f6a62c5ab.js",
-      "path---index-a0e39f21c11f6a62c5ab.js.map"
+      "path---index-e7c754a04a43b74ecd75.js",
+      "path---index-e7c754a04a43b74ecd75.js.map"
     ],
     "path---blog-nodejs": [
       "path---blog-nodejs-f49fdd0d575dc72d0fa3.js",
@@ -224,6 +220,10 @@
       "path---blog-typescript-c8cfa739a98a34671bfa.js",
       "path---blog-typescript-c8cfa739a98a34671bfa.js.map"
     ],
+    "component---src-pages-index-jsx": [
+      "component---src-pages-index-jsx-505aa63dd1a364e13cf4.js",
+      "component---src-pages-index-jsx-505aa63dd1a364e13cf4.js.map"
+    ],
     "path---blog-mvc-async-controllers": [
       "path---blog-mvc-async-controllers-c3cc24f140a51a9e6bb0.js",
       "path---blog-mvc-async-controllers-c3cc24f140a51a9e6bb0.js.map"
@@ -249,9 +249,9 @@
       "path---blog-kafka-865598bb37e9a0f395b7.js.map"
     ],
     "app": [
-      "app-ec87f3f4670f2033de9a.js",
+      "app-5fccd193256b29c814a2.js",
       "build-js-styles.css",
-      "app-ec87f3f4670f2033de9a.js.map",
+      "app-5fccd193256b29c814a2.js.map",
       "build-js-styles.css.map"
     ],
     "path---blog-mongodb": [
