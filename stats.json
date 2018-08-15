@@ -1,5 +1,9 @@
 {
   "assetsByChunkName": {
+    "path---blog-books-designing-data-intensive-applications": [
+      "path---blog-books-designing-data-intensive-applications-32ec6f4b1703973014e2.js",
+      "path---blog-books-designing-data-intensive-applications-32ec6f4b1703973014e2.js.map"
+    ],
     "path---blog-storybook": [
       "path---blog-storybook-5a29d2baa4a10d8b7a27.js",
       "path---blog-storybook-5a29d2baa4a10d8b7a27.js.map"
@@ -149,8 +153,8 @@
       "path---page-2-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---index": [
-      "path---index-920c70506a6d990254ee.js",
-      "path---index-920c70506a6d990254ee.js.map"
+      "path---index-d660f96c4f9415bf2434.js",
+      "path---index-d660f96c4f9415bf2434.js.map"
     ],
     "path---blog-nodejs": [
       "path---blog-nodejs-f49fdd0d575dc72d0fa3.js",
@@ -225,8 +229,8 @@
       "path---blog-typescript-288e7095a7260887c28e.js.map"
     ],
     "component---src-pages-index-jsx": [
-      "component---src-pages-index-jsx-505aa63dd1a364e13cf4.js",
-      "component---src-pages-index-jsx-505aa63dd1a364e13cf4.js.map"
+      "component---src-pages-index-jsx-7fd84d8b22f75e4cd9a2.js",
+      "component---src-pages-index-jsx-7fd84d8b22f75e4cd9a2.js.map"
     ],
     "path---blog-mvc-async-controllers": [
       "path---blog-mvc-async-controllers-c3cc24f140a51a9e6bb0.js",
@@ -253,9 +257,9 @@
       "path---blog-kafka-14bdce4781bc3bed16e4.js.map"
     ],
     "app": [
-      "app-4565a52f55559f78dd07.js",
+      "app-9047bc8ba036cf5b3b0d.js",
       "build-js-styles.css",
-      "app-4565a52f55559f78dd07.js.map",
+      "app-9047bc8ba036cf5b3b0d.js.map",
       "build-js-styles.css.map"
     ],
     "path---blog-mongodb": [
