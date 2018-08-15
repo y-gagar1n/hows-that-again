@@ -1,3 +1,8 @@
+---
+title: "Designing Data-Intensive Applications"
+path: "/blog/books/designing-data-intensive-applications"
+---
+
 # Designing Data-Intensive Applications
 
 ## Data Models and Query Languages

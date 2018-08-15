@@ -1,4 +1,4 @@
-src/pages/md/mess
+src/mess
 # Project dependencies
 .cache
 node_modules
