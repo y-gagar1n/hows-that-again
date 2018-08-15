@@ -94,3 +94,15 @@ import "postcss_vars.json";
 2. На все стили - postcss с правилами из конфига
 3. css-loader
 4. style-loader
+
+### Проблема
+
+Есть проект верстки, js в нем нет, нужно организовать лайв-релоуд
+
+### Решение
+
+```shell
+npm i -g live-server
+cd %project dir%
+live-server
+```
