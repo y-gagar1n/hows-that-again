@@ -65,8 +65,8 @@
       "path----cac63ff5c1b42581353c.js.map"
     ],
     "path---blog-react": [
-      "path---blog-react-0b8e43906965f425db93.js",
-      "path---blog-react-0b8e43906965f425db93.js.map"
+      "path---blog-react-1772bc9452377966cb75.js",
+      "path---blog-react-1772bc9452377966cb75.js.map"
     ],
     "path---blog-sed": [
       "path---blog-sed-6a7051bbefdd9def0839.js",
@@ -89,8 +89,8 @@
       "path---blog-centos-dd9f433d20c96dfc09f3.js.map"
     ],
     "path---blog-docker": [
-      "path---blog-docker-8b88bd1c5087649077a6.js",
-      "path---blog-docker-8b88bd1c5087649077a6.js.map"
+      "path---blog-docker-8c2f09a74833e7ce236b.js",
+      "path---blog-docker-8c2f09a74833e7ce236b.js.map"
     ],
     "path---blog-html-5-web-storage": [
       "path---blog-html-5-web-storage-7ca81b5906dc54cfcec4.js",
@@ -132,9 +132,13 @@
       "path---blog-ruby-10341037f2e8234a4d30.js",
       "path---blog-ruby-10341037f2e8234a4d30.js.map"
     ],
+    "path---blog-gitlab-ci": [
+      "path---blog-gitlab-ci-9cdb9c5b7a3c03e85974.js",
+      "path---blog-gitlab-ci-9cdb9c5b7a3c03e85974.js.map"
+    ],
     "path---blog-webpack": [
-      "path---blog-webpack-2370fd8145ec82a31c89.js",
-      "path---blog-webpack-2370fd8145ec82a31c89.js.map"
+      "path---blog-webpack-9d3fd355b7a49f15c82d.js",
+      "path---blog-webpack-9d3fd355b7a49f15c82d.js.map"
     ],
     "path---blog-npm": [
       "path---blog-npm-4f38b5dbca23541666f7.js",
@@ -145,8 +149,8 @@
       "path---page-2-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---index": [
-      "path---index-e7c754a04a43b74ecd75.js",
-      "path---index-e7c754a04a43b74ecd75.js.map"
+      "path---index-920c70506a6d990254ee.js",
+      "path---index-920c70506a6d990254ee.js.map"
     ],
     "path---blog-nodejs": [
       "path---blog-nodejs-f49fdd0d575dc72d0fa3.js",
@@ -217,8 +221,8 @@
       "path---blog-redux-4fed98bde112a019015a.js.map"
     ],
     "path---blog-typescript": [
-      "path---blog-typescript-c8cfa739a98a34671bfa.js",
-      "path---blog-typescript-c8cfa739a98a34671bfa.js.map"
+      "path---blog-typescript-288e7095a7260887c28e.js",
+      "path---blog-typescript-288e7095a7260887c28e.js.map"
     ],
     "component---src-pages-index-jsx": [
       "component---src-pages-index-jsx-505aa63dd1a364e13cf4.js",
@@ -245,13 +249,13 @@
       "path---blog-cmake-7871ae59454b19dc9f56.js.map"
     ],
     "path---blog-kafka": [
-      "path---blog-kafka-865598bb37e9a0f395b7.js",
-      "path---blog-kafka-865598bb37e9a0f395b7.js.map"
+      "path---blog-kafka-14bdce4781bc3bed16e4.js",
+      "path---blog-kafka-14bdce4781bc3bed16e4.js.map"
     ],
     "app": [
-      "app-5fccd193256b29c814a2.js",
+      "app-4565a52f55559f78dd07.js",
       "build-js-styles.css",
-      "app-5fccd193256b29c814a2.js.map",
+      "app-4565a52f55559f78dd07.js.map",
       "build-js-styles.css.map"
     ],
     "path---blog-mongodb": [
