@@ -20,6 +20,10 @@
       "path---blog-tmux-18af5c3ee5786bc23e5e.js",
       "path---blog-tmux-18af5c3ee5786bc23e5e.js.map"
     ],
+    "path---blog-ssl": [
+      "path---blog-ssl-d27dc0e7877818ebe753.js",
+      "path---blog-ssl-d27dc0e7877818ebe753.js.map"
+    ],
     "path---blog-js-event-loop": [
       "path---blog-js-event-loop-f72490c1078996bba861.js",
       "path---blog-js-event-loop-f72490c1078996bba861.js.map"
@@ -49,8 +53,8 @@
       "path---blog-github-markdown-2d18c3817989f814e778.js.map"
     ],
     "path---blog-dotnet-monitor": [
-      "path---blog-dotnet-monitor-0861041aac2ea8233c61.js",
-      "path---blog-dotnet-monitor-0861041aac2ea8233c61.js.map"
+      "path---blog-dotnet-monitor-0ee8745d0cde9bdafe90.js",
+      "path---blog-dotnet-monitor-0ee8745d0cde9bdafe90.js.map"
     ],
     "path---blog-webpack-2": [
       "path---blog-webpack-2-613f06922b155eeb86aa.js",
@@ -80,6 +84,14 @@
       "path---blog-mvc-data-tampering-3d0d565b8fbb7674f2e4.js",
       "path---blog-mvc-data-tampering-3d0d565b8fbb7674f2e4.js.map"
     ],
+    "path---blog-books-build-systems": [
+      "path---blog-books-build-systems-537d1c3fc10752c9ff85.js",
+      "path---blog-books-build-systems-537d1c3fc10752c9ff85.js.map"
+    ],
+    "path---blog-tcpip": [
+      "path---blog-tcpip-6ec651317ebc54a794ab.js",
+      "path---blog-tcpip-6ec651317ebc54a794ab.js.map"
+    ],
     "path---blog-redux-2": [
       "path---blog-redux-2-8275ec87d46ada9ec530.js",
       "path---blog-redux-2-8275ec87d46ada9ec530.js.map"
@@ -93,8 +105,8 @@
       "path---blog-centos-dd9f433d20c96dfc09f3.js.map"
     ],
     "path---blog-docker": [
-      "path---blog-docker-8c2f09a74833e7ce236b.js",
-      "path---blog-docker-8c2f09a74833e7ce236b.js.map"
+      "path---blog-docker-186147fde239d96ca50a.js",
+      "path---blog-docker-186147fde239d96ca50a.js.map"
     ],
     "path---blog-html-5-web-storage": [
       "path---blog-html-5-web-storage-7ca81b5906dc54cfcec4.js",
@@ -109,16 +121,16 @@
       "path---blog-pip-abd64edaa0d15be853d7.js.map"
     ],
     "path---blog-python": [
-      "path---blog-python-e95604c87370b3a19f6a.js",
-      "path---blog-python-e95604c87370b3a19f6a.js.map"
+      "path---blog-python-4c69d05159424d2e7402.js",
+      "path---blog-python-4c69d05159424d2e7402.js.map"
     ],
     "path---blog-call-conventions": [
       "path---blog-call-conventions-48d314a4cdd28c9411f0.js",
       "path---blog-call-conventions-48d314a4cdd28c9411f0.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-63d6bf3931f1f1604637.js",
-      "component---src-layouts-index-js-63d6bf3931f1f1604637.js.map"
+      "component---src-layouts-index-js-6f219d83f9c579711828.js",
+      "component---src-layouts-index-js-6f219d83f9c579711828.js.map"
     ],
     "path---blog-algorithms": [
       "path---blog-algorithms-1d768e8d148bd6584be9.js",
@@ -153,8 +165,8 @@
       "path---page-2-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---index": [
-      "path---index-4b323b3bf9ba54a275a8.js",
-      "path---index-4b323b3bf9ba54a275a8.js.map"
+      "path---index-b55e2cbe891b029845bf.js",
+      "path---index-b55e2cbe891b029845bf.js.map"
     ],
     "path---blog-nodejs": [
       "path---blog-nodejs-f49fdd0d575dc72d0fa3.js",
@@ -244,6 +256,10 @@
       "component---src-pages-page-2-js-65f0147ecb0dc4da2a2b.js",
       "component---src-pages-page-2-js-65f0147ecb0dc4da2a2b.js.map"
     ],
+    "path---blog-backstop-js": [
+      "path---blog-backstop-js-8a4e495371b51e8a8f97.js",
+      "path---blog-backstop-js-8a4e495371b51e8a8f97.js.map"
+    ],
     "path---blog-dotnet": [
       "path---blog-dotnet-693598d2dab96d02b919.js",
       "path---blog-dotnet-693598d2dab96d02b919.js.map"
@@ -257,9 +273,9 @@
       "path---blog-kafka-14bdce4781bc3bed16e4.js.map"
     ],
     "app": [
-      "app-2e90cc0c06ce1d1105b4.js",
+      "app-bcd365288ea30065a461.js",
       "build-js-styles.css",
-      "app-2e90cc0c06ce1d1105b4.js.map",
+      "app-bcd365288ea30065a461.js.map",
       "build-js-styles.css.map"
     ],
     "path---blog-mongodb": [
@@ -271,8 +287,8 @@
       "path---blog-debian-7ec12de3eec948fc3f9d.js.map"
     ],
     "path---blog-css": [
-      "path---blog-css-440cfa3a91f6d48079a5.js",
-      "path---blog-css-440cfa3a91f6d48079a5.js.map"
+      "path---blog-css-71751febbf6e24d928b9.js",
+      "path---blog-css-71751febbf6e24d928b9.js.map"
     ],
     "path---blog-maven": [
       "path---blog-maven-da6909564d3fe9fc05b3.js",
