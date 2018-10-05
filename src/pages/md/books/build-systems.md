@@ -1,3 +1,8 @@
+---
+title: "build-systems"
+path: "/blog/books/build-systems"
+---
+
 ## Make:
 
 Создается Makefile:
@@ -82,8 +87,6 @@ Make:
 ## Сравнение систем
 
 ![Build systems comparison](./build-systems-3.png)
-
-# Концепции билд-систем
 
 
 
