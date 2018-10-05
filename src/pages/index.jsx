@@ -9,9 +9,6 @@ const IndexPage = ({ data }) => {
   const nodes = data.allFile.edges.map(({ node }) => node)
   return (
     <div>
-      <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
       {nodes
         .sort(compareByPath)
         .filter(node => node.extension === 'md')
