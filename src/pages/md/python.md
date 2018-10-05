@@ -52,3 +52,13 @@ asd
 ```
 
 Если вводим инпут через терминал, то можем завершить ввод через `Ctrl + D`.
+
+### Чтение бинарного файла и запись его в кодировке UTF-8
+
+```python
+input = open("/home/y/photos/4.jpeg", "rb")
+output = open("/home/y/photos/dump4.txt", "wb+")
+
+input_text = input.read().decode("latin-1") // read возвращает bytes, decode возвращает строку
+output.write(input_text.encode("utf-8"))  // encode принимает строку, возвращает строку, но в другой кодировке
+```

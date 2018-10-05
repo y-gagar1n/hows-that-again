@@ -143,3 +143,34 @@ box-sizing:border-box;
 ## inline-block
 
 Похожи на `inline` элементы, но имеют ширину и высоту.
+
+# Hints
+
+## Спрятать скролл-бар
+
+```css
+#parent{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#child{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
+    box-sizing: content-box; /* So the width will be 100% + 17px */
+}
+```
+
+http://jsfiddle.net/5GCsJ/20882/
+
+## Диву-потомку задать ту же ширину/высоту, что и у дива-родителя
+
+```css
+#child {
+  width: 100%;
+  height: 100%;
+}
+```
