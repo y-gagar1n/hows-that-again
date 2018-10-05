@@ -1,6 +1,6 @@
 ---
 title: "BackstopJS"
-path: "/blog/backstop-js"
+path: "/blog/backstopjs"
 ---
 
 # BackstopJS
