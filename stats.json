@@ -192,6 +192,10 @@
       "path---blog-kazoo-2497377bd7253a7b95a2.js",
       "path---blog-kazoo-2497377bd7253a7b95a2.js.map"
     ],
+    "path---blog-backstopjs": [
+      "path---blog-backstopjs-a035adeda5ee33197a60.js",
+      "path---blog-backstopjs-a035adeda5ee33197a60.js.map"
+    ],
     "path---blog-systemd": [
       "path---blog-systemd-f55fd3cd7e2b29cf0dcf.js",
       "path---blog-systemd-f55fd3cd7e2b29cf0dcf.js.map"
@@ -256,10 +260,6 @@
       "component---src-pages-page-2-js-65f0147ecb0dc4da2a2b.js",
       "component---src-pages-page-2-js-65f0147ecb0dc4da2a2b.js.map"
     ],
-    "path---blog-backstop-js": [
-      "path---blog-backstop-js-8a4e495371b51e8a8f97.js",
-      "path---blog-backstop-js-8a4e495371b51e8a8f97.js.map"
-    ],
     "path---blog-dotnet": [
       "path---blog-dotnet-693598d2dab96d02b919.js",
       "path---blog-dotnet-693598d2dab96d02b919.js.map"
@@ -273,9 +273,9 @@
       "path---blog-kafka-14bdce4781bc3bed16e4.js.map"
     ],
     "app": [
-      "app-bcd365288ea30065a461.js",
+      "app-204c621dc9495dce49a1.js",
       "build-js-styles.css",
-      "app-bcd365288ea30065a461.js.map",
+      "app-204c621dc9495dce49a1.js.map",
       "build-js-styles.css.map"
     ],
     "path---blog-mongodb": [
