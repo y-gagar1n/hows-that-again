@@ -260,6 +260,17 @@ cd autojump
 ./install.py
 ```
 
+# Desktop shortcuts
 
+If you want to add a shortcut for e.g. Telegram, create `~/Desktop/Telegram.desktop` with the following contents:
 
+```
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Exec=/usr/bin/telegram
+Name=Telegram
+Comment=Telegram
+```
 
