@@ -1,6 +1,6 @@
 ---
 title: "Debian Bootstrap"
-path: "/blog/debian/bootstrap"
+path: "/blog/debian-bootstrap"
 ---
 
 Here are some commands that will be useful after you start a fresh install of Debian
