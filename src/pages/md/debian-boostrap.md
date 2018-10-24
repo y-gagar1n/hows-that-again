@@ -130,6 +130,7 @@ sudo apt install -y git
 git config --global http.proxy http://192.168.2.102:3128
 git config --global user.name yuriy.timofeev
 git config --global user.email yuriy.timofeev@vocord.ru
+git config --global url."https://".insteadOf git://
 ```
 
 ## Add SSH keys to git
@@ -250,3 +251,15 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo apt-get update
 sudo apt-get install sublime-text
 ```
+
+# Autojump
+
+```shell
+git clone git://github.com/wting/autojump.git
+cd autojump
+./install.py
+```
+
+
+
+
