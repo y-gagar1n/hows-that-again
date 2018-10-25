@@ -422,3 +422,17 @@ https://docs.docker.com/storage/storagedriver/overlayfs-driver/#how-the-overlay2
 По идентификатору слоя можно получить его содержимое так:
 
 `/var/lib/docker/overlay2/%LAYER_ID%`
+
+## Network problems
+
+Если во всех образах перестала работать сеть, то можно пересоздать мост:
+
+```
+pkill docker
+iptables -t nat -F
+ifconfig docker0 down
+ip link del docker0
+systemctl start docker
+```
+
+Если `ifconfig` не найден, то `apt install net-tools`

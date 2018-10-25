@@ -274,3 +274,65 @@ Name=Telegram
 Comment=Telegram
 ```
 
+# Fira Code
+
+```shell
+sudo vi /etc/apt/sources.list
+```
+
+Change lines ending with `main` to ending with `main contrib non-free`.
+
+Example content:
+
+```
+deb http://deb.debian.org/debian stretch main contrib non-free
+deb-src http://deb.debian.org/debian stretch main contrib non-free
+
+deb http://deb.debian.org/debian-security/ stretch/updates main contrib non-free
+deb-src http://deb.debian.org/debian-security/ stretch/updates main contrib non-free
+
+deb http://deb.debian.org/debian stretch-updates main contrib non-free
+deb-src http://deb.debian.org/debian stretch-updates main contrib non-free
+```
+
+After that you can install Fira Code:
+
+```shell
+sudo apt update
+sudo apt install -y fonts-firacode
+```
+
+## Setup Vs Code
+
+Press Ctrl+\`, change following properties:
+
+```json
+"editor.fontFamily": "'Fira Code'",
+"editor.fontLigatures": true,
+```
+
+Restart VS Code.
+
+# mail
+
+```shell
+sudo apt install -y mailutils ssmtp
+sudo vi /etc/ssmtp/ssmtp.conf
+```
+
+ssmt.conf contents example:
+
+```
+mailhub=smtp-relay.gmail.com:587
+AuthUser=yuriy.timofeev@mail.ru
+AuthPass=YOUR_PASSWORD
+UseTLS=YES
+UseSTARTTLS=YES
+FromLineOverride=YES
+```
+
+After that you can send email like this:
+
+```shell
+echo "LETTER_BODY" | mail -s "LETTER_SUBJ" -a "From: Юрий Тимофеев<yuriy.timofeev@mail.ru>" some.recipient@mail.ru
+```
