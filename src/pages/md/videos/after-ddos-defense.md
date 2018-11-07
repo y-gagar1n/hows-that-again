@@ -1,6 +1,6 @@
 ---
 title: "После подключения DDoS-защиты: как 'положат'' Ваши ресурсы / Рамиль Хантимиров (StormWall)"
-path: "/videos/after-ddos-defense.md"
+path: "/blog/videos/after-ddos-defense.md"
 ---
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/iklmmxuwVrg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
