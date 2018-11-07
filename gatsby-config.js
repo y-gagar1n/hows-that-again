@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: 'How\'s that again?',
   },
-  plugins: ['gatsby-plugin-react-helmet',
+    plugins: ['gatsby-plugin-react-helmet', 
+              'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-source-filesystem',
       options:{
@@ -10,7 +11,12 @@ module.exports = {
         name: "markdown-pages"
       }
     },
-    'gatsby-transformer-remark'
+    {
+        resolve: 'gatsby-transformer-remark',
+        options: {
+            plugins: ['gatsby-remark-images']
+        }
+    }
   ],
   pathPrefix: '/hows-that-again'
 }
