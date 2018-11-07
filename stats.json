@@ -24,6 +24,10 @@
       "path---blog-ssl-d27dc0e7877818ebe753.js",
       "path---blog-ssl-d27dc0e7877818ebe753.js.map"
     ],
+    "path---blog-videos-http-balancing": [
+      "path---blog-videos-http-balancing-3c113e2cd0f530fb3e33.js",
+      "path---blog-videos-http-balancing-3c113e2cd0f530fb3e33.js.map"
+    ],
     "path---blog-js-event-loop": [
       "path---blog-js-event-loop-f72490c1078996bba861.js",
       "path---blog-js-event-loop-f72490c1078996bba861.js.map"
@@ -55,10 +59,6 @@
     "path---blog-github-markdown": [
       "path---blog-github-markdown-2d18c3817989f814e778.js",
       "path---blog-github-markdown-2d18c3817989f814e778.js.map"
-    ],
-    "path---blog-videos-http-balancing-md": [
-      "path---blog-videos-http-balancing-md-90730717b7880f6bc5fb.js",
-      "path---blog-videos-http-balancing-md-90730717b7880f6bc5fb.js.map"
     ],
     "path---blog-dotnet-monitor": [
       "path---blog-dotnet-monitor-0ee8745d0cde9bdafe90.js",
@@ -120,10 +120,6 @@
       "path---blog-html-5-web-storage-7ca81b5906dc54cfcec4.js",
       "path---blog-html-5-web-storage-7ca81b5906dc54cfcec4.js.map"
     ],
-    "path---blog-videos-after-ddos-defense-md": [
-      "path---blog-videos-after-ddos-defense-md-8dafc37ee618c4fbe5cc.js",
-      "path---blog-videos-after-ddos-defense-md-8dafc37ee618c4fbe5cc.js.map"
-    ],
     "path---blog-gcc": [
       "path---blog-gcc-2f6622c1c0f0846a2708.js",
       "path---blog-gcc-2f6622c1c0f0846a2708.js.map"
@@ -177,8 +173,8 @@
       "path---page-2-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---index": [
-      "path---index-7e88d17364b7fbdf0751.js",
-      "path---index-7e88d17364b7fbdf0751.js.map"
+      "path---index-870901d7a646fcae4877.js",
+      "path---index-870901d7a646fcae4877.js.map"
     ],
     "path---blog-nodejs": [
       "path---blog-nodejs-f49fdd0d575dc72d0fa3.js",
@@ -297,9 +293,9 @@
       "path---blog-kafka-14bdce4781bc3bed16e4.js.map"
     ],
     "app": [
-      "app-76d4d4afedff637b7ab7.js",
+      "app-376ea52cbddb3d742fe5.js",
       "build-js-styles.css",
-      "app-76d4d4afedff637b7ab7.js.map",
+      "app-376ea52cbddb3d742fe5.js.map",
       "build-js-styles.css.map"
     ],
     "path---blog-mongodb": [
@@ -325,6 +321,10 @@
     "path---blog-riak": [
       "path---blog-riak-017c27a09cb33adc6bc9.js",
       "path---blog-riak-017c27a09cb33adc6bc9.js.map"
+    ],
+    "path---blog-videos-after-ddos-defense": [
+      "path---blog-videos-after-ddos-defense-7184e9b62ad0a41e9ccd.js",
+      "path---blog-videos-after-ddos-defense-7184e9b62ad0a41e9ccd.js.map"
     ],
     "path---blog-oauth": [
       "path---blog-oauth-58b2881d3b6fe2cf98ae.js",
