@@ -1,8 +1,8 @@
 {
   "assetsByChunkName": {
     "path---blog-books-designing-data-intensive-applications": [
-      "path---blog-books-designing-data-intensive-applications-32ec6f4b1703973014e2.js",
-      "path---blog-books-designing-data-intensive-applications-32ec6f4b1703973014e2.js.map"
+      "path---blog-books-designing-data-intensive-applications-efbe4bb396ccd34deda8.js",
+      "path---blog-books-designing-data-intensive-applications-efbe4bb396ccd34deda8.js.map"
     ],
     "path---blog-storybook": [
       "path---blog-storybook-5a29d2baa4a10d8b7a27.js",
@@ -89,8 +89,8 @@
       "path---blog-mvc-data-tampering-3d0d565b8fbb7674f2e4.js.map"
     ],
     "path---blog-books-build-systems": [
-      "path---blog-books-build-systems-537d1c3fc10752c9ff85.js",
-      "path---blog-books-build-systems-537d1c3fc10752c9ff85.js.map"
+      "path---blog-books-build-systems-da90c07c93f61b8f655a.js",
+      "path---blog-books-build-systems-da90c07c93f61b8f655a.js.map"
     ],
     "path---blog-tcpip": [
       "path---blog-tcpip-6ec651317ebc54a794ab.js",
@@ -129,16 +129,16 @@
       "path---blog-python-4c69d05159424d2e7402.js.map"
     ],
     "path---blog-call-conventions": [
-      "path---blog-call-conventions-48d314a4cdd28c9411f0.js",
-      "path---blog-call-conventions-48d314a4cdd28c9411f0.js.map"
+      "path---blog-call-conventions-bc402b0e5ec4b038ff16.js",
+      "path---blog-call-conventions-bc402b0e5ec4b038ff16.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-fcef82911f79545cbad3.js",
-      "component---src-layouts-index-js-fcef82911f79545cbad3.js.map"
+      "component---src-layouts-index-js-233f967133dc1ec3e5a5.js",
+      "component---src-layouts-index-js-233f967133dc1ec3e5a5.js.map"
     ],
     "path---blog-algorithms": [
-      "path---blog-algorithms-1d768e8d148bd6584be9.js",
-      "path---blog-algorithms-1d768e8d148bd6584be9.js.map"
+      "path---blog-algorithms-488d8b233a71f7dae486.js",
+      "path---blog-algorithms-488d8b233a71f7dae486.js.map"
     ],
     "component---src-templates-blog-template-js": [
       "component---src-templates-blog-template-js-40956da8f886eafeb36f.js",
@@ -169,8 +169,8 @@
       "path---page-2-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---index": [
-      "path---index-96891bffcfd797e06968.js",
-      "path---index-96891bffcfd797e06968.js.map"
+      "path---index-40686b2d053924fc92b5.js",
+      "path---index-40686b2d053924fc92b5.js.map"
     ],
     "path---blog-nodejs": [
       "path---blog-nodejs-f49fdd0d575dc72d0fa3.js",
@@ -224,9 +224,17 @@
       "path---404-html-a0e39f21c11f6a62c5ab.js",
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
     ],
+    "path---blog-videos-microservices-patterns-playbook": [
+      "path---blog-videos-microservices-patterns-playbook-611ac285b29ec980c689.js",
+      "path---blog-videos-microservices-patterns-playbook-611ac285b29ec980c689.js.map"
+    ],
     "path---blog-sh": [
       "path---blog-sh-5dcb1acd2bf5a44349bd.js",
       "path---blog-sh-5dcb1acd2bf5a44349bd.js.map"
+    ],
+    "path---blog-linux-networking": [
+      "path---blog-linux-networking-fa7457ac2d7b179d8bdf.js",
+      "path---blog-linux-networking-fa7457ac2d7b179d8bdf.js.map"
     ],
     "path---blog-flexbox": [
       "path---blog-flexbox-d2727e853a6da977e9a1.js",
@@ -273,8 +281,8 @@
       "component---src-pages-page-2-js-65f0147ecb0dc4da2a2b.js.map"
     ],
     "path---blog-dotnet": [
-      "path---blog-dotnet-693598d2dab96d02b919.js",
-      "path---blog-dotnet-693598d2dab96d02b919.js.map"
+      "path---blog-dotnet-021258d6050424efb3c9.js",
+      "path---blog-dotnet-021258d6050424efb3c9.js.map"
     ],
     "path---blog-cmake": [
       "path---blog-cmake-7871ae59454b19dc9f56.js",
@@ -285,9 +293,9 @@
       "path---blog-kafka-14bdce4781bc3bed16e4.js.map"
     ],
     "app": [
-      "app-bd5a38368417ed9e11c2.js",
+      "app-13e5f34101b193af4a3c.js",
       "build-js-styles.css",
-      "app-bd5a38368417ed9e11c2.js.map",
+      "app-13e5f34101b193af4a3c.js.map",
       "build-js-styles.css.map"
     ],
     "path---blog-mongodb": [
