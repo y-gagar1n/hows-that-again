@@ -1,6 +1,6 @@
 ---
 title: "Балансировка HTTP-трафика / Антон Резников (Mail.Ru Group)"
-path: "/blog/videos/http-balancing.md"
+path: "/blog/videos/http-balancing"
 ---
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/_ZbwXm8-VsE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
