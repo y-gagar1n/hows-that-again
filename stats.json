@@ -173,8 +173,8 @@
       "path---page-2-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---index": [
-      "path---index-870901d7a646fcae4877.js",
-      "path---index-870901d7a646fcae4877.js.map"
+      "path---index-9e3de14e970f1e6eec17.js",
+      "path---index-9e3de14e970f1e6eec17.js.map"
     ],
     "path---blog-nodejs": [
       "path---blog-nodejs-f49fdd0d575dc72d0fa3.js",
@@ -225,8 +225,8 @@
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---blog-videos-microservices-patterns-playbook": [
-      "path---blog-videos-microservices-patterns-playbook-611ac285b29ec980c689.js",
-      "path---blog-videos-microservices-patterns-playbook-611ac285b29ec980c689.js.map"
+      "path---blog-videos-microservices-patterns-playbook-e669b5533a19d9e9e6a1.js",
+      "path---blog-videos-microservices-patterns-playbook-e669b5533a19d9e9e6a1.js.map"
     ],
     "path---blog-sh": [
       "path---blog-sh-5dcb1acd2bf5a44349bd.js",
@@ -289,13 +289,13 @@
       "path---blog-cmake-7871ae59454b19dc9f56.js.map"
     ],
     "path---blog-kafka": [
-      "path---blog-kafka-14bdce4781bc3bed16e4.js",
-      "path---blog-kafka-14bdce4781bc3bed16e4.js.map"
+      "path---blog-kafka-5720e0dbb0148ba26945.js",
+      "path---blog-kafka-5720e0dbb0148ba26945.js.map"
     ],
     "app": [
-      "app-376ea52cbddb3d742fe5.js",
+      "app-bf688e708337f3d2071b.js",
       "build-js-styles.css",
-      "app-376ea52cbddb3d742fe5.js.map",
+      "app-bf688e708337f3d2071b.js.map",
       "build-js-styles.css.map"
     ],
     "path---blog-mongodb": [
