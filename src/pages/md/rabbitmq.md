@@ -6,7 +6,7 @@ path: "/blog/rabbitmq"
 
 ![Architecture](rabbitmq-architecture.png)
 
-Отличия от Кафки смотреть в [статье про Кафку](./kafka)
+Отличия от Кафки смотреть в [статье про Кафку](/blog/kafka)
 
 ## Терминология
 
