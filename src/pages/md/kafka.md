@@ -5,9 +5,14 @@ path: "/blog/kafka"
 # Kafka
 
 ```
-I thought that since Kafka was a system optimized for writing, using a writer’s name would make sense. I had taken a lot of lit classes in college and liked Franz Kafka. Plus the name sounded cool for an open source project.
+I thought that since Kafka was a system optimized for writing, 
+using a writer’s name would make sense. I had taken a lot of 
+lit classes in college and liked Franz Kafka. 
+Plus the name sounded cool for an open source project.
 
 So basically there is not much of a relationship.
+
+Jay Kreps, CEO at Confluent
 ```
 
 ![Architecture](kafka-architecture.png)
