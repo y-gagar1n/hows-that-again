@@ -32,6 +32,10 @@
       "path---blog-js-event-loop-f72490c1078996bba861.js",
       "path---blog-js-event-loop-f72490c1078996bba861.js.map"
     ],
+    "path---blog-hardware-virtual-memory": [
+      "path---blog-hardware-virtual-memory-2b4c7132371817c3944f.js",
+      "path---blog-hardware-virtual-memory-2b4c7132371817c3944f.js.map"
+    ],
     "path---blog-virtualenv": [
       "path---blog-virtualenv-3ed97f2ead9054836cf6.js",
       "path---blog-virtualenv-3ed97f2ead9054836cf6.js.map"
@@ -60,6 +64,10 @@
       "path---blog-github-markdown-2d18c3817989f814e778.js",
       "path---blog-github-markdown-2d18c3817989f814e778.js.map"
     ],
+    "path---blog-hardware-ram": [
+      "path---blog-hardware-ram-0dd809f14b6e1ca42b47.js",
+      "path---blog-hardware-ram-0dd809f14b6e1ca42b47.js.map"
+    ],
     "path---blog-dotnet-monitor": [
       "path---blog-dotnet-monitor-0ee8745d0cde9bdafe90.js",
       "path---blog-dotnet-monitor-0ee8745d0cde9bdafe90.js.map"
@@ -71,6 +79,10 @@
     "path---blog-wget": [
       "path---blog-wget-b2276cddc4105ace9aa7.js",
       "path---blog-wget-b2276cddc4105ace9aa7.js.map"
+    ],
+    "path---blog-books-computer-organization-and-design": [
+      "path---blog-books-computer-organization-and-design-7b975035387b85b00fae.js",
+      "path---blog-books-computer-organization-and-design-7b975035387b85b00fae.js.map"
     ],
     "path---blog-git": [
       "path---blog-git-678cc6e0c04e239fb8bb.js",
@@ -99,6 +111,10 @@
     "path---blog-tcpip": [
       "path---blog-tcpip-6ec651317ebc54a794ab.js",
       "path---blog-tcpip-6ec651317ebc54a794ab.js.map"
+    ],
+    "path---howto-mips-gcc": [
+      "path---howto-mips-gcc-0880423397eebc2bc371.js",
+      "path---howto-mips-gcc-0880423397eebc2bc371.js.map"
     ],
     "path---blog-redux-2": [
       "path---blog-redux-2-8275ec87d46ada9ec530.js",
@@ -164,6 +180,10 @@
       "path---blog-webpack-9d3fd355b7a49f15c82d.js",
       "path---blog-webpack-9d3fd355b7a49f15c82d.js.map"
     ],
+    "path---blog-hardware-cpu": [
+      "path---blog-hardware-cpu-02967e8a241c4acd4bb3.js",
+      "path---blog-hardware-cpu-02967e8a241c4acd4bb3.js.map"
+    ],
     "path---blog-npm": [
       "path---blog-npm-4f38b5dbca23541666f7.js",
       "path---blog-npm-4f38b5dbca23541666f7.js.map"
@@ -173,12 +193,12 @@
       "path---page-2-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---index": [
-      "path---index-8e3765b45332e30a3cde.js",
-      "path---index-8e3765b45332e30a3cde.js.map"
+      "path---index-8b1d565cdee54b489720.js",
+      "path---index-8b1d565cdee54b489720.js.map"
     ],
     "path---blog-nodejs": [
-      "path---blog-nodejs-f49fdd0d575dc72d0fa3.js",
-      "path---blog-nodejs-f49fdd0d575dc72d0fa3.js.map"
+      "path---blog-nodejs-a4db1ba11ab71d87a276.js",
+      "path---blog-nodejs-a4db1ba11ab71d87a276.js.map"
     ],
     "path---blog-bash": [
       "path---blog-bash-3ddfa212b4f034c8e82c.js",
@@ -297,9 +317,9 @@
       "path---blog-kafka-994a98c1949449554020.js.map"
     ],
     "app": [
-      "app-3b6011baacda01b9638e.js",
+      "app-cefac153f71ab951e191.js",
       "build-js-styles.css",
-      "app-3b6011baacda01b9638e.js.map",
+      "app-cefac153f71ab951e191.js.map",
       "build-js-styles.css.map"
     ],
     "path---blog-mongodb": [
