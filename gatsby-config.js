@@ -14,7 +14,18 @@ module.exports = {
     {
         resolve: 'gatsby-transformer-remark',
         options: {
-            plugins: ['gatsby-remark-images']
+          plugins: [
+            'gatsby-remark-images',
+            {
+              resolve: 'gatsby-remark-toc',
+              options: {
+                header: 'Содержание', // the custom header text
+                include: [
+                  '**/*.md' // an include glob to match against
+                ]
+              }
+            }
+          ]
         }
     }
   ],
