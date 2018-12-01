@@ -22,3 +22,26 @@ function handler (req, res) {
 	res.end('It\'s alive!');
 }
 ```
+
+## Прокси
+
+```js
+var http = require('http');
+
+const wrappedApi = "http://192.168.1.3:8089";
+
+const proxy = http.createServer((req, clientRes) => {
+    const srvUrl = new URL(req.url, wrappedApi);
+    const proxyRequest = http.request(srvUrl, req, function (wrappedResponse) {
+    	clientRes.writeHead(wrappedResponse.statusCode, wrappedResponse.headers);
+        wrappedResponse.pipe(clientRes, {
+            end: true
+        });
+    });
+    req.pipe(proxyRequest, {
+        end: true
+    });
+});
+
+proxy.listen(9091);
+```
