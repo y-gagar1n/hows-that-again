@@ -5,7 +5,7 @@ path: "/blog/hardware/cpu"
 
 Источники:
 
-https://3dnews.ru/969891
+- https://3dnews.ru/969891
 
 # Зачем уменьшать техпроцесс?
 

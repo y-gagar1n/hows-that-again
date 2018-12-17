@@ -3,7 +3,11 @@ title: "computer-organization-and-design"
 path: "/blog/books/computer-organization-and-design"
 ---
 
-[Computer Organization and Design MIPS Edition](https://www.amazon.com/Computer-Organization-Design-MIPS-Architecture/dp/0124077269)
+Источники: 
+
+- [Computer Organization and Design MIPS Edition](https://www.amazon.com/Computer-Organization-Design-MIPS-Architecture/dp/0124077269)
+- [Логическая организация кэш-памяти процессора](https://habr.com/post/179647/)
+- [Кэш в многопроцессорных системах. Когерентность кэша. Протокол MESI](https://habr.com/post/183834/)
 
 # I/O
 
@@ -589,6 +593,14 @@ again:
 В этом коде мы прочитали значение по адресу `$s1` и записали туда новое значение из регистра `$t0`.	
 
 На основании конструкции *load linked/store conditional* могут быть построены другие примитивы синхронизации, такие как *atomic compare*, *swap* или *atomic fetch-and-increment*.
+
+## Системные вызовы
+
+Реализация системных вызовов зависит от ОС и архитектуры процессора, рассмотрим, как реализованы сисколлы в x86_64 на линуксе:
+
+1. Номер системного вызова кладется в регистр RAX
+2. Аргументы вызова кладутся в регистры RDI, RSI, RDX...
+3. Выполняется инструкция ассемблера SYSCALL. Эта инструкция переводит процессор на кольцо защиты 0 и выполняет код, на который ссылается регистр `MSR_LSTAR`, а он ссылается на функцию `system_call`. Эта функция пушит регистры в стек ядра и берет из таблицы `sys_call_table` адрес функции, в строке с номером, соответствующим номеру системного вызова, лежащему в RAX. 
 
 ## Компиляция программы
 
