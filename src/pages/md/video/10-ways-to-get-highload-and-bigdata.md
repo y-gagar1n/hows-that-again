@@ -1,6 +1,6 @@
 ---
 title: "10 способов достижения HighLoad'а и BigData на ровном месте/Илья Космодемьянский"
-path: "/blog/video/10-ways-to-get-highload-and-bigdata"
+path: "/blog/video/10-ways-to-get-highload-and-bigdata/"
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 title: "Микросервисная Архитектура: проблемы и решения / Сергей Орлов (Avito)"
-path: "/blog/videos/microservices-introduction"
+path: "/blog/video/microservices-introduction"
 ---
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/GIslwdE2DWY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

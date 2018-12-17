@@ -1,6 +1,6 @@
 ---
 title: "Брокер сообщений Kafka в условиях повышенной нагрузки"
-path: "/blog/video/kafka-under-highload"
+path: "/blog/video/kafka-under-highload/"
 ---
 
 <iframe width="660" height="375" src="https://www.youtube.com/embed/BtmYjTO1EpI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

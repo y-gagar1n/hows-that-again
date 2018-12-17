@@ -1,6 +1,6 @@
 ---
 title: "microservices-patterns-playbook"
-path: "/blog/videos/microservices-patterns-playbook"
+path: "/blog/video/microservices-patterns-playbook"
 ---
 
 # Microservices Architectural Design Patterns Playbook

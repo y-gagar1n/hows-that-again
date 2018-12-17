@@ -1,6 +1,6 @@
 ---
 title: "Чему мы научились, разрабатывая микросервисы"
-path: "/blog/video/microservices-what-we-learned"
+path: "/blog/video/microservices-what-we-learned/"
 ---
 
 Кусок архитектуры М-Тех, который занимается нарезкой видео из лайв-потока:

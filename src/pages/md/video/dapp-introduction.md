@@ -1,6 +1,6 @@
 ---
 title: "Собираем Docker-образы быстро и удобно / Дмитрий Столяров (Флант)"
-path: "/blog/videos/after-ddos-defense"
+path: "/blog/video/dapp-introduction"
 ---
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/7K6tW_Enhwg?list=PLyKHoHx4tuqoKfxRdDUHfOd3h7Br0f8Ol" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
