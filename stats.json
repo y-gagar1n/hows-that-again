@@ -161,8 +161,8 @@
       "path---blog-python-4c69d05159424d2e7402.js.map"
     ],
     "path---blog-call-conventions": [
-      "path---blog-call-conventions-bc402b0e5ec4b038ff16.js",
-      "path---blog-call-conventions-bc402b0e5ec4b038ff16.js.map"
+      "path---blog-call-conventions-7aed69ebb10bd7c0f4d0.js",
+      "path---blog-call-conventions-7aed69ebb10bd7c0f4d0.js.map"
     ],
     "path---blog-video-microservices-patterns-playbook": [
       "path---blog-video-microservices-patterns-playbook-789b40dcdf4d315ca285.js",
@@ -221,8 +221,8 @@
       "path---blog-video-microservices-introduction-f3e72db12b0fbbb3d580.js.map"
     ],
     "path---index": [
-      "path---index-1bda9604f57c896b9103.js",
-      "path---index-1bda9604f57c896b9103.js.map"
+      "path---index-72529bd7a1ca6d64264d.js",
+      "path---index-72529bd7a1ca6d64264d.js.map"
     ],
     "path---blog-nodejs": [
       "path---blog-nodejs-a4db1ba11ab71d87a276.js",
@@ -257,12 +257,12 @@
       "path---blog-backstopjs-a035adeda5ee33197a60.js.map"
     ],
     "path---blog-books-xv-6": [
-      "path---blog-books-xv-6-51534722ac9292fa84e3.js",
-      "path---blog-books-xv-6-51534722ac9292fa84e3.js.map"
+      "path---blog-books-xv-6-9023bac90e984ef3e566.js",
+      "path---blog-books-xv-6-9023bac90e984ef3e566.js.map"
     ],
     "path---blog-systemd": [
-      "path---blog-systemd-f55fd3cd7e2b29cf0dcf.js",
-      "path---blog-systemd-f55fd3cd7e2b29cf0dcf.js.map"
+      "path---blog-systemd-bde979ddc87b1e7c9bf1.js",
+      "path---blog-systemd-bde979ddc87b1e7c9bf1.js.map"
     ],
     "component---src-pages-404-js": [
       "component---src-pages-404-js-4503918ea3a16cfcdb75.js",
@@ -279,6 +279,10 @@
     "path---404-html": [
       "path---404-html-a0e39f21c11f6a62c5ab.js",
       "path---404-html-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---blog-x-64": [
+      "path---blog-x-64-7781a52988fda6ca93ef.js",
+      "path---blog-x-64-7781a52988fda6ca93ef.js.map"
     ],
     "path---blog-video-kafka-under-highload": [
       "path---blog-video-kafka-under-highload-c9ba43a895234eb619dc.js",
@@ -357,9 +361,9 @@
       "path---blog-kafka-4e5cbf0c1f4416575a91.js.map"
     ],
     "app": [
-      "app-0125f742b6f489e7a56f.js",
+      "app-80f0c3edca12ab8e99f9.js",
       "build-js-styles.css",
-      "app-0125f742b6f489e7a56f.js.map",
+      "app-80f0c3edca12ab8e99f9.js.map",
       "build-js-styles.css.map"
     ],
     "path---blog-mongodb": [
