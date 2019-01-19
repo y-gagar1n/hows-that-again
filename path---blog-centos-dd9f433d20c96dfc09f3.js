@@ -1,2 +1,0 @@
-webpackJsonp([97211341503335],{424:function(t,n){t.exports={data:{markdownRemark:{html:"<h1>CentOS</h1>\n<h2>netstat</h2>\n<pre><code>yum -y install net-tools\nnetstat -tulpn\n</code></pre>",frontmatter:{path:"/blog/centos",title:"CentOS"}}},pathContext:{}}}});
-//# sourceMappingURL=path---blog-centos-dd9f433d20c96dfc09f3.js.map
