@@ -436,3 +436,44 @@ systemctl start docker
 ```
 
 Если `ifconfig` не найден, то `apt install net-tools`
+
+# Автоматическая очистка места на диске
+
+По адресу `/etc/cron.daily/docker-gc` создаем скрипт следующего содержания:
+
+```shell
+#!/bin/sh -e
+
+# Delete all stopped containers (including data-only containers).
+docker ps -a -q --no-trunc --filter "status=exited" | xargs --no-run-if-empty docker rm -v
+
+# Delete all tagged images more than a month old
+docker images --no-trunc --format '{{.ID}} {{.CreatedSince}}' | grep ' months' | awk '{ print $1 }' | xargs --no-run-if-empty docker rmi -f || true
+
+# Delete all 'untagged/dangling' (<none>) images
+# Those are used for Docker caching mechanism.
+docker images -q --no-trunc --filter dangling=true | xargs --no-run-if-empty docker rmi
+
+# Delete all dangling volumes.
+docker volume ls -qf dangling=true | xargs --no-run-if-empty docker volume rm
+```
+
+Даем ему права:
+
+```shell
+sudo chmod +x /etc/cron.daily/docker-gc
+```
+
+Добавляем новый джоб в `crontab`:
+
+```shell
+crontab -e
+```
+
+Открывается текстовый редактор, нужно в него добавить строчку:
+
+```
+0 0 * * * /etc/cron.daily/docker-gc
+```
+
+не забыть последнюю строчку сделать пустой (иначе кронтаб ругаться будет) и выйти с сохранением
