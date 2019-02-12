@@ -310,7 +310,6 @@ fi
   2. Делаем изменения в его файловой системе `docker run --name hw_container ubuntu:latest touch /HelloWorld`
   3. Коммитим эти изменения как новый контейнер `docker commit hw_container hw_image`
 
-
 Флаги commit:
 
 -a - подписывает образ авторской строкой
@@ -329,14 +328,12 @@ fi
 
 Кроме этого коммитятся:
 
-■ All environment variables
-
-■ The working directory
-■ The set of exposed ports
-■ All volume definitions
-■ The container entrypoint
-■ Command and arguments 
-
+- все переменные окружения
+- рабочая директория
+- открытые порты
+- объявления волюмов
+- точка входа в контейнер
+- сама команда и все ее аргументы
 
 ```docker diff <container id> ```\- выводит список изменений в файловой системе контейнера относительно образа, из которого он создан. A - added, C - changed, D - deleted.
 
@@ -477,3 +474,82 @@ crontab -e
 ```
 
 не забыть последнюю строчку сделать пустой (иначе кронтаб ругаться будет) и выйти с сохранением
+
+# Файловая система докера
+
+По умолчанию находится в папке `/var/lib/docker`
+
+**Структура файловой системы зависит от используемого драйвера хранилища. У меня на Debian это по уомлчанию overlay2, поэтому дальнейшая информация справедлива для него. Узнать свой драйвер можно командой `docker info` в графе Storage Driver** 
+
+[Оригинал документации](https://docs.docker.com/storage/storagedriver/#how-the-overlay2-driver-works)
+
+В `/var/lib/docker` можем найти следующие подпапки:
+
+- builder
+- buildkit
+- containerd
+- containers
+- image
+- network
+- overlay2
+- plugins
+- runtimes
+- swarm
+- tmp
+- trust
+- volumes
+
+Описания образов лежат по адресу: `/var/lib/docker/image/overlay2/imagedb/content/sha256`.
+
+Например, если мы ходим посмотреть описание образа с идентификатором `ebaee1a37cda...`, то нам нужно в текстовом редакторе открыть файл `/var/lib/docker/image/overlay2/imagedb/content/sha256/ebaee1a37cda...`. В этом текстовом файле лежит в основном та же инфа, которую мы получаем через `docker inspect ebaee1a37cda`, только иначе структурирована.
+
+Но в этом файле мы не найден идентификаторы слоев образа для overlay2, те идентификаторы которые там указаны - они для RootFS (так и не понял, зачем нужны). Полезные идентификаторы будем брать из вывода `docker inspect ebaee1a37cda`:
+
+```
+"GraphDriver": {
+    "Data": {
+        "LowerDir": "/var/lib/docker/overlay2/1ef930458b9b7c4b107589bfa8708a5a905c0bff78fe82c04db1b65908ca356f/diff:/var/lib/docker/overlay2/990d47bc6c20549415caca3a6f6cfffc43b34491f128eeafffc2a8214c86ff1a/diff:/var/lib/docker/overlay2/6465e9cbb477e85f312139fd430c82649d5559190f2eed4fe32d1b2c2ca9bd9b/diff:/var/lib/docker/overlay2/7a924b04842adb199e077c02c4661955fb318d5d276c5c66b2e07628a69fc49d/diff:/var/lib/docker/overlay2/b4cf7f55f924b2167262f246ecdd8d2400adfbac69d0258049c619293228b6f0/diff",
+        "MergedDir": "/var/lib/docker/overlay2/cf7ef417035f8dcbaabecdb4897a94ef1ad00b0919ddf4f7af0b1150b9c7bd8f/merged",
+        "UpperDir": "/var/lib/docker/overlay2/cf7ef417035f8dcbaabecdb4897a94ef1ad00b0919ddf4f7af0b1150b9c7bd8f/diff",
+        "WorkDir": "/var/lib/docker/overlay2/cf7ef417035f8dcbaabecdb4897a94ef1ad00b0919ddf4f7af0b1150b9c7bd8f/work"
+    },
+    "Name": "overlay2"
+},
+```
+
+Верхний слой описан в поле `MergedDir`. Пройдем по этому адресу:
+
+```shell
+$ cd /var/lib/docker/overlay2/cf7ef417035f8dcbaabecdb4897a94ef1ad00b0919ddf4f7af0b1150b9c7bd8f/
+$ ls
+diff link lower work	
+```
+
+В файле `link` содержится сокращенный идентификатор слоя:
+
+```shell
+$ cat link
+HRKAB26PG22YEF25QW3DFUSPVO
+```
+
+В `lower` - сокращенные идентификаторы нижних слоев, разделенные двоеточием:
+
+```shell
+$ cat lower
+l/ZJPNNPNGB2QUT7UHS6FGJAJEXS:l/ITT6VDHHVLTL4XSV4MKXFARWZX:l/D73DFE6U73XW47KLW2IWYFN3X4:l/GPI73DKAIBG4M4HEPH22KTQBLS:l/AIQ55Z4PNLZZZTY5PWAD7EY74K
+```
+
+В папке `/var/lib/docker/overlay2/l` содержатся симлинки от сокращенных идентификаторов слоев к нормальным:
+
+```shell
+y# ls /var/lib/docker/overlay2/l/ZJPNNPNGB2QUT7UHS6FGJAJEXS -l
+lrwxrwxrwx 1 root root 72 Jan 22 11:17 /var/lib/docker/overlay2/l/ZJPNNPNGB2QUT7UHS6FGJAJEXS -> ../1ef930458b9b7c4b107589bfa8708a5a905c0bff78fe82c04db1b65908ca356f/diff
+```
+
+Как видим, второй сверху слой нашего образа `ZJPNNPNGB2QUT7UHS6FGJAJEXS` соответствует слою `1ef930458b9b7c4b107589bfa8708a5a905c0bff78fe82c04db1b65908ca356f`. А его содержимое можем посмотреть в папке `diff` (посмотрим самый нижний слой нашего образа, содержащий файловую систему базового образа):
+
+```shell
+y# ls /var/lib/docker/overlay2/l/AIQ55Z4PNLZZZTY5PWAD7EY74K 
+bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+```
+

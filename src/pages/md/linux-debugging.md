@@ -9,7 +9,7 @@ path: "/blog/linux-debugging"
 
 `strace ls`
 
-Выводит кучу строк вроде следующего вида:
+Выводит кучу строк следующего вида:
 
 ```
 execve("/bin/ls", ["ls"], [/* 93 vars */]) = 0                 
@@ -20,7 +20,7 @@ access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
 open("/usr/local/cuda/lib64/tls/x86_64/libselinux.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
 ```
 
-Разберем первую чтроку по частям:
+Разберем первую строку по частям:
 
 - `execve` - системный вызов
 - `("/bin/ls", ["ls"], [/* 93 vars */])` - аргументы вызова
@@ -264,7 +264,115 @@ perf script | ./stackcollapse-perf.pl > out.perf-folded
 cat out.perf-folded | ./flamegraph.pl > perf-kernel.svg
 ```
 
+# vmstat
 
+Использование:
+
+```shell
+vmstat 2 6
+```
+
+С такими аргументами статистика использования виртуальной памяти будет показываться каждые 2 секунды 6 раз. Первая строчка всегда дает средние значения с последней перезагрузки. Последующие дают средние значения за время *delay*, указывающееся первым числовым аргументом.
+
+Можно выводить статистику по использованию диска: `vmstat -d 2 6`.
+
+Пример вывода на Debian в режиме VM:
+
+```shell
+procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
+ 1  0 5866632 302212 1028888 4434828    0    1    13    61    2    2  3  2 95  0  0
+ 0  0 5866632 291460 1028896 4435540    0    0     0   220 9818 17977  4  2 94  0  0
+ 6  0 5866632 293752 1028896 4435996    0    0     0     0 10499 21794  8  4 88  0  0
+ 0  0 5866632 290568 1028896 4436376    0    0     0  2328 10009 18690  4  3 93  0  0
+ 0  0 5866632 289300 1028912 4436496    0    0     0   738 9977 18418  3  3 95  0  0
+ 0  0 5866632 289728 1028924 4436684    0    0     0   120 10139 19331  3  2 95  0  0
+```
+## Описание полей:
+
+### Procs
+
+- r: The number of runnable processes (running or waiting for run time).
+- b: The number of processes in uninterruptible sleep.
+
+### Memory
+
+- swpd: the amount of virtual memory used.
+- free: the amount of idle memory.
+- buff: the amount of memory used as buffers.
+- cache: the amount of memory used as cache.
+- inact: the amount of inactive memory.  (-a option)
+- active: the amount of active memory.  (-a option)
+
+### Swap
+
+- si: Amount of memory swapped in from disk (/s).
+- so: Amount of memory swapped to disk (/s).
+
+### IO
+
+- bi: Blocks received from a block device (blocks/s).
+- bo: Blocks sent to a block device (blocks/s).
+
+### System
+
+- in: The number of interrupts per second, including the clock.
+- cs: The number of context switches per second.
+
+### CPU
+
+These are percentages of total CPU time.
+
+- us: Time spent running non-kernel code.  (user time, including nice time)
+- sy: Time spent running kernel code.  (system time)
+- id: Time spent idle.  Prior to Linux 2.5.41, this includes IO-wait time.
+- wa: Time spent waiting for IO.  Prior to Linux 2.5.41, included in idle.
+- st: Time stolen from a virtual machine.  Prior to Linux 2.6.11, unknown.
+
+## Дисковый режим
+
+```shell
+vmstat -d 1 1
+```
+
+Результат:
+
+```
+disk- ------------reads------------ ------------writes----------- -----IO------
+       total merged sectors      ms  total merged sectors      ms    cur    sec
+sda   4875777 1816309 473984778 5311008 18301794 32203707 2244809614 197933460      0  18362
+dm-0  4802238      0 458568874 6456436 43560867      0 2203748144 777588792      0  17997
+dm-1  1908554      0 15272184 2384716 5123066      0 40984528 200874876      0   1287
+loop0 227474      0  457018   57800      0      0       0       0      0      2
+loop1    535      0    3100      76      0      0       0       0      0      0
+loop2    538      0    3102      68      0      0       0       0      0      0
+loop3     33      0     120       0      0      0       0       0      0      0
+loop4      0      0       0       0      0      0       0       0      0      0
+loop5      0      0       0       0      0      0       0       0      0      0
+loop6      0      0       0       0      0      0       0       0      0      0
+loop7      0      0       0       0      0      0       0       0      0      0
+```
+
+## Описание полей
+
+### Reads
+
+- total: Total reads completed successfully
+- merged: grouped reads (resulting in one I/O)
+- sectors: Sectors read successfully
+- ms: milliseconds spent reading
+
+### Writes
+
+- total: Total writes completed successfully
+- merged: grouped writes (resulting in one I/O)
+- sectors: Sectors written successfully
+- ms: milliseconds spent writing
+
+### IO
+
+- cur: I/O in progress
+- s: seconds spent for I/O
 
 
 

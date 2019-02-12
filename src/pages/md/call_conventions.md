@@ -86,7 +86,7 @@ ret
     mov         dword ptr [c],eax
 ```
 
-The called function is shown below:
+Вызываемая функция выглядит так:
 
 ```
 ; // function prolog
@@ -135,7 +135,7 @@ ret
   mov         dword ptr [c],eax
 ```
 
-The function code is shown below:
+Код функции:
 
 ```
 ; // function prolog goes here (the same code as in the __cdecl example)
@@ -177,7 +177,7 @@ The function code is shown below:
   mov         dword ptr [c],eax
 ```
 
-Function code:
+Код функции:
 
 ```
 ; // function prolog
@@ -222,7 +222,7 @@ call        ?sum@CSum@@QAEHHH@Z            ; CSum::sum
 mov         dword ptr [s4],eax
 ```
 
-The function itself is given below:
+Код функции:
 
 ```
     push        ebp
