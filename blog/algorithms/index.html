@@ -1,85 +1,464 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><link rel="preload" href="/hows-that-again/component---src-layouts-index-js-f9093e768c10ad987803.js" as="script"/><link rel="preload" href="/hows-that-again/component---src-templates-blog-template-js-40956da8f886eafeb36f.js" as="script"/><link rel="preload" href="/hows-that-again/path---blog-algorithms-488d8b233a71f7dae486.js" as="script"/><link rel="preload" href="/hows-that-again/app-05cf2a8ec2ce72bc13ee.js" as="script"/><link rel="preload" href="/hows-that-again/commons-afb5782224ac01f1fa03.js" as="script"/><title data-react-helmet="true">How&#x27;s that again?</title><meta data-react-helmet="true" name="description" content="Sample"/><meta data-react-helmet="true" name="keywords" content="sample, something"/><style id="gatsby-inlined-css">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:112.5%/1.45em georgia,serif;box-sizing:border-box;overflow-y:scroll}*,:after,:before{box-sizing:inherit}body{color:rgba(0,0,0,.8);font-family:georgia,serif;font-weight:400;word-wrap:break-word;-webkit-font-kerning:normal;font-kerning:normal;-ms-font-feature-settings:"kern","liga","clig","calt";-webkit-font-feature-settings:"kern","liga","clig","calt";font-feature-settings:"kern","liga","clig","calt","kern"}img{max-width:100%;margin:0 0 1.45rem;padding:0}h1{font-size:2.25rem}h1,h2{margin:0 0 1.45rem;padding:0;color:inherit;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;font-weight:700;text-rendering:optimizeLegibility;line-height:1.1}h2{font-size:1.62671rem}h3{font-size:1.38316rem}h3,h4{margin:0 0 1.45rem;padding:0;color:inherit;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;font-weight:700;text-rendering:optimizeLegibility;line-height:1.1}h4{font-size:1rem}h5{font-size:.85028rem}h5,h6{margin:0 0 1.45rem;padding:0;color:inherit;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;font-weight:700;text-rendering:optimizeLegibility;line-height:1.1}h6{font-size:.78405rem}hgroup{margin:0 0 1.45rem;padding:0}ol,ul{margin:0 0 1.45rem 1.45rem;padding:0;list-style-position:outside;list-style-image:none}dd,dl,figure,p{margin:0 0 1.45rem;padding:0}pre{padding:0;font-size:.85rem;line-height:1.42;background:rgba(0,0,0,.04);border-radius:3px;overflow:auto;word-wrap:normal;padding:1.45rem}pre,table{margin:0 0 1.45rem}table{padding:0;font-size:1rem;line-height:1.45rem;border-collapse:collapse;width:100%}fieldset{margin:0 0 1.45rem;padding:0}blockquote{margin:0 1.45rem 1.45rem;padding:0}form,iframe,noscript{margin:0 0 1.45rem;padding:0}hr{margin:0 0 calc(1.45rem - 1px);padding:0;background:rgba(0,0,0,.2);border:none;height:1px}address{margin:0 0 1.45rem;padding:0}b,dt,strong,th{font-weight:700}li{margin-bottom:.725rem}ol li,ul li{padding-left:0}li>ol,li>ul{margin-left:1.45rem;margin-bottom:.725rem;margin-top:.725rem}blockquote :last-child,li :last-child,p :last-child{margin-bottom:0}li>p{margin-bottom:.725rem}code,kbd,samp{font-size:.85rem;line-height:1.45rem}abbr,abbr[title],acronym{border-bottom:1px dotted rgba(0,0,0,.5);cursor:help}abbr[title]{text-decoration:none}td,th,thead{text-align:left}td,th{border-bottom:1px solid rgba(0,0,0,.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding:.725rem .96667rem calc(.725rem - 1px)}td:first-child,th:first-child{padding-left:0}td:last-child,th:last-child{padding-right:0}code,tt{background-color:rgba(0,0,0,.04);border-radius:3px;font-family:SFMono-Regular,Consolas,Roboto Mono,Droid Sans Mono,Liberation Mono,Menlo,Courier,monospace;padding:0;padding-top:.2em;padding-bottom:.2em}pre code{background:none;line-height:1.42}code:after,code:before,tt:after,tt:before{letter-spacing:-.2em;content:" "}pre code:after,pre code:before,pre tt:after,pre tt:before{content:""}@media only screen and (max-width:480px){html{font-size:100%}}</style></head><body><div id="___gatsby"><div data-reactroot="" data-reactid="1" data-react-checksum="368580453"><!-- react-empty: 2 --><div style="background:rebeccapurple;margin-bottom:1.45rem;" data-reactid="3"><div style="margin:0 auto;max-width:960px;padding:1.45rem 1.0875rem;" data-reactid="4"><h1 style="margin:0;" data-reactid="5"><a style="color:white;text-decoration:none;" href="/hows-that-again/" data-reactid="6">How&#x27;s that again?</a></h1></div></div><div style="margin:0 auto;max-width:960px;padding:0px 1.0875rem 1.45rem;padding-top:0;" data-reactid="7"><div class="blog-post-container" data-reactid="8"><div class="blog-post" data-reactid="9"><div class="blog-post-content" data-reactid="10"><h1>Algorithms</h1>
-<h1>Сумма двух</h1>
+<!DOCTYPE html><html><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><link rel="preload" href="/hows-that-again/component---src-layouts-index-js-fcef82911f79545cbad3.js" as="script"/><link rel="preload" href="/hows-that-again/component---src-templates-blog-template-js-40956da8f886eafeb36f.js" as="script"/><link rel="preload" href="/hows-that-again/path---blog-algorithms-468d9f4ec6663363261b.js" as="script"/><link rel="preload" href="/hows-that-again/app-e2f9c144b4668201d051.js" as="script"/><link rel="preload" href="/hows-that-again/commons-afb5782224ac01f1fa03.js" as="script"/><title data-react-helmet="true">How&#x27;s that again?</title><meta data-react-helmet="true" name="description" content="Sample"/><meta data-react-helmet="true" name="keywords" content="sample, something"/><style id="gatsby-inlined-css">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:112.5%/1.45em georgia,serif;box-sizing:border-box;overflow-y:scroll}*,:after,:before{box-sizing:inherit}body{color:rgba(0,0,0,.8);font-family:georgia,serif;font-weight:400;word-wrap:break-word;-webkit-font-kerning:normal;font-kerning:normal;-ms-font-feature-settings:"kern","liga","clig","calt";-webkit-font-feature-settings:"kern","liga","clig","calt";font-feature-settings:"kern","liga","clig","calt","kern"}img{max-width:100%;margin:0 0 1.45rem;padding:0}h1{font-size:2.25rem}h1,h2{margin:0 0 1.45rem;padding:0;color:inherit;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;font-weight:700;text-rendering:optimizeLegibility;line-height:1.1}h2{font-size:1.62671rem}h3{font-size:1.38316rem}h3,h4{margin:0 0 1.45rem;padding:0;color:inherit;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;font-weight:700;text-rendering:optimizeLegibility;line-height:1.1}h4{font-size:1rem}h5{font-size:.85028rem}h5,h6{margin:0 0 1.45rem;padding:0;color:inherit;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;font-weight:700;text-rendering:optimizeLegibility;line-height:1.1}h6{font-size:.78405rem}hgroup{margin:0 0 1.45rem;padding:0}ol,ul{margin:0 0 1.45rem 1.45rem;padding:0;list-style-position:outside;list-style-image:none}dd,dl,figure,p{margin:0 0 1.45rem;padding:0}pre{padding:0;font-size:.85rem;line-height:1.42;background:rgba(0,0,0,.04);border-radius:3px;overflow:auto;word-wrap:normal;padding:1.45rem}pre,table{margin:0 0 1.45rem}table{padding:0;font-size:1rem;line-height:1.45rem;border-collapse:collapse;width:100%}fieldset{margin:0 0 1.45rem;padding:0}blockquote{margin:0 1.45rem 1.45rem;padding:0}form,iframe,noscript{margin:0 0 1.45rem;padding:0}hr{margin:0 0 calc(1.45rem - 1px);padding:0;background:rgba(0,0,0,.2);border:none;height:1px}address{margin:0 0 1.45rem;padding:0}b,dt,strong,th{font-weight:700}li{margin-bottom:.725rem}ol li,ul li{padding-left:0}li>ol,li>ul{margin-left:1.45rem;margin-bottom:.725rem;margin-top:.725rem}blockquote :last-child,li :last-child,p :last-child{margin-bottom:0}li>p{margin-bottom:.725rem}code,kbd,samp{font-size:.85rem;line-height:1.45rem}abbr,abbr[title],acronym{border-bottom:1px dotted rgba(0,0,0,.5);cursor:help}abbr[title]{text-decoration:none}td,th,thead{text-align:left}td,th{border-bottom:1px solid rgba(0,0,0,.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding:.725rem .96667rem calc(.725rem - 1px)}td:first-child,th:first-child{padding-left:0}td:last-child,th:last-child{padding-right:0}code,tt{background-color:rgba(0,0,0,.04);border-radius:3px;font-family:SFMono-Regular,Consolas,Roboto Mono,Droid Sans Mono,Liberation Mono,Menlo,Courier,monospace;padding:0;padding-top:.2em;padding-bottom:.2em}pre code{background:none;line-height:1.42}code:after,code:before,tt:after,tt:before{letter-spacing:-.2em;content:" "}pre code:after,pre code:before,pre tt:after,pre tt:before{content:""}@media only screen and (max-width:480px){html{font-size:100%}}</style></head><body><div id="___gatsby"><div data-reactroot="" data-reactid="1" data-react-checksum="1599496614"><!-- react-empty: 2 --><div style="background:rebeccapurple;margin-bottom:1.45rem;" data-reactid="3"><div style="margin:0 auto;max-width:960px;padding:1.45rem 1.0875rem;" data-reactid="4"><h1 style="margin:0;" data-reactid="5"><a style="color:white;text-decoration:none;" href="/hows-that-again/" data-reactid="6">How&#x27;s that again?</a></h1></div></div><div style="margin:0 auto;max-width:960px;padding:0px 1.0875rem 1.45rem;padding-top:0;" data-reactid="7"><div class="blog-post-container" data-reactid="8"><div class="blog-post" data-reactid="9"><div class="blog-post-content" data-reactid="10"><h1>Алгоритмы</h1>
+<h2>Merge Sort</h2>
+<p>Главный недостаток - необходимость использовать дополнительную память для массива размером N, куда мержим. Можно использовать только размер N/2, если копировать в него левую половину массива и потом мержить этот массив и правую половину сразу в оригинал, так что заполняться будет сначала левая половина.</p>
+<p>Достоинства:</p>
+<ul>
+<li>работает на устройствах последовательного доступа</li>
+<li>хорошо сочетается с подкачкой и кэшированием памяти</li>
+<li>можно легко параллелить</li>
+<li>не имеет "трудных" входных данных</li>
+<li>стабильная</li>
+</ul>
+<h2>Selection sort</h2>
+<p>Идем слева направо, ищем минимальный элемент в неотсортированной части массива, когда находим - свапаем с самым левым элементом несортированной части. Этот легче всего реализовать на бумажке.</p>
+<h2>Insertion sort</h2>
+<p>Идем слева направо, берем самый левый элемент несортированной части и проходим справа налево по сортированной, ищем где его место. Когда находим место - вставляем туда, сдвигая элементы сортированной части направо. </p>
+<p>Сильно ускорить можно, если при обмене не менять значения, а просто сдвигать левый направо. Элемент, для которого ищем место, все равно держим в памяти, поэтому в конце просто ставим его в найденное место.</p>
+<h2>Shellsort</h2>
+<p>Сложность в лучшем случае: <code>O(n log n)</code></p>
+<p>В худшем: <code>O(n log^2 n)</code> - для лучшей известной последовательности пропусков</p>
+<p>В среднем случае - зависит от последовательности пропусков.</p>
+<p>Совершенствует Insertion Sort. Проблема Insertion Sort в том, что он всегда сравнивает только соседние элементы, поэтому он очень хорошо работает на почти упорядоченном массиве и очень плохо - на обратно упорядоченном.</p>
+<p>Shellsort делает несколько проходов Insertion Sort, но на каждом он сортирует каждый <code>k</code>-й элемент массива, постепенно уменьшая <code>k</code> до 1. Этого можно достигнуть, если в условиях внутреннего цикла Insertion Sort уменьшать индекс при каждой итерации не на 1, а на <code>k</code>.</p>
+<p>Есть много вариантов последовательностей <code>k</code>, самая производительная на сегодняшний день такова: <code>[701, 301, 132, 57, 23, 10, 4, 1]</code>.</p>
+<h2>Heap</h2>
+<p>Представляем дерево в виде массива, у которого <code>a[0]</code> - корень, а для <code>a[i]</code> дочерними являются элементы <code>a[2*i+1], a[2*i+2]</code>.</p>
+<p>Свойства кучи:</p>
+<ol>
+<li>Значение в любой вершине не меньше, чем значения её потомков.</li>
+<li>Глубина всех листьев (расстояние до корня) отличается не более чем на 1 слой.</li>
+<li>Последний слой заполняется слева направо без «дырок».</li>
+</ol>
+<p>Свойства 2 и 3 выполняются автоматически, когда храним кучу в массиве.</p>
+<p>Для выполнения свойства 1 нужно при каждом изменении элементов вызывать функцию Heapify. Она работает так:</p>
+<pre><code>Если i-й элемент меньше, чем любой из его сыновей, то меняем местами i-й элемент с наибольшим из его сыновей, после чего выполняем Heapify для этого сына.
+Если же i-й элемент больше своего родителя, то меняем его местами с родителем и вызываем Heapify для родителя.
+</code></pre>
+<h3>Добавление</h3>
+<p>Кладем элемент в конец массива и вызываем Heapify на этом элементе</p>
+<h3>Инициализация</h3>
+<p>Чтобы построить кучу из массива, нужно просто вызвать Heapify для всех его элементов, начиная с последнего и кончая первым. Более того, так как начиная с N/2 все элементы - листья, не содержащие потомков, то можем начинать сразу с N/2.</p>
+<h3>Удаление максимума</h3>
+<p>Ставим последний элемент на место первого, уменьшаем размер, вызываем <code>Heapify(0)</code>.</p>
+<h2>Heap Sort</h2>
+<p>Использует бинарное сортирующее дерево (она же куча). </p>
+<p>Сам алгоритм состоит из 2 этапов:</p>
+<ol>
+<li>Строим кучу (О(n) операций)</li>
+<li>Удаляем по одному элементу за раз и перестраиваем дерево. Только удаленные элементы мы будем класть сразу в конец нашего массива, в котором и хранится дерево. То есть сначала меняем местами <code>a[0]</code> и <code>a[n-1]</code>, перестраиваем дерево, состоящее из элементов <code>a[0] ... a[n-2]</code>. Потом меняем местами <code>a[0]</code> и <code>a[n-2]</code>, перестраиваем дерево <code>a[0] ... a[n-3]</code> и так далее (О(n log n) операций).</li>
+</ol>
+<p>Достоинства:</p>
+<ul>
+<li>сортирует на месте, если хранить и дерево и результат в одном массиве</li>
+<li>всегда работает с одинаковой сложностью</li>
+</ul>
+<p>Недостатки:</p>
+<ul>
+<li>неустойчив</li>
+<li>на почти отсортированных работает так же, как и на хаотичных</li>
+<li>выборка делается хаотично по всему массиву, поэтому плохо сочетается с кэшированием и подкачкой</li>
+<li>не работает на связанных списках и других структурах последовательного доступа</li>
+<li>из-за сложности выигрыш начинается только от больших n (от нескольких тысяч)</li>
+</ul>
+<h2>Quick Sort</h2>
+<h3>Разбиение Ломуто</h3>
+<p>Проще в реализации, но менее эффективно.</p>
+<pre><code>algorithm partition(A, lo, hi) is
+    pivot := A[hi]
+    i := lo    
+    for j := lo to hi - 1 do
+        if A[j] ≤ pivot then
+            swap A[i] with A[j]
+            i := i + 1
+    swap A[i] with A[hi]
+    return i
+</code></pre>
+<h3>Разбиение Хоара</h3>
+<p>Данная схема использует два индекса (один в начале массива, другой в конце), которые приближаются друг к другу, пока не найдётся пара элементов, где один больше опорного и расположен перед ним, а второй меньше и расположен после. Эти элементы меняются местами. Обмен происходит до тех пор, пока индексы не пересекутся. Очень важно в качетсве изначальной <code>pivot</code>-точки брать именно серединную, а в циклах сдвига <code>left</code> и <code>right</code> делать строгое меньше и строгое больше, это гарантирует нам что они остановятся в середине, а не пойдут в другую половину и не улетят за край массива. Алгоритм возвращает последний индекс. Схема Хоара эффективнее схемы Ломуто, так как происходит в среднем в три раза меньше обменов (swap) элементов, и разбиение эффективнее, даже когда все элементы равны.</p>
+<pre><code>algorithm partition(A, lo, hi) is
+    pivot := A[(hi+lo)/2]
+    i := lo - 1
+    j := hi + 1
+    loop forever
+        do
+            i := i + 1
+        while A[i] &#x3C; pivot
+
+        do
+            j := j - 1
+        while A[j] > pivot
+
+        if i >= j then
+            return j
+
+        swap A[i] with A[j]
+</code></pre>
+<p>Опорный элемент остается в начале, таким образом попадает в подмножество чисел, которые меньше или равны опорному.</p>
+<h3>Варианты улучшения</h3>
+<ul>
+<li>Insertion Sort на малых подмассивах</li>
+<li>Использовать в качестве <code>pivot</code>-точки медиану из первого, последнего и серединного значения массива</li>
+<li>Если в массиве есть множество элементов с одинаковыми ключами, то можно разбивать на 3 партишна, посередине - с элементами, равными <code>pivot</code>. Это можно сделать разбиением Ломуто, только нужно вести 2 счетчика, один вначале серединного партишна и идет слева направо, другой - в конце серединного партишна и идет справа налево.</li>
+</ul>
+<h2>Radix Heap</h2>
+<p>(<a href="http://ssp.impulsetrain.com/radix-heap.html">http://ssp.impulsetrain.com/radix-heap.html</a>)</p>
+<p>Монотонная очередь с приоритетом. Все ключи должны быть натуральными числами. Разница между максимальным и минимальным ключом не больше определенной константы. Свойство монотонности означает, что нельзя добавлять элементы с ключом, меньшим, чем все имеющиеся к куче ключи.</p>
+<p>Все элементы лежат по бакетам, как в Dictionary. Отдельно хранится переменная <code>last_deleted</code>. Элементы, лежащие в бакете <code>k</code> должны отличаться от <code>last_deleted</code> в бите с номером <code>k-1</code> (нумерация с 0 и с самого младшего бита), могут отличаться в битах, младших чем <code>k-1</code> и <strong>не должны</strong> отличаться в битах, старших чем <code>k-1</code>.</p>
+<p>Например, пусть в <code>last_deleted</code> лежит 8 и мы пытается посчитать, в каком бакете лежит 10.</p>
+<pre><code>8 = 01000
+10 = 01010
+</code></pre>
+<p>Нам нушно найти самый старший бит, в котором они различаются, поэтому идем от самого старшего к самому младшему. </p>
+<pre><code>4: 0 == 0
+3: 1 == 1
+2: 0 == 0
+1: 0 != 1
+</code></pre>
+<p>Значит самый старший отличающийся бит имеет индекс 1, а бакет имеет номер 1 + 1 = 2.</p>
+<p>Посчитаем, куда идет ключ 30:</p>
+<pre><code>8 =  001000
+10 = 011110
+
+5: 0 == 0
+4: 0 != 1
+
+k - 1 = 4, k = 5
+</code></pre>
+<p>Получили пятый бакет.</p>
+<p>Теперь рассмотрим операции:</p>
+<h3>Вставка</h3>
+<p>Тут все просто - вычисляем номер бакета и добавляем в него. Номер бакета можно вычислить через XOR:</p>
+<pre><code>bucket_no = highest_bit (new_element XOR last_deleted) + 1
+</code></pre>
+<p><strong>ВАЖНО</strong> если на вход функции <code>highest_bit</code> поступает 0, то она должна возвращать -1!</p>
+<h3>Извлечение</h3>
+<p>Находим минимальный бакет, в котором есть элементы, затем линейным поиском ищем в этом бакете минимальный элемент и возвращаем, попутно записав его в <code>last_deleted</code>. После этого нам нужно перераспределить оставшиеся элементы в этом бакете в соответствии с новым <code>last_deleted</code>, но более старшие бакеты трогать не надо, так как для них ничего не изменилось, их совпадающие биты все еще на совпадают.</p>
+<h2>Counting Sort</h2>
+<p>Алгоритм сортировки для небольших положительных целых чисел. </p>
+<p>Для работы понадобится массив с размером, равным максимально возможному используемому числу. Поэтому применение этого алгоритма целесообразно лишь тогда, когда сортируемые числа имеют (или их можно отобразить в) диапазон возможных значений, который достаточно мал по сравнению с сортируемым множеством. Например, миллион натуральных чисел, меньших 1000.</p>
+<p>Состоит из 3 шагов:</p>
+<ol>
+<li>Вычисление частот</li>
+<li>Вычисление индексов</li>
+<li>Заполнение результата</li>
+</ol>
+<pre><code>function countingSort(array, k) is
+  count ← new array of k zeros
+  for i = 1 to length(array) do
+    count[array[i]] ← count[array[i]] + 1
+  for i = 2 to k do
+    count[i] ← count[i] + count[i - 1]
+  for i = length(array) downto 1 do
+    output[count[array[i]]] ← array[i]
+    count[array[i]] ← count[array[i]] - 1
+  return output
+</code></pre>
+<p>После первого цикла в массиве <code>count</code> хранится для каждого числа количество, сколько раз оно встречается во входном массиве.</p>
+<p>Во втором цикле мы записываем в массив <code>count</code> т.н. префиксные суммы и после его завершения <code>i</code>-е значение массива означает, сколько чисел в исходном массиве меньше, чем <code>i</code>. То есть это индекс, на котором должно стоять <code>i</code> в результирующем упорядоченном массиве.</p>
+<p>В третьем цикле мы заполняем результирующий массив в соответствии с полученным массивом <code>count</code>. Мы берем очередное число из входного массива, смотрим какой записан для него индекс в массиве <code>count</code> и записываем число в результат по этому индексу. После этого индекс в <code>count</code> нужно увеличить, атк как следующее такое число нужно записывать уже на следующую позицию. Сложная логика в этом цикле обусловлена тем, что обычно мы сортируем не просто целые числа, а некие объекты, у которых ключами являются целые числа. Кроме того так мы обеспечиваем стабильность сортировки. </p>
+<p>Если же мы сортируем просто целые числа, то мы сразу после первого цикла можем идти по массиву <code>count</code> и вставлять в результат <code>count[i]</code> копий числа <code>i</code>.</p>
+<h2>Radix Sort</h2>
+<p>Предназначен для сортировки целых чисел, или же любых объектов, которые можно представить в виде целых чисел. Но сложность алгоритма зависит от длины ключа, поэтому лучше чтобы он был не сильно большой.</p>
+<p>Алгоритм хорош тем, что его сложность составляет <code>O(n * m)</code>, где <code>n</code> - количество элементов, а <code>m</code> - количество знаков в них. В то же время сложность остальных алгоритмов, основанных на сравнении, не может быть ниже чем <code>O(n * log n)</code>.</p>
+<p>Бывают 2 вида: least significant radix (LSD) и most significant radix (MSD).</p>
+<h3>LSD</h3>
+<p>Исходя из этого, алгоритм часто используют для сортировки строк.</p>
+<p>Для алгоритма нужно выбрать значение <code>r</code>, то есть по какому основанию мы будем работать с числами. Вместе с тем это и количество бакетов. При маленьких <code>r</code> алгоритм становится все больше похож на Counting Sort. Ну и вообще, в своей эффективной реализации алгоритм использует Counting Sort, просто повторяет ее для каждого разряда.</p>
+<p>Суть алгоритма в том, что мы сначала сортируем по самому младшему разряду, потом по следующему и так до самого старшего.</p>
+<p>Например, отсортируем следующий массив (<code>r=10</code>):</p>
+<p>170, 45, 75, 90, 2, 802, 2, 66</p>
+<p>Сортируем сначала по самому младшему разряду:</p>
+<p>17<strong>0</strong>, 9<strong>0</strong>, 0<strong>2</strong>, 80<strong>2</strong>, <strong>2</strong>, 4<strong>5</strong>, 7<strong>5</strong>, 6<strong>6</strong></p>
+<p>Теперь по второму:</p>
+<p><strong>0</strong>2, 8<strong>0</strong>2, <strong>0</strong>2, <strong>4</strong>5, <strong>6</strong>6, 1<strong>7</strong>0, <strong>7</strong>5, <strong>9</strong>0</p>
+<p>И наконец по третьему:</p>
+<p><strong>0</strong>02, <strong>0</strong>02, <strong>0</strong>45, <strong>0</strong>66, <strong>0</strong>75, <strong>0</strong>90, <strong>1</strong>70, <strong>8</strong>02</p>
+<h4>Неэффективная реализация</h4>
+<p>Самая простая, неэффективная реализация использует массив очередей (или других массивов), где в очереди <code>i</code> лежат элементы, у которых в разряде, соответствующем текущей итерации, записано <code>i</code>.</p>
+<p>В нашем примере после первого прохода получим следующий массив очередей:</p>
+<pre><code>0: 170, 090
+1: 
+2: 002, 802, 002
+3: 
+4: 
+5: 045, 075
+6: 066
+7–9: 
+</code></pre>
+<p>Затем по порядку вычитываем элементы в одномерный массив:</p>
+<pre><code>170 090 002 802 002 045 075 066
+</code></pre>
+<p>Затем опять записываем в массив очередей, ориентируясь уже на второй справа разряд:</p>
+<pre><code>0: 002, 802, 002
+1–3: 
+4: 045
+5: 
+6: 066
+7: 170, 075
+8: 
+9: 090
+</code></pre>
+<p>Выписываем в 1-мерный массив:</p>
+<pre><code>002 802 002 045 066 170 075 090
+</code></pre>
+<p>Третий проход:</p>
+<pre><code>0: 002, 002, 045, 066, 075, 090
+1: 170
+2–7: 
+8: 802
+9: 
+</code></pre>
+<p>Выписываем результат:</p>
+<pre><code>002 002 045 066 075 090 170 802
+</code></pre>
+<h4>Эффективная реализация</h4>
+<p>Проходим по числам от наименее значимого к наиболее значимому и для каждого осуществляем Counting Sort.</p>
+<p>Если в качестве <code>r</code> использовать степени двойки, то разряды будет очень удобно получать двоичными операциями сдвига и XOR:</p>
+<pre><code>b = количество бит в двоичной записи r
+mask = 1 &#x3C;&#x3C; b
+shift = 0
+
+for ...
+    c = (a[i] >> shift) &#x26; mask
+    shift += b
+</code></pre>
+<h3>MSD</h3>
+<p>Все в основном то же самое, но сортировать начинаем с самого значимого знака. Не гарантирует стабильность. Используется, когда нам нужно, например, отсортировать строки по N первых символов. На каждом этапе разбивает массив на несколько подмассивов (по одному на каждый символ алфавита), которые потом можно сортировать рекурсивно. То есть лучше параллелится, чем LSD.</p>
+<h2>Одновременный поиск минимума и максимума в массиве</h2>
+<p>Если искать простым линейным поиском, то получим сложность <code>O(2n-1)</code> (количество сравнений в худшем случае). Но есть более эффективный алгоритм со сложностью <code>O(3n/2)</code>:</p>
+<ol>
+<li>Разбиваем массив на подмассивы по 2 элемента.</li>
+<li>Упорядочиваем каждый из них (n/2 сравнений). После этого у нас на нечетных местах стоят минимальные элементы из пар, а на четных - максимальные.</li>
+<li>Находим минимальный среди всех нечетных (n/2 сравнений). При этом если количество элементов нечетное, то взять в качестве начального значения последний элемент.</li>
+<li>Находим максимальный среди всех четных (n/2 сравнений). При этом если количество элементов нечетное, то взять в качестве начального значения последний элемент.</li>
+</ol>
+<p>Итого - 3n/2 сравнений.</p>
+<h2>Поиск n-го наименьшего элемента массива без сортировки</h2>
+<p>Обычно требуется найти такой элемент за время O(n), а сортировка потребует O(n * log n).</p>
+<h3>Quickselect</h3>
+<p>Самым популярным алгоритмом тут является Quickselect (от создателя Quicksort). Он работает по тому же принципу что и Quicksort, но на каждом этапе продолжает работать только с одним из полученнхы партишнов, за счет этого и получается снижение сложности до O(N) в среднем и O(N^2) - в худшем случае.</p>
+<h3>Медиана медиан</h3>
+<p>Еще есть алгоритм, который обеспечивает O(N) даже в худшем случае. Он похож на Quickselect, но в качестве pivot-точки на каждом этапе выбирается медиана медиан. Для того чтобы ее найти, мы разбиваем массив на подмассивы по 5 элементов, каждый из них сортируем методом вставки (Insertion sort) и выбираем медиану. Затем формируем массив найденных медиан, и рекурсивно ищем его медиану. Когда массив медиан становится &#x3C;= 5, то используем Insertion sort чтоб найти его медиану. В результате получаем индекс медианы медиан, который используем как точку pivot.</p>
+<p>Засчет того, что точка pivot у нас всегда является медианой массива, худший случай становится средним и мы получаем сложность O(N) в худшем случае. На практике большое количество операций для поиска точки разбиения сильно раздувает константу и этот метод практически не используется.</p>
+<p>Выбор 5 в качетсве длины группы объясняется тем, что:</p>
+<ul>
+<li>в массивах нечетной длины легче искать медиану, т.к. в четных приходится брать середину двух срединных элементов</li>
+</ul>
+<h2>Хэш-таблица с открытой адресацией</h2>
+<p>Обычная хэш-таблица имеет закрытую адресацию - это когда в случае коллизии элемент кладется в список.</p>
+<p>В случае открытой адресации при коллизии берется какой-то другой элемент этого же массива. Например, следующий. Если он тоже занят - то следующий за ним. Так как есть коэффициент заполнения, то пустой элемент рано или поздно будет найден.</p>
+<p>В случае чтения - точно так же, находим нужный элемент, сравниваем ключ, если не равен - берем следующий, и так пока не найдем нужный.</p>
+<p>Когда берем следующий элемент - это называется <strong>линейный поиск</strong> (Linear probing).</p>
+<p><strong>Квадратичный поиск</strong> (Quadratic probing) - это когда интервал увеличивается как значение некоторого полинома второй степени.</p>
+<p>При использовании метода <strong>двойного хэширования</strong> (иногда его называют <strong>Rehashing</strong>) интервал вычисляется с помощью еще одной хэш-функции. Этот метод приводит к уменьшению коллизий, так как следующий проверяемый элемент зависит от самого ключа. Даже если два разных ключа дают один и тот же хэш, то последовательность просматриваемых элементов для них будет разная.</p>
+<h2>Префиксное дерево</h2>
+<p>Дерево для хранения данных, ключами которых являются строки. Для каждого узла реба, соединяющие его с сыновьями, помечены разными символами. Узлы соответствующие концу слова, должны быть помечены. Чтобы найти элемент, нужно начинать с корня и выбирать на i-м уровне то ребро, которое помечено i-м символом в искомом ключе.</p>
+<p>Таким образом, ключ, идентифицирующий некий узел, не явно хранится в каком-либо узле, а задается положением узла в дереве. Ключ корня - пустая строка.</p>
+<h2>Union-Find (задача динамической связности)</h2>
+<p>Дано N точек с идентификаторами от 0 до N-1. Затем дается список связей между этими точками. Связи транзитивные, то есть если А связано с Б, а Б с В, значит А связано с В. Если на вход подается связь между точками А и Б, а они уже связаны, то эта пара игнорируется. Иначе - точки связываются. В конце выдать, сколько получилось кластеров и каких.</p>
+<p>Воспользуемся тем, что точки имеют идентификаторы от 0 до N-1 и будем хранить их в массиве на N элементов. Индекс - идентификатор точки, а значение - идентификатор предыдущего элемента кластера, как если бы элементы кластера были представлены в виде связных списков. </p>
+<p>На самом деле для удобного объединения кластеров мы будем хранить их в деревьях, но деревья будут представлены в виде массивов. Каждый элемент хранит индекс родительского элемента, а если индекс элемента равен самому элементу, значит этот элемент - корень своего кластера.</p>
+<p>Для поиска, какому кластеру принадлежит элемент, нам нужно "подниматься" в дереве от этого элемента, пока не достигнем корня. А чтобы объединить кластеры, нужно всего лишь корню одного кластера присвоить значение корня другого.</p>
+<p>Тогда операции объединения и поиска будут выглядеть так:</p>
+<pre><code class="language-csharp">public int find (int id) {
+    var p = id;
+    while (_ids[p] != p) p = _ids[p];
+    return p;
+}
+
+public void union (int a, int b) {
+    int ca = find (a),
+        cb = find (b);
+    if (ca == cb) return;
+
+    _ids[ca] = cb;
+}
+</code></pre>
+<p>В операции <code>union</code> есть недостаток - мы не знаем, какой из кластеров больше и в результате у нас получается несбалансированное дерево, по которому операция <code>find</code> будет выполняться все дольше и дольше. Для решения проблемы мы можем завести отдельный массив, где храним веса кластеров и всегда мержить меньший кластер к бОльшему.</p>
+<h2>Проверка правильности скобок</h2>
+<p>Написать функцию, проверяющую правильно расставленные скобки; </p>
+<pre><code>check("{()}[]") // true     check("{[}]") // false
+</code></pre>
+<p>Тут решается простым стэком, в котором мы храним открывающие скобки. Когда встречаем открывающую - пушим в стек. Когда встречаем закрывающую - проверяем, что матчится с той, которая лежит на вершине стека и если да, то попим из стэка. </p>
+<p>Самое главное:</p>
+<ul>
+<li>если у нас закрывающая скобка, то сначала проверить, что в стэке еще есть элементы!</li>
+<li>когда строка закончилась, проверить что стэек пуст, иначе возвращаем false!</li>
+</ul>
+<h2>Генерация последовательности скобок</h2>
+<p>Делаем через рекурсию, других способов не знаю. Только надо помнить, сколько скобок уже открыли и сколько закрыли. И еще важно <strong>НЕ</strong> ставить <code>else</code> между рекурсивными вызовами Generate.</p>
+<pre><code class="language-csharp">if (i == 2 * n) {
+    result.Add (new string (a));
+    return;
+}
+if (open &#x3C; n) {
+    a[i] = '(';
+    Generate (result, a, i + 1, n, open + 1, close);
+}
+if (close &#x3C; open) {
+    a[i] = ')';
+    Generate (result, a, i + 1, n, open, close + 1);
+}
+</code></pre>
+<h2>Дерево отрезков</h2>
+<p>Структура данных, позволяющая за время O(log n) получить значение некой функции для любого последовательного интервала элементов массива. </p>
+<p>Например, у нас есть массив:</p>
+<pre><code>4, 7, -12, 23, -9, 19, 0, 22, 7, 6, -4, 15
+</code></pre>
+<p>Дерево отрезков поможет нам быстро найти значение некой аггрегирующей функции (например, поиск минимума/максимума, сумма, произведение) для любого подмассива, например, для <code>7, -12, 23, -9, 19</code> или <code>-9, 19, 0</code> или любого другого.</p>
+<p>Поддерживается операция обновления (тоже O(log n)).</p>
+<p>Рассмотрим работу алгоритма на примере подсчета суммы элементов.</p>
+<p>В корне дерева хранится сумма всех элементов массива. В левом ребенке - сумма элементов левой половины, в правом - элементов правой. И так далее рекурсивно вниз, а в листьях хранятся значения функции над единичным интервалом, то есть в случае суммы- сами единичные элементы.</p>
+<p>Строится дерево снизу вверх - сначала заполняем нижний уровень, затем считаем значения предыдущего уровня как сумму двух листьев, затем предыдущего и так далее. Строится такое дерево за <code>O(n)</code>.</p>
+<p>При запросе суммы мы принимаем на вход интервал <code>[l..r]</code>, для которого посчитать сумму, встаем в корень дерева и сначала смотрим, совпадают ли границы интервала, соответствующего корню, границам искомого отрезка. Если да - то просто возвращаем значение корня. Если же нет, то смотрим, в какие из двух сыновей попадает отрезок <code>[l..r]</code>. Если он целиком попадает в одного из сыновей, то рекурсивно запускаем запрос для этого сына. Если же он пересекается с обоими, то рекурсивно запускаем запрос по левому дереву для отрезка <code>[l..n/2]</code>, потом по правому по отрезка <code>[n/2+1..r]</code> и суммируем результаты.</p>
+<p>Хранится дерево отрезков обычно в виде массива (по аналогии с кучей), где в каждом элементе хранится значение функции над соответствующим элементу интервалом, а детьми элемента с индексом <code>i</code> являются элементы <code>2*i+1</code> и <code>2*i+2</code>. Для массива длиной <code>n</code> количество будет не больше, чем <code>2n</code>, <strong>НО для массива нужно выделить длину 4<em>n, потому что дерево получится несбалансированное и индексы нижнего уровня могут выходить за пределы 2</em>n</strong>.</p>
+<h3>Построение</h3>
+<p><code>a</code> - исходный массив, <code>v</code> - текущая вершина, <code>tl</code> и <code>tr</code> - границы отрезка, соответствующего текущей вершине дерева. Из основной программы вызывается с параметрами: <code>v=0, tl=0,tr=n-1</code>.</p>
+<pre><code class="language-cs">void build (int a[], int v, int tl, int tr) {
+    if (tl == tr)
+        t[v] = a[tl];
+    else {
+        int tm = (tl + tr) / 2;
+        build (a, v*2, tl, tm);
+        build (a, v*2+1, tm+1, tr);
+        t[v] = t[v*2] + t[v*2+1];
+    }
+}
+</code></pre>
+<h3>Запрос суммы</h3>
+<p><code>v</code> - текущая вершина, <code>tl</code> и <code>tr</code> - границы отрезка, соответствующего текущей вершине дерева, <code>l</code> и <code>r</code> - границы запроса. При первом запуске подаются параметры <code>v=0, tl=0, tr=n-1</code>.</p>
+<pre><code class="language-cs">int sum (int v, int tl, int tr, int l, int r) {
+    if (l > r)
+        return 0;
+    if (l == tl &#x26;&#x26; r == tr)
+        return t[v];
+    int tm = (tl + tr) / 2;
+    return sum (v*2, tl, tm, l, min(r,tm))
+        + sum (v*2+1, tm+1, tr, max(l,tm+1), r);
+}
+</code></pre>
+<h3>Запрос модификации</h3>
+<p><code>v</code> - текущая вершина, <code>tl</code> и <code>tr</code> - границы отрезка текущей вершины, <code>pos</code> - иднекс меняющегося элемента, <code>new_val</code> - его новое значение.</p>
+<pre><code class="language-cs">void update (int v, int tl, int tr, int pos, int new_val) {
+    if (tl == tr)
+        t[v] = new_val;
+    else {
+        int tm = (tl + tr) / 2;
+        if (pos &#x3C;= tm)
+            update (v*2, tl, tm, pos, new_val);
+        else
+            update (v*2+1, tm+1, tr, pos, new_val);
+        t[v] = t[v*2] + t[v*2+1];
+    }
+}
+</code></pre>
+<h2>Алгоритм Кнута-Морриса-Пратта</h2>
+<p>Алгоритм поиска подстроки длиной <code>n</code> в строке длиной <code>m</code>. Основывается на префикс-функции. Решает задачу за <code>O(n+m)</code> и <code>O(n)</code> памяти.</p>
+<h3>Префикс-функция</h3>
+<p>Для строки <code>s</code> длиной <code>n</code> префикс-функция это такой массив <code>p</code> длиной <code>n</code>, в котором <code>p[i]</code> означает длину наибольшего нетривиального (не равного самой строке) префикса, совпадающего с суффиксом для строки <code>s[0..i]</code></p>
+<p>Например, для строки "abcabcd" префикс-функция равна: <code>[0, 0, 0, 1, 2, 3, 0]</code>, что означает:</p>
+<ul>
+<li>у строки "a" нет нетривиального префикса, совпадающего с суффиксом;</li>
+<li>у строки "ab" нет нетривиального префикса, совпадающего с суффиксом;</li>
+<li>у строки "abc" нет нетривиального префикса, совпадающего с суффиксом;</li>
+<li>у строки "abca" префикс длины 1 совпадает с суффиксом;</li>
+<li>у строки "abcab" префикс длины 2 совпадает с суффиксом;</li>
+<li>у строки "abcabc" префикс длины 3 совпадает с суффиксом;</li>
+<li>у строки "abcabcd" нет нетривиального префикса, совпадающего с суффиксом.</li>
+</ul>
+<h4>Нахождение префикс-функции</h4>
+<p>Этот алгоритм не содержит явных сравнений строк и выполняет <code>O(n)</code> действий.</p>
+<p>Пусть мы, идя от <code>s[0]</code> к <code>s[n]</code> дошли до некоторого индекса <code>i</code> и вычислили его префикс-функцию <code>p[i] = j</code>.</p>
+<p>Тогда для <code>i+1</code> префикс-функция увеличится на 1 только в том случае, если <code>s[i+1] == s[j]</code>. (1)</p>
+<p>Если же они не равны, то нам нужно найти такое значение <code>k</code>, которое меньше <code>p[i]</code>, но при этом для него все еще выполняется условие "префикс равен суффиксу", и когда мы найдем такое значение, сможем попробовать условие <code>s[i+1] == s[k]</code> для него. То есть мы знаем, что <code>s[0..j-1] == s[i-j..i-1]</code> и нам нужно найти <code>k</code>, такое, что <code>k&#x3C;j</code> и <code>s[0..k-1] == s[i-k..i-1]</code>. Но у нас уже есть такое значение, мы его получили, когда вычисляли префикс-функцию для строки <code>s[0..j-1]</code>. Поэтому берем <code>j=p[j-1]</code> и проверяем, выпонляется ли условие 1: <code>s[i+1] == s[j]</code>. Если нет, то повторяем уменьшение <code>j</code>, пока не дойдем до нуля.</p>
+<p>Итак, получили такой алгоритм:</p>
+<ul>
+<li>Считать значения префикс-функции <code>p[i]</code> будем по очереди: от <code>i=1</code> к <code>i=n-1</code> (значение <code>p[0]</code> просто присвоим равным нулю).</li>
+<li>Для подсчёта текущего значения <code>p[i]</code> мы заводим переменную <code>j</code>, обозначающую длину текущего рассматриваемого образца. Изначально <code>j = p[i-1]</code>.</li>
+<li>Тестируем образец длины <code>j</code>, для чего сравниваем символы <code>s[j]</code> и <code>s[i]</code>. Если они совпадают — то полагаем <code>p[i] = j+1</code> и переходим к следующему индексу <code>i+1</code>. Если же символы отличаются, то уменьшаем длину <code>j</code>, полагая её равной <code>p[j-1]</code>, и повторяем этот шаг алгоритма с начала.</li>
+<li>Если мы дошли до длины <code>j=0</code> и так и не нашли совпадения, то останавливаем процесс перебора образцов и полагаем <code>p[i] = 0</code> и переходим к следующему индексу <code>i+1</code>.</li>
+</ul>
+<h3>Поиск подстроки</h3>
+<p>Допустим, нам надо найти подстроку <code>s</code> длиной <code>n</code> в тексте <code>t</code>. Для этого мы: </p>
+<ol>
+<li>выбираем некий специальный символ <code>#</code>, которого точно нет ни в <code>s</code>, ни в <code>t</code></li>
+<li>составляем строку <code>Q = s + "#" + t</code></li>
+<li>вычисляем префикс-функцию <code>P</code> для <code>Q</code></li>
+<li>просматриваем значения <code>P</code>, начиная с индекса <code>n+1</code>. Там, где <code>P[i] == n</code> - <code>i</code> обозначает индекс очередного вхождения <code>s</code> в <code>t</code>, а начало вхождения будет по индексу <code>i - (n + 1) - n + 1 = i - 2n</code>.</li>
+</ol>
+<h2>Сумма двух</h2>
 <p>Имея массив целых чисел, нужно вернуть индексы двух элементов, сумма которых будет равна заданному числу</p>
-<h2>Пример</h2>
-<pre><code>Given nums = [2, 7, 11, 15], target = 9,
-
-Because nums[**0**] + nums[**1**] = 2 + 7 = 9,
-return [**0**, **1**].
-</code></pre>
-<h2>Решение</h2>
+<h3>Пример</h3>
+<p>Допустим, у нас есть массив <code>nums == [2, 7, 11, 15]</code> и нужно получить число 9.</p>
+<p>Так как <code>nums[0] + nums[1] == 2 + 7 == 9</code>, то возвращаем массив индексов <code>[0,1]</code>.</p>
+<h3>Решение</h3>
 <ol>
-<li>Отсортировать массив по возрастанию.</li>
-<li>Идти с двух концов навстречу друг другу счетчиками i (слева) и j (справа)</li>
-<li>Если nums[i] + nums[j] &#x3C; target, то увеличиваем i</li>
-<li>Иначе, если nums[i] + nums[j] > target, то уменьшаем j</li>
-<li>А если равны, то очевидно возвращаем</li>
+<li>Сортируем массив по возрастанию;</li>
+<li>Идем по массиву с двух концов навстречу друг другу счетчиками i (слева) и j (справа);</li>
+<li>Если <code>nums[i] + nums[j] &#x3C; target</code>, то увеличиваем i;</li>
+<li>Иначе, если <code>nums[i] + nums[j] > target</code>, то уменьшаем j;</li>
+<li>Если же <code>nums[i] + nums[j] == target</code>, то очевидно возвращаем <code>[i, j]</code>.</li>
 </ol>
-<h1>Самая длинная подстрока без повторяющихся символов</h1>
+<h2>Самая длинная подстрока без повторяющихся символов</h2>
 <p>Имея строку, найти в ней самую длинную подстроку без повторяющихся символов.</p>
-<h2>Examples</h2>
-<p>"abcabcbb" => "abc" (3)</p>
-<p>"bbbbb" => "b" (1)</p>
-<p>pwwkew => "wke" (3)</p>
-<h2>Решение 1. Скользящее окно.</h2>
-<p>Нам понадобится set символов. Если известно, что все символы входят в некое подмножество (например a-z), то можно вместо set использовать массив на n элементов, где n = длина подмножества.</p>
+<h3>Примеры</h3>
+<p>"abcabcbb" => "abc"</p>
+<p>"bbbbb" => "b"</p>
+<p>pwwkew => "wke"</p>
+<h3>Решение</h3>
+<p>Для решения используем так называемое скользящее окно - это подстрока нашей входной строки <code>input</code>, которая не содержит повторяющихся символов, начинается в начале <code>input</code> и постепенно движется (скользит) по направлению к ее концу.</p>
+<p>Нам понадобится словарь символов, у которого ключом будет символ, а значением - индекс последнего такого символа в строке, который нам встретился. Назовем этот словарь <strong>s</strong>. Если известно, что все символы входят в некое подмножество/алфавит (например, символы латинского алфавита a-z), то можно вместо словаря использовать массив на <code>n</code> элементов, где n = длина алфавита.</p>
 <ol>
-<li>Инициализируем start = 0, это будет левая граница нашего скользящего окна.</li>
-<li>Идем счетчиком i с левого края. </li>
-<li>Если set содержит <code>input[i]</code>, то мы встретили первый повторяющийся символ в текущем окне. </li>
-</ol>
-<p>3.1. <code>i - start + 1</code> будет длина соответствующей подстроки, нужно ее сравнить с максимумом. </p>
-<p>3.2. Теперь нам нужно сдвинуть левый край окна и мы можем его сдвинуть сразу к символу справа от первого повторяющегося символа из нашей пары, т.к. для любого края левее этого, подстрока уже заведомо будет содержать повторяющийся символ. Таким образом, <code>start = set[input[i]] + 1</code>.</p>
-<ol start="4">
-<li>Запоминаем в set индекс текущего символа: <code>set[input[i] = i</code>.</li>
-</ol>
-<h1>Медиана 2 отсортированных массивов</h1>
-<p>Имея 2 отсортированных массива, найти их медиану. Сложность должна быть <code>O(log(n+m))</code> </p>
-<h2>Пример 1</h2>
-<pre><code>nums1 = [1, 3]
-nums2 = [2]
-
-The median is 2.0
-</code></pre>
-<h2>Пример 2</h2>
-<pre><code>nums1 = [1, 2]
-nums2 = [3, 4]
-
-The median is (2 + 3)/2 = 2.5
-</code></pre>
-<h2>Решение</h2>
-<p>Массивы a и b, длины - m и n соответственно. </p>
-<p>Медиана - это число, разделяющее множество на 2 подмножества одинаковой длины, одно из которых всегда меньше другого. </p>
-<p>Значит, нам нужно удовлетворить 2 условия: </p>
+<li>Инициализируем <code>start=0</code>, это будет левая граница нашего скользящего окна.</li>
+<li>Идем счетчиком <code>i</code> с левого края.</li>
+<li>
+<p>Если <code>s</code> содержит <code>input[i]</code> и <code>s[input[i]]>=start</code>, то мы встретили первый повторяющийся символ в текущем окне.</p>
 <ol>
-<li>Условие равенства длин </li>
-<li>Условие соотношения граничных элементов отсортированных подмножеств </li>
+<li>Длина соответствующей подстроки равна <code>i-start+1</code>, нужно ее сравнить с текущим максимумом. Если эта длина больше текущего максимума, то запоминаем строку и обновляем максимум.</li>
+<li>Теперь нам нужно сдвинуть левый край окна и мы можем его сдвинуть сразу к символу справа от первого (левого) повторяющегося символа из нашей пары, т.к. для любого края левее этого, подстрока уже заведомо будет содержать повторяющийся символ. Таким образом, <code>start = s[input[i]] + 1</code>.</li>
 </ol>
-<p>Допустим, мы разбиваем массив A в точке i, а массив B в точке j. </p>
-<pre><code>left | right 
-
-A[0], A[1], ..., A[i-1] | A[i], A[i+1], ..., A[m-1] 
-
-B[0], B[1], ..., B[j-1] | B[j], B[j+1], ..., B[n-1] 
-</code></pre>
-<p>Тогда условия будут выглядеть так: </p>
+</li>
+<li>Запоминаем в наше множество индекс текущего символа: <code>s[input[i]] = i</code>.</li>
+</ol>
+<h2>Медиана 2 отсортированных массивов</h2>
+<p>Имея 2 отсортированных массива, найти их медиану. Сложность должна быть <code>O(log(n+m))</code>. Медиана - это число, разделяющее множество на 2 подмножества одинаковой длины, одно из которых всегда меньше другого.</p>
+<h3>Пример</h3>
+<p>Для массивов [1, 3] и [2] медиана равна 2.0.</p>
+<p>Для [1, 2] и [3, 4] медиана равна (2 + 3) / 2 = 2.5</p>
+<h3>Решение</h3>
+<p>Пусть на входе у нас есть массивы <code>a</code> и <code>b</code>, обозначим их длины как <code>m</code> и <code>n</code> соответственно.</p>
+<p>Чтобы выполнить условия задачи, нам нужно разбить входное множество, состоящее из элементов массивов <code>m</code> и <code>n</code> на 2 подмножества, удовлетворяющие следующим критериям:</p>
 <ol>
-<li><code>len(left) = len(right) => i + j = (m - i) + (n - j) => j = (m + n) / 2 - i => (учтем нечетные длины, прибавив к числителю 1) j = (m + n + 1) / 2 - i</code> </li>
-<li><code>max(left) &#x3C;= min(right) => A[i-1] &#x3C;= B[j] &#x26;&#x26; B[j-1] &#x3C;= A[i]</code> </li>
+<li>Критерий равенства длин - в подмножествах одинаковое количество элементов.</li>
+<li>Критерий соотношения граничных элементов отсортированных подмножеств - максимальный элемент левого подмножества должен быть меньше или равен минимальному элементу правого.</li>
 </ol>
-<p>Если эти условия соблюдены, то: </p>
-<p><code>median = (max(left) + min(right)) / 2</code> </p>
-<p>Значит, задача свелась к следующей: </p>
-<pre><code>Найти i в [0, m] такую, что: 
-A[i-1] &#x3C;= B[j] &#x26;&#x26; B[j-1] &#x3C;= A[i] где j = (m + n + 1) / 2 - i 
+<p>Сейчас обьясню, что это значит. Допустим, мы разбиваем массив A в точке i, а массив B в точке j.</p>
+<pre><code>left | right
+
+A[0], A[1], ..., A[i-1] | A[i], A[i+1], ..., A[m-1]
+
+B[0], B[1], ..., B[j-1] | B[j], B[j+1], ..., B[n-1]
 </code></pre>
+<p>Тогда условия будут выглядеть так:</p>
+<ol>
+<li><code>len(left) == len(right) -> i + j == (m - i) + (n - j) -> j == (m + n) / 2 - i -> (учтем нечетные длины, прибавив к числителю 1) j == (m + n + 1) / 2 - i</code></li>
+<li><code>max(left) &#x3C;= min(right) -> A[i-1] &#x3C;= B[j] &#x26;&#x26; B[j-1] &#x3C;= A[i]</code></li>
+</ol>
+<p>Если эти условия соблюдены, то искомая медиана будет равна:</p>
+<p><code>median = (max(left) + min(right)) / 2</code></p>
+<p>Значит, задача свелась к следующей:</p>
+<blockquote>
+<p>Найти <code>i</code> в <code>[0, m]</code>, такую, что:
+<code>A[i-1] &#x3C;= B[j] &#x26;&#x26; B[j-1] &#x3C;= A[i] где j = (m + n + 1) / 2 - i</code></p>
+</blockquote>
 <p>Это мы можем сделать половинным делением.</p>
-<p>Когда нашли i, медиана будет: </p>
-<pre><code>max(A[i-1], B[j-1]), когда m+n нечетное 
-( max(A[i-1], B[j-1]) + min(A[i], B[j]) ) / 2, когда m+n четное
-</code></pre>
-<h1>Найти подмассив с максимальной суммой</h1>
-<h2>Вариант 1. Разделяй и властвуй</h2>
+<p>Когда нашли i, медиана будет равна:</p>
+<blockquote>
+<p><code>max(A[i-1], B[j-1])</code>, если <code>m+n</code> нечетное
+и <code>(max(A[i-1], B[j-1]) + min(A[i], B[j])) / 2</code>, если <code>m+n</code> четное</p>
+</blockquote>
+<h2>Найти подмассив с максимальной суммой</h2>
+<h3>Вариант 1. Разделяй и властвуй</h3>
 <p>Делим массив на 2 половины и возвращаем максимум из:</p>
 <ol>
 <li>максимальная сумма в левой половине</li>
@@ -87,72 +466,160 @@ A[i-1] &#x3C;= B[j] &#x26;&#x26; B[j-1] &#x3C;= A[i] где j = (m + n + 1) / 2 
 <li>максимальная сумма в подмассиве, пересекающем середину</li>
 </ol>
 <p>1 и 2 пункт - это просто рекурсивные вызовы.</p>
-<p>3 пункт посложнее - там нужно от середины идти влево и вправо, и считать масимальную сумму элементов левой и правой полвоины, а потом суммировать их. </p>
-<p>То есть, если у нас такой массив:</p>
-<pre><code>-2 1 -3 4 -1 3 -5 4
+<p>3 пункт посложнее - там нужно от середины идти влево и вправо, и считать масимальную сумму элементов левой и правой половины, а потом суммировать их.</p>
+<p>Рассмотрим пример, допустим у нас такой массив:</p>
+<pre><code>6 1 -3 4 -1 3 -5 4
 </code></pre>
-<p>Масимальная сумма левой половины = 4</p>
-<p>Максимальная сумма правой = 2</p>
-<p>Общая сумма = 4+2 = 6</p>
+<p>Максимальная сумма идущих подряд элементов в левой половине = 7 для последовательности <code>6 1</code>.</p>
+<p>Максимальная сумма идущих подряд элементов в правой половине = 4 для последовательности <code>4</code>.</p>
+<p>Максимальная сумма в подмассиве, пересекающем середину - складывается из:</p>
+<ul>
+<li>максимальной суммы идущих подряд элементов левой половины, включающих самый <strong>правый</strong> элемент левой половины. В данном случае это 8 для последовательности <code>6 1 -3 4</code>.</li>
+<li>максимальной суммы идущих подряд элементов правой половины, включающих самый <strong>левый</strong> элемент правой половины. В данном случае это 2 для последовательности <code>-1 3</code>.</li>
+</ul>
+<p>Получили максимальную сумму в подмассиве, пересекающем середину = 8 + 2 = 10.</p>
+<p>Результат выбираем как максимум из трех полученных максимумов, то есть <code>max(7, 4, 10) == 10</code>, то есть последовательность <code>6 1 -3 4 -1 3</code>.</p>
 <p>Сложность - <code>O(nlogn)</code></p>
-<p>И есть специализированный алгоритм - <strong>Kadane's Algorithm.</strong></p>
-<p>На псевдокоде описывается очень просто:
-<br>
-Initialize:
-max<em>so</em>far = 0
-max<em>ending</em>here = 0
-<br>
-Loop for each element of the array
-(a) max<em>ending</em>here = max<em>ending</em>here + a<a href="b">i</a> if(max<em>ending</em>here &#x3C; 0)
-max<em>ending</em>here = 0
-(c) if(max<em>so</em>far &#x3C; max<em>ending</em>here)
-max<em>so</em>far = max<em>ending</em>here
-return max<em>so</em>far</p>
-<p>Идея так же проста - ищем последовательные подмассивы, сумма которых больше нуля и берем максимальную сумму из них.</p>
+<h3>Вариант 2. Алгоритм Кадане.</h3>
+<p>Алгоритм Кадане - это специализированный алгоритм именно для этой задачи. Объяснять это словами будет тяжело, лучше сразу кодом.</p>
+<p>На псевдокоде описывается очень просто:</p>
+<pre><code>Initialize:
+max_so_far = 0
+max_ending_here = 0
+
+Loop for each element of the array:
+  max_ending_here = max_ending_here + a[i]
+  if(max_ending_here &#x3C; 0)
+    max_ending_here = 0
+  if(max_so_far &#x3C; max_ending_here)
+    max_so_far = max_ending_here
+return max_so_far
+</code></pre>
+<p>Идея так же проста - идем по массиву скользящим окном, ищем последовательные подмассивы, сумма которых больше нуля и берем максимальную сумму из них.</p>
 <p>Пример:</p>
 <pre><code>2 -3 8 -1
 </code></pre>
 <p>Алгоритм выдаст 8 и это правильно.</p>
-<p>Если бы кусок перед 8 выдавал результат больше нуля, то он бы увеличивал масимальную сумму и мы бы его правильно взяли.</p>
-<p>Если он меньше нуля, то он точно уменьшает сумму и мы его правильно не берем.</p>
-<h1>Найти отсутствующий элемент</h1>
+<p>Если бы кусок перед 8 выдавал результат больше нуля, то он бы увеличивал масимальную сумму и мы бы его взяли.</p>
+<p>Если он меньше нуля, то он точно уменьшает сумму и мы его не берем.</p>
+<p>Более сложный пример:</p>
+<pre><code>3 2 -7 2 1 -2 4 -1 3 -5 4
+</code></pre>
+<p>Идем слева направо, считаем сумму:</p>
+<pre><code>3 => max = 3
+3 + 2 = 5 => max = 5
+3 + 2 - 7 = -2 &#x3C; 0 начинаем считать заново
+2 &#x3C; max
+2 + 1 = 3 &#x3C; max
+2 + 1 - 2 = 1 &#x3C; max
+2 + 1 - 2 + 4 = 5 == max
+2 + 1 - 2 + 4 - 1 = 4 &#x3C; max
+2 + 1 - 2 + 4 - 1 + 3 = 7 > max обновляем max = 7
+2 + 1 - 2 + 4 - 1 + 3 - 5 = 2 &#x3C; max
+2 + 1 - 2 + 4 - 1 + 3 - 5 + 4 = 6 &#x3C; max
+</code></pre>
+<p>Итог: максимум = 7 для последовательности <code>2 1 -2 4 -1 3</code>.</p>
+<h2>Найти отсутствующий элемент</h2>
 <p>Есть массив из N-1 различных чисел от 1 до N. Нужно найти отсутствующий элемент.</p>
-<h2>1 вариант</h2>
-<p>Суммируем все числа и вычитаем результат из суммы всех элементов от 1 до N = n * (n+1) / 2. Результат вычитания будет ответов.</p>
-<h2>2 вариант</h2>
+<h3>Решение 1</h3>
+<p>Суммируем все элементы массива и вычитаем результат из ожидаемой суммы всех чисел от 1 до N, которая равна <code>n \* (n+1) / 2</code>. Результат вычитания будет ответом.</p>
+<h3>Решение 2</h3>
 <p>XOR-им все числа от 1 до N, затем поверх этого XOR-им все элементы нашего массива. Результат будет ответом.</p>
-<p>Объяснение:</p>
+<p>Вот почему это работает:</p>
 <pre><code>(A1 ^ A2 ^ A3) ^ (A1 ^ A3) = (A1 ^ A1) ^ A2 ^ (A3 ^ A3) = 0 ^ A2 ^ 0 = A2
 </code></pre>
-<h1>Найти точку эквилибриума в массиве</h1>
+<h2>Найти точку эквилибриума в массиве</h2>
 <p>Точка эквилибриума - это такой элемент массива, у которого сумма всех элементов слева равна сумме всех элементов справа.</p>
-<h2>Решение 1</h2>
-<p>Можно создать массив сумм, пройти слева направо по массиву и в массив сумм писать "подвижную сумму", Потом идти справа налево, так же считать подвижную сумму и сравнивать ее с элементов в массиве сумм на 2 левее текущего.</p>
-<p>Пример:</p>
-<pre><code>1 2 3 4 5 6 7 2 9 10
-
-1 3 6 10 15 21 28 30 39 49 - массив подвижных сумм слева
-
-21 19 10 - начали считать массив справа, остановились на третьем элементе, т.к. в массиве левых сумм 5-й элемент тоже равен 21.
+<h3>Решение 1</h3>
+<p>Допустим, наш исходный массив <code>input</code> равен <code>[1, 2, 3, 4, 5, 6, 7, 2, 9, 10]</code>.</p>
+<p>Создаем массив аггрегированных сумм, где каждый <code>i</code>-й элемент равен сумме элементов <code>0..i-1</code> исходного массива. Полученный массив <code>sums</code> будет таким: <code>[1, 3, 6, 10, 15, 21, 28, 30, 39, 49]</code></p>
+<p>Теперь идем по <code>input</code> справа налево и так же считаем аггрегированные суммы, но на каждом шаге сравниваем полученный элемент с элементом массива <code>sums</code>, стоящим на 2 позиции левее.</p>
+<p>Потом идем справа налево, так же считаем подвижную сумму и сравниваем ее с элементом в массиве сумм на 2 левее текущего. Как только эти значения становятся равны, мы останавливаемся и выдаем в качестве результата элемент, стоящий между ними.</p>
+<p>Для нашего примера, идем по <code>input</code> справа налево и считаем аггрегированную сумму <code>rsum</code>:</p>
+<ol>
+<li>Крайний правый элемент <code>input</code> равен 10, значит <code>rsum = 10</code>. Индекс крайнего правого элемента равен <strong>9</strong>, сравниваем его с <code>sum[7]==30</code>. <strong>10 &#x3C; 30</strong>, поэтому продолжаем.</li>
+<li>Следующий справа элемент <code>input[8]</code> равен 9, сумма <code>rsum</code> становится <strong>10+9=19</strong>, индекс равен <strong>8</strong>, сравниваем с <code>sum[6]==28</code>. <strong>19&#x3C;28</strong>, продолжаем.</li>
+<li>Следующий справа элемент <code>input[7]</code> равен 2, сумма <code>rsum</code> становится <strong>19+2=21</strong>, индекс равен <strong>7</strong>, сравниваем с <code>sum[5]==21</code>. <strong>21==21</strong>, условие выхода выполнилось. Индекс эквилибриума равен <strong>7-1==6</strong>, поэтому возвращаем <code>input[6] == 7</code>.</li>
+</ol>
+<p>Недостаток этого решения в том, что нужен дополнительный массив.</p>
+<h3>Решение 2</h3>
+<p>Этот вариант решения сложнее для реализации, но ему не нужен дополнительный массив.</p>
+<pre><code>Считаем сумму всех элементов массива sum
+leftsum = 0
+rightsum = sum
+Идем по массиву слева направо, на каждом шаге:
+  rightsum -= a[i]
+  Если leftsum == rightsum, то точка эквилибриума найдена
+  leftsum += a[i]
 </code></pre>
-<p>Но для этого решения нужен дополнительный массив. Можно и без него.</p>
-<h2>Решение 2</h2>
-<ol>
-<li>Считаем сумму всех элементов массива sum</li>
-<li>leftsum = 0</li>
-<li>rightsum = sum</li>
-<li>
-<p>Идем по массиву слева направо, на каждом шаге:</p>
-<ol>
-<li>rightsum -= a[i]</li>
-<li>Если leftsum == rightsum, то точка эквилибриума найдена</li>
-<li>leftsum += a[i]</li>
-</ol>
-</li>
-</ol>
-<h1>External sorting (внешняя сортировка)</h1>
+<p>Рассмотрим на нашем примере <code>[1, 2, 3, 4, 5, 6, 7, 2, 9, 10]</code>.</p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>a
+[
+i
+]</th>
+<th>rightsum</th>
+<th>leftsum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>49</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>48</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>46</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+<td>43</td>
+<td>6</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4</td>
+<td>39</td>
+<td>10</td>
+</tr>
+<tr>
+<td>4</td>
+<td>5</td>
+<td>34</td>
+<td>15</td>
+</tr>
+<tr>
+<td>5</td>
+<td>6</td>
+<td>28</td>
+<td>21</td>
+</tr>
+<tr>
+<td>6</td>
+<td>7</td>
+<td>21</td>
+<td>21</td>
+</tr>
+</tbody>
+</table>
+<p>В последней строке суммы сошлись, точка эквилибриума найдена, возвращаем <code>a[i]</code>==<strong>7</strong>.</p>
+<h2>External sorting (внешняя сортировка)</h2>
 <p>Применяется для сортировки огромных массивов данных, которые не уменьшаются в память. Массив делится на чанки, помещающиеся в память, каждый из чанков сортируется и пишется на диск. Затем из каждого файла берется начальный мини-чанк и между мини-чанками производится merging на диск. Когда какой-то из мини-чанков пустеет, он заполняется следующими данными из своего файла.</p>
-<h2>Пример</h2>
+<h3>Пример</h3>
 <p>Есть 900 МБ файл и 100 МБ памяти.</p>
 <ol>
 <li>Делим файл на 9 чанков по 100 МБ, сортируем каждый quicksort-ом и пишем в отдельный файл на диске.</li>
@@ -162,8 +629,8 @@ return max<em>so</em>far</p>
 <li>Если после очередной записи в выходной буфер он заполнился, то флашим его на диск и очищаем.</li>
 </ol>
 <p>Этап мержа (шаг 3) здесь неэффективен, так как требует приблизительно <code>N * (k - 1)</code> сравнений.</p>
-<p>Можно на этом этапе использовать <a href="https://en.wikipedia.org/wiki/Heap_(data_structure)">min-heap</a> с ключом равным первому элементу чанка. Тогда уложимся в (???) </p>
-<h1>QuickSort</h1>
+<p>Можно на этом этапе использовать <a href="https://en.wikipedia.org/wiki/Heap_(data_structure)">min-heap</a> с ключом равным первому элементу чанка.</p>
+<h2>QuickSort</h2>
 <pre><code class="language-csharp">public static class QuickSort
 {
     public static void Sort&#x3C;T>(T[] input) where T:IComparable
@@ -200,7 +667,7 @@ return max<em>so</em>far</p>
     }
 }
 </code></pre>
-<h1>Красно-черные деревья</h1>
+<h2>Красно-черные деревья</h2>
 <p>Это бинарные поисковые деревья, удовлетворяющие следующим условиям:</p>
 <ol>
 <li>Каждый узел может быть либо красным, либо черным</li>
@@ -256,21 +723,17 @@ return max<em>so</em>far</p>
   
   </a>
     </p>
-<ol start="2">
+<ol start="5">
 <li>
 <p>eсли дяди нет, или дядя х - черный, то мы не можем перекрасить папу в черный, т.к. это увеличит количество черных узлов на одной ветви, оставим неизменным на остальных и автоматически нарушится свойство 4. Поэтому приходится вертеть:</p>
 <ol>
 <li>p - parent узла х, g - grandfather узла х</li>
-<li>
-<p>возможны 4 случая:</p>
-<ol>
+<li>возможны 4 случая:</li>
 <li>p слева от g, x слева от p</li>
 <li>p слева от g, x справа от p</li>
 <li>p справа от g, x справа от p</li>
 <li>p справа от g, x слева от p</li>
-</ol>
-</li>
-<li>Для каждого из этих 4 случаев нам нужно нарушающий свойство 3 путь от x вида <strong>красный-красный-черный</strong> в <strong>красный с двумя черными детьми</strong>. Как это сделать - смотрим на картинке (картинка из другой книги, поэтому там добавляемый узел - не x, а просто тот, который самый нижний и в кружочке. На этих случаях всегда x &#x3C; y &#x3C; z, поэтому y в результате становится корнем поддерева: </li>
+<li>Для каждого из этих 4 случаев нам нужно нарушающий свойство 3 путь от x вида <strong>красный-красный-черный</strong> в <strong>красный с двумя черными детьми</strong>. Как это сделать - смотрим на картинке (картинка из другой книги, поэтому там добавляемый узел - не x, а просто тот, который самый нижний и в кружочке. На этих случаях всегда x &#x3C; y &#x3C; z, поэтому y в результате становится корнем поддерева:</li>
 </ol>
 </li>
 </ol>
@@ -307,9 +770,8 @@ return max<em>so</em>far</p>
   
   </a>
     </p>
-<pre><code>  4. После этого нужно перекрасить наше поддерево, сделав корень черным, а его детей красным.
-</code></pre>
+<ol start="6">
+<li>После этого нужно перекрасить наше поддерево, сделав корень черным, а его детей красным.</li>
+</ol>
 <p>Вращение дерева:</p>
-<p><img src="./Tree_Rotations.gif" alt="tree rotation" title="tree rotation"></p>
-<h1>Нахождение простых чисел</h1>
-<p>Самый быстрый алгоритм на сегодня - решето Аткина. Но его сложно запомнить, поэтому можно на собеседовании использовать решето Эратосфена.</p></div></div></div></div></div></div><script id="webpack-manifest">/*<![CDATA[*/window.webpackManifest={"231608221292675":"app-05cf2a8ec2ce72bc13ee.js","122212659448958":"component---src-templates-blog-template-js-40956da8f886eafeb36f.js","162898551421021":"component---src-pages-404-js-4503918ea3a16cfcdb75.js","213534597649335":"component---src-pages-index-jsx-ed5f83543216989c42c9.js","218538773642512":"component---src-pages-page-2-js-65f0147ecb0dc4da2a2b.js","60335399758886":"path----312dbf55939ed237922c.js","229226591425695":"path---blog-video-microservices-what-we-learned-f5a90a189b44da7a91be.js","100364315975247":"path---blog-video-dapp-introduction-18a08af6d97c4f55c2fa.js","55495657889055":"path---blog-video-after-ddos-defense-d7f2f630e6f10d653de7.js","139359830059626":"path---blog-video-microservices-introduction-f3e72db12b0fbbb3d580.js","192092705425134":"path---blog-react-code-review-3639de61a5c8ec40c288.js","92226880614288":"path---howto-mips-gcc-0880423397eebc2bc371.js","186363950922344":"path---blog-video-kafka-under-highload-c9ba43a895234eb619dc.js","226923551111508":"path---blog-video-http-balancing-6eec4894584ee04d7a77.js","160831456888542":"path---blog-books-xv-6-9023bac90e984ef3e566.js","184279855636086":"path---blog-x-64-7781a52988fda6ca93ef.js","53213360603775":"path---blog-wget-b2276cddc4105ace9aa7.js","27547127271145":"path---blog-virtualenv-3ed97f2ead9054836cf6.js","24818581494570":"path---blog-hardware-virtual-memory-79d5b2f9932e063d2b8c.js","98763693551004":"path---blog-hardware-video-a882f7233cbbe8420a8f.js","130591662829648":"path---blog-hardware-usb-2902438d72114310e6d2.js","9365413787972":"path---blog-tmux-18af5c3ee5786bc23e5e.js","162551281273053":"path---blog-systemd-bde979ddc87b1e7c9bf1.js","186644301018450":"path---blog-sh-5dcb1acd2bf5a44349bd.js","73744929748382":"path---blog-sed-6a7051bbefdd9def0839.js","104991713993326":"path---blog-pip-abd64edaa0d15be853d7.js","264201604445726":"path---blog-pdb-cbd483343d11c66f1e7c.js","133853690878566":"path---blog-npm-4f38b5dbca23541666f7.js","109648760230997":"path---blog-video-microservices-patterns-playbook-789b40dcdf4d315ca285.js","159123021256651":"path---blog-kazoo-2497377bd7253a7b95a2.js","104310528048563":"path---blog-gcc-2f6622c1c0f0846a2708.js","110067976222435":"path---blog-hardware-disk-306e6d689cb622b49051.js","132138994540798":"path---blog-hardware-cpu-4cd2e518ccf742e8026f.js","55889076892030":"path---blog-books-computer-organization-and-design-df9ba92f588b98eb54fb.js","77570552653218":"path---blog-books-build-systems-da90c07c93f61b8f655a.js","131670063006948":"path---blog-webpack-9d3fd355b7a49f15c82d.js","48555064563601":"path---blog-webpack-2-613f06922b155eeb86aa.js","36163852562177":"path---blog-web-components-143a7e086a55de724af5.js","207874380873722":"path---blog-typescript-288e7095a7260887c28e.js","1112656806016":"path---blog-storybook-5a29d2baa4a10d8b7a27.js","85756719843508":"path---blog-spring-boot-374ccfd3bfa67ded83ed.js","94230034957513":"path---blog-mvc-sessionless-state-12281ec2091582c9e1ae.js","34503133861313":"path---blog-swig-2cbe0b7c6b6e1e3d1ec3.js","9783932336651":"path---blog-ssl-d27dc0e7877818ebe753.js","30778352477470":"path---blog-sql-recursive-cte-e643e27fb3c8145e3a0a.js","218031196284409":"path---blog-sql-fizzbuzz-a19125265b020c668aaf.js","123969815895874":"path---blog-ruby-10341037f2e8234a4d30.js","254035159982288":"path---blog-riak-017c27a09cb33adc6bc9.js","204811817341229":"path---blog-redux-4fed98bde112a019015a.js","92818489627367":"path---blog-redux-2-8275ec87d46ada9ec530.js","62231134199178":"path---blog-react-1772bc9452377966cb75.js","148854442917752":"path---blog-rabbitmq-f591f04c8eff604d8f41.js","38855089869933":"path---blog-hardware-ram-43b876484484261a742e.js","148886276492926":"path---blog-python-2-a5296659987e03ada440.js","105666842049118":"path---blog-python-4c69d05159424d2e7402.js","269087443385385":"path---blog-postcss-fc1a38ea5a4d5f6c1159.js","256307876683203":"path---blog-oauth-58b2881d3b6fe2cf98ae.js","143217941000248":"path---blog-nodejs-a4db1ba11ab71d87a276.js","28480827339995":"path---blog-nginx-95158fa4765cbc4e89cf.js","244296159480370":"path---blog-mongodb-a0072eebb3f25201f6b5.js","250734049749304":"path---blog-maven-da6909564d3fe9fc05b3.js","189813236319561":"path---blog-linux-networking-fa7457ac2d7b179d8bdf.js","64880211853811":"path---blog-linux-debugging-db040ffeeeb7ace27574.js","197411268609348":"path---blog-knockout-7c4cfbd4a1c286e3ac1b.js","229750489612856":"path---blog-kafka-4e5cbf0c1f4416575a91.js","123278874046992":"path---blog-javascript-bf38942f9fb919cc14c6.js","53396112491056":"path---blog-java-1bdcc1887eeecc89a78d.js","18938219703366":"path---blog-js-event-loop-f72490c1078996bba861.js","130613441630911":"path---blog-gitlab-ci-9cdb9c5b7a3c03e85974.js","60149745945718":"path---blog-git-678cc6e0c04e239fb8bb.js","191388377664321":"path---blog-flexbox-d2727e853a6da977e9a1.js","259445767305737":"path---blog-express-00cc4f3d5211bb03edae.js","267150169503670":"path---blog-docker-compose-4a43b0829173eab4e471.js","97711108842923":"path---blog-docker-740441660bd312ae32b4.js","838797986268":"path---blog-books-designing-data-intensive-applications-1eaeffd06f5df9f3bbba.js","175567745484808":"path---blog-debian-bootstrap-a4183455e2eea7aeb7ca.js","246498121182663":"path---blog-debian-7ec12de3eec948fc3f9d.js","109290739445578":"path---blog-call-conventions-7aed69ebb10bd7c0f4d0.js","249667644861725":"path---blog-css-71751febbf6e24d928b9.js","257759292890660":"path---blog-web-security-2ad6831319dac386d275.js","226785351346532":"path---blog-cmake-7871ae59454b19dc9f56.js","159223318109625":"path---blog-backstopjs-a035adeda5ee33197a60.js","117626492464451":"path---blog-algorithms-488d8b233a71f7dae486.js","215540810942742":"path---blog-mvc-async-controllers-c3cc24f140a51a9e6bb0.js","27779406687296":"path---blog-mvc-web-farms-9cb51abf17a7815a45a8.js","146292636605172":"path---blog-mvc-web-sockets-86e449c7694174065fb9.js","279780729786774":"path---blog-mvc-modules-handlers-44f1e163873a16c2c733.js","77216212851623":"path---blog-mvc-data-tampering-3d0d565b8fbb7674f2e4.js","13218921337688":"path---blog-video-10-ways-to-get-highload-and-bigdata-2a40a94753b968a20eda.js","225240287407359":"path---blog-dotnet-021258d6050424efb3c9.js","44704367536930":"path---blog-dotnet-monitor-0ee8745d0cde9bdafe90.js","254022195166212":"path---404-a0e39f21c11f6a62c5ab.js","142629428675168":"path---index-daa91970143dc60773d6.js","135728916539164":"path---page-2-a0e39f21c11f6a62c5ab.js","178698757827068":"path---404-html-a0e39f21c11f6a62c5ab.js","114276838955818":"component---src-layouts-index-js-f9093e768c10ad987803.js"}/*]]>*/</script><script>/*<![CDATA[*/!function(e,t,r){function n(){for(;d[0]&&"loaded"==d[0][f];)c=d.shift(),c[o]=!i.parentNode.insertBefore(c,i)}for(var s,a,c,d=[],i=e.scripts[0],o="onreadystatechange",f="readyState";s=r.shift();)a=e.createElement(t),"async"in i?(a.async=!1,e.head.appendChild(a)):i[f]?(d.push(a),a[o]=n):e.write("<"+t+' src="'+s+'" defer></'+t+">"),a.src=s}(document,"script",["/hows-that-again/commons-afb5782224ac01f1fa03.js","/hows-that-again/app-05cf2a8ec2ce72bc13ee.js","/hows-that-again/path---blog-algorithms-488d8b233a71f7dae486.js","/hows-that-again/component---src-templates-blog-template-js-40956da8f886eafeb36f.js","/hows-that-again/component---src-layouts-index-js-f9093e768c10ad987803.js"])/*]]>*/</script></body></html>
+<p><img src="./Tree_Rotations.gif" alt="tree rotation" title="tree rotation"></p></div></div></div></div></div></div><script id="webpack-manifest">/*<![CDATA[*/window.webpackManifest={"231608221292675":"app-e2f9c144b4668201d051.js","122212659448958":"component---src-templates-blog-template-js-40956da8f886eafeb36f.js","162898551421021":"component---src-pages-404-js-4503918ea3a16cfcdb75.js","213534597649335":"component---src-pages-index-jsx-ed5f83543216989c42c9.js","218538773642512":"component---src-pages-page-2-js-65f0147ecb0dc4da2a2b.js","60335399758886":"path----312dbf55939ed237922c.js","229226591425695":"path---blog-video-microservices-what-we-learned-f5a90a189b44da7a91be.js","100364315975247":"path---blog-video-dapp-introduction-18a08af6d97c4f55c2fa.js","55495657889055":"path---blog-video-after-ddos-defense-d7f2f630e6f10d653de7.js","139359830059626":"path---blog-video-microservices-introduction-f3e72db12b0fbbb3d580.js","192092705425134":"path---blog-react-code-review-3639de61a5c8ec40c288.js","92226880614288":"path---howto-mips-gcc-0880423397eebc2bc371.js","186363950922344":"path---blog-video-kafka-under-highload-c9ba43a895234eb619dc.js","226923551111508":"path---blog-video-http-balancing-6eec4894584ee04d7a77.js","160831456888542":"path---blog-books-xv-6-9023bac90e984ef3e566.js","184279855636086":"path---blog-x-64-7781a52988fda6ca93ef.js","53213360603775":"path---blog-wget-b2276cddc4105ace9aa7.js","27547127271145":"path---blog-virtualenv-3ed97f2ead9054836cf6.js","24818581494570":"path---blog-hardware-virtual-memory-79d5b2f9932e063d2b8c.js","98763693551004":"path---blog-hardware-video-a882f7233cbbe8420a8f.js","130591662829648":"path---blog-hardware-usb-2902438d72114310e6d2.js","9365413787972":"path---blog-tmux-18af5c3ee5786bc23e5e.js","162551281273053":"path---blog-systemd-bde979ddc87b1e7c9bf1.js","186644301018450":"path---blog-sh-5dcb1acd2bf5a44349bd.js","73744929748382":"path---blog-sed-6a7051bbefdd9def0839.js","104991713993326":"path---blog-pip-abd64edaa0d15be853d7.js","264201604445726":"path---blog-pdb-cbd483343d11c66f1e7c.js","133853690878566":"path---blog-npm-4f38b5dbca23541666f7.js","109648760230997":"path---blog-video-microservices-patterns-playbook-789b40dcdf4d315ca285.js","159123021256651":"path---blog-kazoo-2497377bd7253a7b95a2.js","104310528048563":"path---blog-gcc-2f6622c1c0f0846a2708.js","110067976222435":"path---blog-hardware-disk-306e6d689cb622b49051.js","132138994540798":"path---blog-hardware-cpu-4cd2e518ccf742e8026f.js","55889076892030":"path---blog-books-computer-organization-and-design-b9fec2d6c985ad44539f.js","77570552653218":"path---blog-books-build-systems-da90c07c93f61b8f655a.js","131670063006948":"path---blog-webpack-9d3fd355b7a49f15c82d.js","48555064563601":"path---blog-webpack-2-613f06922b155eeb86aa.js","36163852562177":"path---blog-web-components-143a7e086a55de724af5.js","207874380873722":"path---blog-typescript-288e7095a7260887c28e.js","1112656806016":"path---blog-storybook-5a29d2baa4a10d8b7a27.js","85756719843508":"path---blog-spring-boot-374ccfd3bfa67ded83ed.js","94230034957513":"path---blog-mvc-sessionless-state-12281ec2091582c9e1ae.js","34503133861313":"path---blog-swig-2cbe0b7c6b6e1e3d1ec3.js","9783932336651":"path---blog-ssl-d27dc0e7877818ebe753.js","30778352477470":"path---blog-sql-recursive-cte-e643e27fb3c8145e3a0a.js","218031196284409":"path---blog-sql-fizzbuzz-a19125265b020c668aaf.js","123969815895874":"path---blog-ruby-10341037f2e8234a4d30.js","254035159982288":"path---blog-riak-017c27a09cb33adc6bc9.js","204811817341229":"path---blog-redux-4fed98bde112a019015a.js","92818489627367":"path---blog-redux-2-8275ec87d46ada9ec530.js","62231134199178":"path---blog-react-1772bc9452377966cb75.js","148854442917752":"path---blog-rabbitmq-f591f04c8eff604d8f41.js","38855089869933":"path---blog-hardware-ram-11c6c8f0b951e307c6d9.js","105666842049118":"path---blog-python-4c69d05159424d2e7402.js","148886276492926":"path---blog-python-2-a5296659987e03ada440.js","269087443385385":"path---blog-postcss-fc1a38ea5a4d5f6c1159.js","256307876683203":"path---blog-oauth-58b2881d3b6fe2cf98ae.js","143217941000248":"path---blog-nodejs-a4db1ba11ab71d87a276.js","28480827339995":"path---blog-nginx-95158fa4765cbc4e89cf.js","244296159480370":"path---blog-mongodb-a0072eebb3f25201f6b5.js","250734049749304":"path---blog-maven-da6909564d3fe9fc05b3.js","189813236319561":"path---blog-linux-networking-fa7457ac2d7b179d8bdf.js","64880211853811":"path---blog-linux-debugging-2d1eabdd3caf05008f62.js","197411268609348":"path---blog-knockout-7c4cfbd4a1c286e3ac1b.js","229750489612856":"path---blog-kafka-4e5cbf0c1f4416575a91.js","123278874046992":"path---blog-javascript-bf38942f9fb919cc14c6.js","53396112491056":"path---blog-java-1bdcc1887eeecc89a78d.js","18938219703366":"path---blog-js-event-loop-f72490c1078996bba861.js","130613441630911":"path---blog-gitlab-ci-9cdb9c5b7a3c03e85974.js","60149745945718":"path---blog-git-678cc6e0c04e239fb8bb.js","191388377664321":"path---blog-flexbox-d2727e853a6da977e9a1.js","259445767305737":"path---blog-express-00cc4f3d5211bb03edae.js","267150169503670":"path---blog-docker-compose-4a43b0829173eab4e471.js","97711108842923":"path---blog-docker-9d4ff6fc5df7945b590e.js","838797986268":"path---blog-books-designing-data-intensive-applications-1eaeffd06f5df9f3bbba.js","175567745484808":"path---blog-debian-bootstrap-a4183455e2eea7aeb7ca.js","246498121182663":"path---blog-debian-7ec12de3eec948fc3f9d.js","109290739445578":"path---blog-call-conventions-e27a519ae0d79911dda9.js","249667644861725":"path---blog-css-71751febbf6e24d928b9.js","257759292890660":"path---blog-web-security-2ad6831319dac386d275.js","226785351346532":"path---blog-cmake-7871ae59454b19dc9f56.js","159223318109625":"path---blog-backstopjs-6e9ff9bcf4f8661b9ce4.js","117626492464451":"path---blog-algorithms-468d9f4ec6663363261b.js","215540810942742":"path---blog-mvc-async-controllers-c3cc24f140a51a9e6bb0.js","27779406687296":"path---blog-mvc-web-farms-9cb51abf17a7815a45a8.js","146292636605172":"path---blog-mvc-web-sockets-86e449c7694174065fb9.js","279780729786774":"path---blog-mvc-modules-handlers-44f1e163873a16c2c733.js","77216212851623":"path---blog-mvc-data-tampering-3d0d565b8fbb7674f2e4.js","13218921337688":"path---blog-video-10-ways-to-get-highload-and-bigdata-2a40a94753b968a20eda.js","225240287407359":"path---blog-dotnet-021258d6050424efb3c9.js","44704367536930":"path---blog-dotnet-monitor-0ee8745d0cde9bdafe90.js","254022195166212":"path---404-a0e39f21c11f6a62c5ab.js","142629428675168":"path---index-555dba899a24a5ff7e3e.js","135728916539164":"path---page-2-a0e39f21c11f6a62c5ab.js","178698757827068":"path---404-html-a0e39f21c11f6a62c5ab.js","114276838955818":"component---src-layouts-index-js-fcef82911f79545cbad3.js"}/*]]>*/</script><script>/*<![CDATA[*/!function(e,t,r){function n(){for(;d[0]&&"loaded"==d[0][f];)c=d.shift(),c[o]=!i.parentNode.insertBefore(c,i)}for(var s,a,c,d=[],i=e.scripts[0],o="onreadystatechange",f="readyState";s=r.shift();)a=e.createElement(t),"async"in i?(a.async=!1,e.head.appendChild(a)):i[f]?(d.push(a),a[o]=n):e.write("<"+t+' src="'+s+'" defer></'+t+">"),a.src=s}(document,"script",["/hows-that-again/commons-afb5782224ac01f1fa03.js","/hows-that-again/app-e2f9c144b4668201d051.js","/hows-that-again/path---blog-algorithms-468d9f4ec6663363261b.js","/hows-that-again/component---src-templates-blog-template-js-40956da8f886eafeb36f.js","/hows-that-again/component---src-layouts-index-js-fcef82911f79545cbad3.js"])/*]]>*/</script></body></html>
