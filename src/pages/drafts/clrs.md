@@ -1,15 +1,19 @@
 # Алгоритмы
 
-Пора приступать к графам (читать главу Седжвика про графы)
-
-50. Parallel job scheduling (Coffman-Graham algorithm? https://medium.com/@bolerio/scheduling-tasks-and-drawing-graphs-the-coffman-graham-algorithm-3c85eb975ab)
+00. Boyer-Moore substring search
+00. Rabin-Karp fingerprint search
 22. Поиск наидлиннейшей общей подпоследовательности
 23. Оптимальное бинарное дерево поиска
 24. Жадный выбор, отличие от динамического програмирования
 25. Задача о выборе процессов
 26. Код Хаффмана, префиксные коды.
 27. B-деревья
-28. Кучи Фибоначчи https://www.cs.usfca.edu/~galles/visualization/FibonacciHeap.html - множество неубывающих куч, где кучу начинают объединятся лишь при операции EXTRACT-MIN, а при добавлении просто добавляется новое дерево единичной высоты
+28. Кучи Фибоначчи https://www.cs.usfca.edu/~galles/visualization/FibonacciHeap.html - множество неубывающих куч, где кучи начинают объединятся лишь при операции EXTRACT-MIN, а при добавлении просто добавляется новое дерево единичной высоты
+00. Биномиальная куча (сливаемая куча)
+00. Skew heap (сливаемая куча)
+00. Leftist tree (сливаемая куча)
+00. Сплэй-деревья.  (сбалансированное дерево поиска, сливаемое)
+00. Декартовые деревья
 29. Деревья ван Эмде Боаса
 30. Непересекающиеся множества
 19. Задачи на тервер (парадокс дней рождения, шары и корзины, последовательности выпадения орлов, задача о найме)
@@ -48,6 +52,7 @@
 49. Решатель матемаических выражений    X
 31. Поиск в графе в ширину         X
 33. Топологическая сортировка в графе.   X
+50. Parallel job scheduling (Coffman-Graham algorithm? https://medium.com/@bolerio/scheduling-tasks-and-drawing-graphs-the-coffman-graham-algorithm-3c85eb975ab).  X
 
 И еще много невошедших алгоритмов здесь: https://proglib.io/p/required-programmer-algorithms/
 
