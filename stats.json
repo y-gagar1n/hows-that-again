@@ -53,8 +53,8 @@
       "path---blog-web-components-143a7e086a55de724af5.js.map"
     ],
     "path---blog-hardware-ram": [
-      "path---blog-hardware-ram-43b876484484261a742e.js",
-      "path---blog-hardware-ram-43b876484484261a742e.js.map"
+      "path---blog-hardware-ram-11c6c8f0b951e307c6d9.js",
+      "path---blog-hardware-ram-11c6c8f0b951e307c6d9.js.map"
     ],
     "path---blog-dotnet-monitor": [
       "path---blog-dotnet-monitor-0ee8745d0cde9bdafe90.js",
@@ -77,8 +77,8 @@
       "path---blog-video-after-ddos-defense-d7f2f630e6f10d653de7.js.map"
     ],
     "path---blog-books-computer-organization-and-design": [
-      "path---blog-books-computer-organization-and-design-df9ba92f588b98eb54fb.js",
-      "path---blog-books-computer-organization-and-design-df9ba92f588b98eb54fb.js.map"
+      "path---blog-books-computer-organization-and-design-b9fec2d6c985ad44539f.js",
+      "path---blog-books-computer-organization-and-design-b9fec2d6c985ad44539f.js.map"
     ],
     "path---blog-git": [
       "path---blog-git-a176b80686ca6e70bf81.js",
@@ -95,6 +95,10 @@
     "path---blog-linux-debugging": [
       "path---blog-linux-debugging-2d1eabdd3caf05008f62.js",
       "path---blog-linux-debugging-2d1eabdd3caf05008f62.js.map"
+    ],
+    "path---blog-architecture": [
+      "path---blog-architecture-e499ab2115654d6ed9ad.js",
+      "path---blog-architecture-e499ab2115654d6ed9ad.js.map"
     ],
     "path---blog-sed": [
       "path---blog-sed-6a7051bbefdd9def0839.js",
@@ -161,12 +165,12 @@
       "path---blog-hardware-disk-306e6d689cb622b49051.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-f9093e768c10ad987803.js",
-      "component---src-layouts-index-js-f9093e768c10ad987803.js.map"
+      "component---src-layouts-index-js-fcef82911f79545cbad3.js",
+      "component---src-layouts-index-js-fcef82911f79545cbad3.js.map"
     ],
     "path---blog-algorithms": [
-      "path---blog-algorithms-a8815e6ada07feab305a.js",
-      "path---blog-algorithms-a8815e6ada07feab305a.js.map"
+      "path---blog-algorithms-e375169a15a627e27332.js",
+      "path---blog-algorithms-e375169a15a627e27332.js.map"
     ],
     "component---src-templates-blog-template-js": [
       "component---src-templates-blog-template-js-40956da8f886eafeb36f.js",
@@ -208,13 +212,21 @@
       "path---blog-video-microservices-introduction-f3e72db12b0fbbb3d580.js",
       "path---blog-video-microservices-introduction-f3e72db12b0fbbb3d580.js.map"
     ],
+    "path---blog-how-would-you-implement": [
+      "path---blog-how-would-you-implement-dadf14c5b3d1d033b3d3.js",
+      "path---blog-how-would-you-implement-dadf14c5b3d1d033b3d3.js.map"
+    ],
     "path---index": [
-      "path---index-8e17a1669cea75e411bf.js",
-      "path---index-8e17a1669cea75e411bf.js.map"
+      "path---index-cbd4665061b0c7df988e.js",
+      "path---index-cbd4665061b0c7df988e.js.map"
     ],
     "path---blog-nodejs": [
       "path---blog-nodejs-a4db1ba11ab71d87a276.js",
       "path---blog-nodejs-a4db1ba11ab71d87a276.js.map"
+    ],
+    "path---blog-cpp": [
+      "path---blog-cpp-ba7e30c938ef74e45a3d.js",
+      "path---blog-cpp-ba7e30c938ef74e45a3d.js.map"
     ],
     "path---blog-mvc-web-sockets": [
       "path---blog-mvc-web-sockets-86e449c7694174065fb9.js",
@@ -333,9 +345,9 @@
       "path---blog-kafka-4e5cbf0c1f4416575a91.js.map"
     ],
     "app": [
-      "app-fb91c1c66f6378d99df8.js",
+      "app-5434307b608b7f13a76e.js",
       "build-js-styles.css",
-      "app-fb91c1c66f6378d99df8.js.map",
+      "app-5434307b608b7f13a76e.js.map",
       "build-js-styles.css.map"
     ],
     "path---blog-mongodb": [
@@ -347,8 +359,8 @@
       "path---blog-debian-7ec12de3eec948fc3f9d.js.map"
     ],
     "path---blog-css": [
-      "path---blog-css-71751febbf6e24d928b9.js",
-      "path---blog-css-71751febbf6e24d928b9.js.map"
+      "path---blog-css-d703a1dc6dd9f41ddaec.js",
+      "path---blog-css-d703a1dc6dd9f41ddaec.js.map"
     ],
     "path---blog-maven": [
       "path---blog-maven-da6909564d3fe9fc05b3.js",
