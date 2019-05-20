@@ -746,13 +746,13 @@ void f()
 
 ### condition_variable
 
-Механизм, позволяющий одному потоку ждать другого. В частности, позволяет потоку ждать выполнения некоего условия (собыия), которое выполняется как результат работы другого потока.
+Механизм, позволяющий одному потоку ждать другого. В частности, позволяет потоку ждать выполнения некоего условия (события), которое выполняется как результат работы другого потока.
 
-Функция `wait(unique_lock<mutex>& lock)` блокирует текущий поток, пока кто-то не вызовет `notify_one` или `notify_all`. Автоматически отпускает `lock`, а когда события дождались - захватывает его обратно. Иногда бывают ложные выстрелы события, поэтому лучше использовать в виде `while(mcond.wait(lck))`. Перед вызовом `wait` блокировка `lock` должна быть уже захвачена.
+Функция `cond.wait(unique_lock<mutex>& lock)` блокирует текущий поток, пока кто-то не вызовет `cond.notify_one` или `cond.notify_all`. При вызове `wait` автоматически отпускается `lock`, а когда события дождались - он захватывается обратно. Иногда бывают ложные выстрелы события, поэтому лучше использовать в виде `while(mcond.wait(lck))`. Перед вызовом `wait` блокировка `lock` должна быть уже захвачена.
 
 В качестве второго параметра может принимать предикат, который будет автоматически проверяться для избежания ложных выстрелов события.
 
-На этом основании можно решить классичекую задачу producer-consumer:
+На этом основании можно решить классическую задачу producer-consumer:
 
 ```cpp
 class Message { ...}
@@ -809,8 +809,8 @@ void product(std::promise<int>&& intPromise, int a, int b){
 
 int main(){
 
-  int a= 20;
-  int b= 10;
+  int a = 20;
+  int b = 10;
 
   std::promise<int> prodPromise;
 
@@ -823,6 +823,88 @@ int main(){
   prodThread.join();
 }
 ```
+
+Если нужно в пропис передать исключение, то нужно вызвать `promise.set_exception(e)`. Тогда при попытке получения результата через `future.get()` пользователь получит это исключение.
+
+`future.get()` можно вызывать лишь единожды. Все последующие вызовы выбросят исключение.
+
+К `std::future` можно обращаться только из одного потока. Если нужно из нескольких, то можно использовать `std::shared_future`. `future` реализует семантику перемещения, а `shared_future` - копирования.
+
+### packaged_task
+
+Принимает в конструктор функцию `f`. Имеет функцию `task.get_future()`, возвращающую футуру. Когда функция `f` будет выполнена, эта футура перейдет в состояние `ready` и вернет результат `f`.
+
+Удобно использовать, например, для реализации тред-пулов или других менеджеров заданий.
+
+Пример очереди сообщений для GUI:
+
+```cpp
+#include <deque>
+#include <mutex>
+#include <future>
+#include <thread>
+#include <utility>
+
+std::mutex m;
+std::deque<std::packaged_task<void()> > tasks;
+
+bool gui_shutdown_message_received();
+void get_and_process_gui_message();
+
+void gui_thread()
+{
+	while(!gui_shutdown_message_received())
+	{
+    	get_and_process_gui_message();
+    	std::packaged_task<void()> task;
+    	{
+    		std::lock_guard<std::mutex> lk(m);
+			if(tasks.empty())
+    			continue;
+			task=std::move(tasks.front());
+			tasks.pop_front();
+    	}
+		task(); 
+	}
+ }
+
+std::thread gui_bg_thread(gui_thread);
+
+template<typename Func>
+std::future<void> post_task_for_gui_thread(Func f)
+{
+    std::packaged_task<void()> task(f);
+    std::future<void> res=task.get_future();
+    std::lock_guard<std::mutex> lk(m);
+    tasks.push_back(std::move(task));
+	return res; 
+}
+```
+
+Здесь функция `post_task_for_gui_thread` добавляет задания в очередь обработки для GUI-треда и возвращает соответствующие им футуры, а функция `gui_thread()` по очереди обрабатывает задания. При выполнении очередного задания соответствующая ему футура получит состояние **ready**.
+
+### async
+
+Наиболее близко к ключевому слову `async` в С# (но все еще далеко). Без использования `std::async` то же самое можно реализовать и при помощи `std::packaged_task` и `std::thread`, но если есть возможность использовать `std::async`, то лучше использовать его.
+
+Функция `std::async` принимает на вход функцию и запускает ее в новом треде, а возвращает футуру, которая получит состояние `ready` как только завершится переданная функция.
+
+```cpp
+#include <future>
+#include <iostream>
+
+int find_the_answer_to_ltuae();
+void do_other_stuff();
+
+int main()
+{
+    std::future<int> the_answer=std::async(find_the_answer_to_ltuae);
+    do_other_stuff();
+    std::cout<<"The answer is "<<the_answer.get()<<std::endl;
+}
+```
+
+Один из параметров имеет тип `std::launch` и он определяет, будет ли функция запущена в отдельном потоке, или в этом же. По умолчанию он имеет значение `std::launch::deferred | std::launch::async`.
 
 # Утилиты
 
@@ -914,7 +996,272 @@ int FIT(2)
 }
 ```
 
+# Работа с потоками
 
+В C стандартная работа с IO осуществляется через пакеты `stdio.h` и `unistd.h` стандартной библиотеки. Там есть `read()`, `write()`, `printf()`, `scanf()` и другие.
 
+В С++ стандартная работа с IO осуществляется через библиотеки `iostream`, `fstream` для файлов, `sstream` для стрингов.
 
+![IO classes](IOclasses.png)
 
+Для поддержки различных чарсетов (char, wchar_t, char16_t, char32_t) классы потоков реализованы как шаблонные классы:
+
+```cpp
+template <class charT, class traits = char_traits<charT> >
+class basic_istream;
+
+template <class charT, class traits = char_traits<charT> >
+class basic_ostream;
+```
+
+- `char_t` - тип символа, зависящий от чарсета/кодировки, например, `char` или `wchar_t`.
+- `traints` - тип, содержащий свойства этого типа символа, например, порядок сортировки и прочее
+
+Предоставлены куча алиасов для конкретизаций этих шаблонных типов:
+
+```cpp
+typedef basic_ios<char>				ios;
+typedef basic_ios<wchar_t>			wios;
+typedef basic_istream<char>			istream;
+typedef basic_istream<wchar_t>		wistream;
+typedef basic_ostream<char>			ostream;
+typedef basic_ostream<wchar_t>		wostream;
+typedef basic_iostream<char>		iostream;
+typedef basic_iostream<wchar_t>		wiostream;
+typedef basic_streambuf<char>		streambuf;
+typedef basic_streambuf<wchar_t>	wstreambuf;
+```
+
+Далее речь будет идти только о конкретизациях для типа `char`, но вместо него можно подставить и другой тип:
+
+- `ios_base`, `ios`: общие свойства потоков, такие как  флаги формата, ширина поля, точность, локаль.
+- `istream`, `ostream` - интерфейсы для ввода и вывода. Каждый из потоков - ондонаправленный.
+- `iostream` - интерфейс для двунаправленного ввода/вывода. Определен в заголовке `<istream>`, не в `<iostream>`.
+- `ifstream`, `ofstream`, `fstream` - однонаправленный и двунаправленный ввод/вывод в файлы
+- `streambuf`, `filebuf`, `stringbuf` - буферы памяти для потока, файлового потока и строкового потока соответственно
+
+Заголовок `<iostream>` содержит также стандартные объекты потоков:
+
+```cpp
+istream cin;
+wistream wcin;
+ostream cout;
+wostream wcout;
+ostream cerr;
+wostream wcerr;
+ostream clog;
+wostream wclog;
+```
+
+## ostream
+
+Содержит два набора функций - для форматированного и неформатированного вывода. Форматированный (через оператор `<<`) берет числовые типы, конвертит их в строки и затем в поток символов. Неформатированный - принимает сразу поток байт.
+
+Перегрузка оператора форматированного вывода выглядит так:
+
+```cpp
+ostream & operator<< (type)
+```
+
+Благодаря тому, что оператор возвращает ссылку на поток, оператор можно чейнить ( `cout << 123 << 1.13 << endl`).
+
+### Флаш
+
+Флашить буфер вывода можно 3 способами:
+
+- `ostream & flush()`, причем можно так: `cout.flush()`, а можно даже и так: `cout << "hello" << flush`
+- выводя в поток `endl` (причем вывод `\n` может и не флашить, а вот `endl` флашит всегда)
+- нажав ожидание на потоке ввода: `cout << "Enter a number"; cin >> number";` - на втором операторе флашится `cout`.
+
+## istream
+
+Также содержит форматированный и неформатированный ввод.
+
+```cpp
+istream & operator>> (type &)
+```
+
+## Неформатированный ввод/вывод
+
+`put()` - выводит `char`, возвращает ссылку на поток и может чейниться
+
+```cpp
+ostream & put(char c);
+```
+
+`get()` - получает `char` из инпута:
+
+```cpp
+/// класс istream
+int get ();   // берет один символ, возвращает его как int, если достигли конца файла, возвращает EOF
+istream & get (char & c);
+istream & get (char * cstr, streamsize n, char delim = '\n'); // берет n-1 символов, или пока не встретит указанный разделитель, и сохраняет его в C-строке cstr, символ разделителя при этом не сохраняет
+```
+
+`getline()` - получает из потока линию и сохраняет в указанную строку вместе с разделителем строки
+
+```cpp
+istream & getline (char * cstr, streamsize n, char delim = '\n');
+```
+
+`read()`
+
+```cpp
+/// класс istream
+istream & read (char * buf, streamsize n); // читает n символов из инпута, в отличие от get()/getline() не добавляет \0 в конце. Читает бинарные данные, а не строку.
+```
+
+`write()`
+
+```cpp
+/// класс ostream
+ostream & write(const char * buf, streamsize n); // пишет n символов из буфера
+```
+
+`gcount()`
+
+```cpp
+streamsize gcount() const; // возвращает количество символов, полученное предыдущей операцией неформатированного ввода get(), getline(), ignore() или read()
+```
+
+## Состояния потока:
+
+На любом потоке могут быть вызваны следующие функции, возвращающие bool:
+
+```cpp
+good(); 	- ошибок нет
+eof();		- конец файла
+fail();		- последняя операция не смогла прочесть или записать данные
+bad();		- серьезная ошибка IO или буфера потока
+clear();	- сбросить состояние
+```
+
+## Файловый ввод/вывод
+
+Чтобы работать с файловыми потоками, нужно включить заголовки `<iostream>` и `<fstream>`.
+
+Запись в файл осуществляется так же, как и с обычными потоками, но добавляются операции `open()` и `close()`, которые есть только у файловых потоков:
+
+```cpp
+#include <fstream>
+
+...
+ofstream fout;
+fout.open(filename, mode);
+...
+fout.close();
+```
+
+Также можно открывать файл прямо в конструкторе потока:
+
+```cpp
+#include <fstream>
+
+ofstream fout(filename, mode);
+```
+
+**open() принимает только C-string, если нужно передать string, то нужно юзать c_str()**.
+
+```cpp
+void open (const char* filename, ios::openmode mode = ios::in | ios::out); // можно указать несколько режимов через |, дефолтный для вывода равен ios::out | ios::trunc, для ввода - ios::in
+void close ();   
+bool is_open ();  
+```
+
+**Для работы с бинарными данными обязательно при открытии нужно указать флаг `ios::binary`**
+
+При чтении из файла все точно так же:
+
+```cpp
+#include <fstream>
+
+...
+ifstream fin;
+fin.open(filename, mode);
+...
+fin.close();
+```
+
+ИЛИ
+
+```cpp
+#include <fstream>
+
+ifstream fin(filename, mode);
+```
+
+Для бинарных данных использовать `read()`/`write()`, для строковых - `get()`/`getline()`/`put()`.
+
+### Случайный доступ
+
+```cpp
+// для входящих файлов (g означает get)
+istream & seekg (streampos pos);  // абсолютное позиционирование
+istream & seekg (streamoff offset, ios::seekdir way);
+      // относительное (возможно отрицательное) позиционирование относительно seekdir:
+      // ios::beg (beginning), ios::cur (current), ios::end (end)
+streampos tellg ();  // возвращает текущую абсолютную позицию
+
+// для исходящих файлов (p означает put)
+ostream & seekp (streampos pos);  // абсолютное позиционирование
+ostream & seekp (streamoff offset, ios::seekdir way);  // относительное
+streampos tellp ();		// возвращает текущую абсолютную позицию
+```
+
+## Строковые потоки
+
+Описаны в заголовке `<sstream>`:
+
+```cpp
+typedef basic_istringstream<char> istringstream;
+typedef basic_ostringstream<char> ostringstream;
+```
+
+### istringstream
+
+```cpp
+explicit istringstream (ios::openmode mode = ios::in);  // default with empty string
+explicit istringstream (const string & buf,
+                        ios::openmode mode = ios::in);  // with initial string
+```
+
+### ostringstream
+
+```cpp
+explicit ostringstream (ios::openmode mode = ios::out);  // default with empty string
+explicit ostringstream (const string & buf, 
+                        ios::openmode mode = ios::out);  // with initial str
+
+string str () const;           // Get contents
+void str (const string & str); // Set contents
+```
+
+# Регулярные выражения
+
+```cpp
+std::string subject("Name: John Doe");
+std::string result;
+try {
+  std::regex re("Name: (.*)");
+  std::smatch match;
+  if (std::regex_search(subject, match, re) && match.size() > 1) {
+    result = match.str(1);
+  } else {
+    result = std::string("");
+  } 
+} catch (std::regex_error& e) {
+  // Syntax error in the regular expression
+}
+```
+
+Матч может быть одним из типов:
+
+- `std::cmatch` - для массива `char`
+- `std::smatch` - для `std::string`
+- `std::wcmatch` - для массива `wchar_t`
+- `std::wsmatch` - для `std::wstring`
+
+Функции:
+
+- `regex_search()` - ищет и возвращает матчи, возвращает true или false
+- `regex_match()` - определяет, подходит ли ВСЯ строка subject под указанный регэксп, так же возвращает true или false
