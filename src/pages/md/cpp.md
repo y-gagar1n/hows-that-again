@@ -830,6 +830,8 @@ int main(){
 
 К `std::future` можно обращаться только из одного потока. Если нужно из нескольких, то можно использовать `std::shared_future`. `future` реализует семантику перемещения, а `shared_future` - копирования.
 
+Футуры хороши когда нужно ждать какого-то одноразового события.
+
 ### packaged_task
 
 Принимает в конструктор функцию `f`. Имеет функцию `task.get_future()`, возвращающую футуру. Когда функция `f` будет выполнена, эта футура перейдет в состояние `ready` и вернет результат `f`.
@@ -997,6 +999,20 @@ int FIT(2)
 ```
 
 # Работа с потоками
+
+## Примеры
+
+### Чтение всего файла
+
+```cpp
+std::string readWholeFile(const std::string* filepath)
+{
+	ifstream file(filepath);
+    return std::string(((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>()));
+}
+```
+
+## Теория
 
 В C стандартная работа с IO осуществляется через пакеты `stdio.h` и `unistd.h` стандартной библиотеки. Там есть `read()`, `write()`, `printf()`, `scanf()` и другие.
 
@@ -1265,3 +1281,206 @@ try {
 
 - `regex_search()` - ищет и возвращает матчи, возвращает true или false
 - `regex_match()` - определяет, подходит ли ВСЯ строка subject под указанный регэксп, так же возвращает true или false
+
+# Работа с файловой системой
+
+## Рекурсивное удаление директории
+
+```cpp
+void removeDirectoryRecursively(const std::string& path)
+{
+    DIR* dir = opendir(path.c_str());
+    struct dirent *nextFile;
+
+    while((nextFile = readdir(dir)) != NULL)
+    {
+        if(strcmp(nextFile->d_name, ".") == 0 || strcmp(nextFile->d_name, "..") == 0)
+            continue;
+
+        char filepath[256];
+        sprintf(filepath, "%s/%s", path.c_str(), nextFile->d_name);
+
+        struct stat direntStat;
+        lstat(filepath, &direntStat);
+        bool isDirectory = S_ISDIR(direntStat.st_mode);
+        if(isDirectory)
+            removeDirectoryRecursively(filepath);
+
+        remove(filepath);
+    }
+    closedir(dir);
+    remove(path.c_str());
+}
+```
+
+# Правила выведения общего типа
+
+- Перед сравнениями и арифметическими операциями числа приводятся к общему типу
+- Все типы размера меньше `int` приводятся к `int`
+- Из двух типов выбирается больший по размеру
+- Если размер одинаковый, выбирается беззнаковый
+
+# Словарь
+
+`std::unordered_map<Key, Value>`
+
+## Получение элемента по ключу
+
+Оператор [] создает элемент с дефолтным значением, если его там нет, поэтому он не константный.
+
+Если нужен константный, то использовать `map.at(int key)`, но он выбросит исключение, если такого ключа нет. Поэтому нужно предварительно всегда проверять наличие ключа через `find()`.
+
+Пример:
+
+```cpp
+if(map.find(key) != map.end())
+	return map.at(key);
+```
+
+## Итерирование по всем ключам
+
+```cpp
+for(const auto& iterator: map) {
+	std::cout << "Key: " << iterator.first << ", value: " << iterator.second;
+}
+```
+
+# Лямбды
+
+В лямбду можно захватить только локальные переменные и аргументы функции. Если хочется передать член класса, то есть 2 варианта:
+
+1. передавать `this` в лямбду, тогда все его поля будут автоматически переданы в лямбду по ссылке. 
+
+```cpp
+auto f = [this]{ std::cout << a << std::endl; };
+```
+
+На эту тему есть [правило](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#Rf-this-capture) - **если передаем в лямбду `this`, то нужно явно указывать все остальные переменные**, которые туда передаем, чтобы не было иллюзий, будто члены класса переданы по значению:
+
+2. кэшировать нуэное поле в локальную переменную и передавать ее:
+
+```cpp
+auto a = this->a;
+auto f = [a]{ std::cout << a << std::endl; };
+```
+
+И еще одно важное [правило](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#Rf-value-capture) - **избегать передачи любых переменных в лямбду по ссылке, если эта лямбда будет использовано не-локально, то есть возвращена, сохранена на куче, или передана в другой поток**
+
+В тех лямбдах, что будут использоваться строго локально - наоборот, стоит предпочитать передачу всегда по ссылке.
+
+# Вывод типов для шаблонов
+
+Допустим, у нас есть такое объявление функции:
+
+```cpp
+template<typename T>
+void f(ParamType param);   // ParamType - это какая-то производная от T, например, const T&
+```
+
+и вызов функции выглядит так:
+
+```cpp
+f(expr);
+```
+
+то в зависимости от типа `expr` будут получаться разные типы `T` и `ParamType`, причем вовсе не обязательно одинаковые. Неодинаковы они потому, что `ParamType` может содержать ограничения, такие как `const` или `&`. 
+
+При выводе этих типов есть 3 варианта:
+
+## `ParamType` является указателем или ссылкой
+
+В этом случае:
+
+1. если тип `expr` - ссылка, то она отбрасывается
+2. после этого тип `expr` паттерн-матчится против `ParamType` для определения `T`.
+
+Примеры:
+
+```cpp
+template <typename T>
+void f(T& param);
+
+int x = 27;
+f(x);		// T -> int, ParamType -> int&
+
+const int cx = x;
+f(cx);		// T -> const int, ParamType -> const int&
+
+const int& rx = x;
+f(rx);		// T -> const int, ParamType -> const int& (ссылка игнорится)
+```
+
+```cpp
+template <typename T>
+void f(const T& param);
+
+int x = 27;
+f(x);		// T -> int, ParamType -> const int&
+
+const int cx = x;
+f(cx);		// T -> int, ParamType -> const int&
+
+const int& rx = x;
+f(rx);		// T -> int, ParamType -> const int& (ссылка игнорится)
+```
+
+```cpp
+template <typename T>
+void f(T* param);
+
+int x = 27;
+f(&x);		// T -> int, ParamType -> int*
+
+const int *px = &x;
+f(px);		// T -> const int, ParamType -> const int*
+```
+
+## `ParamType` является универсальной ссылкой
+
+Универсальная ссылка - это когда объявление шаблонного типа выглядит как `T&&`. Универсальная - потому что это может означать как *rvalue*, так и *lvalue*.
+
+В этом случае:
+
+1. Если `expr` - *lvalue*, то `T` и `ParamType` выводятся как ссылки на *lvalue*.
+2. Если `expr` - *rvalue*, то используются "нормальные" правила, то есть как в 1 случае
+
+Примеры:
+
+```cpp
+template<typename T>
+void f(T&& param);
+
+int x = 27;
+f(x);		// x: lvalue, T -> int&, ParamType -> int&
+
+const int cx = x;
+f(cx);		// cx: lvalue, T -> const int&, ParamType -> const int&
+
+const int& rx = x;
+f(rx);		// rx: lvalue, T -> const int&, ParamType -> const int&
+
+f(27);		// 27: rvalue, T -> int, ParamType -> int&&
+```
+
+## `ParamType` - не указатель и не ссылка
+
+В этом случае:
+
+1. Если тип `expr` - ссылка, то она отбрасывается
+2. Если после отбрасывания ссылки `expr` является `const`, то это отбросить тоже. Если она `volatile`, то и это отбрасываем.
+
+Примеры:
+
+```cpp
+template<typename T>
+void f(T param);
+
+int x = 27;
+f(x);		// T -> int, ParamType -> int
+
+const int cx = x;
+f(cx);		// T -> int, ParamType -> int
+
+const int& rx = x;
+f(rx);		// T -> int, ParamType -> int
+```

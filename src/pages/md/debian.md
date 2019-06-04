@@ -199,7 +199,9 @@ Tweak tool >> Typing >> Modifiers of input sources switch >> Alt shift.
 
 ## find
 
-Поиск файла по всей файловой системе: `find / -name FILENAME -print 2&gt;/dev/null`
+Поиск файла по всей файловой системе: 
+
+    find / -name FILENAME -print 2>/dev/null
 
 ## Вывод процесса, занимающего порт:   
     
