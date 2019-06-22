@@ -231,3 +231,35 @@ Tweak tool >> Typing >> Modifiers of input sources switch >> Alt shift.
     
 
 **ВАЖНО**, чтобы схема (http://) присутсвовала в адресе, иначе, например, питоновский urlparse может тупить (было такое в geeknote)
+
+## Вывод флагов компиляции для установленной библиотеки
+
+```shell
+pkg-config --cflags --libs LIBRARY_NAME
+```
+
+Пример использования:
+
+```shell
+gcc -Wall -o main main.cpp $(pkg-config --cflags --libs gstreamer-1.0)
+```
+
+После выполнения выражения, получим:
+
+```shell
+gcc -Wall -o main main.cpp -pthread -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0
+```
+
+`pkgconfig` знает только про те либы, для которых есть **pc** файл в одной из его поисковых директорий. Список таких директорий можно узнать командой:
+
+```shell
+pkg-config --variable pc_path pkg-config
+```
+
+## Поиск библиотеки на диске
+
+```shell
+ldconfig -p | grep gstreamer
+```
+
+Выведет путь к либе, если найдет такую.

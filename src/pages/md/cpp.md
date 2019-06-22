@@ -273,7 +273,7 @@ vector<int>::value_type vt; //int
 
 ## typedef
 
-Это более старый синтаксис, служащий в тех же целях. Но он сложнее в понимании, потому что объявляемое имя стоит там, где стояло бы имя переменной при ее объявлении. 
+Это более старый синтаксис, служащий в тех же целях. Но он сложнее в понимании, потому что объявляемое имя стоит там, где стояло бы имя переменной при ее объявлении. В определении не могут быть использованы шаблоны. Не рекомендуется к использованию в современном C++. 
 
 Примеры:
 
@@ -317,6 +317,66 @@ const char* pc2; // опять указатель на константу
 
 Удобнее читать эти определения справа налево: `cp` это константый указатель на `char`, а `pc2` это указатель на `char const`.
 
+# rvalue/lvalue
+
+http://thbecker.net/articles/rvalue_references/section_01.html
+
+**lvalue** - объект, который занимает идентифицируемое место в памяти (например, имеет адрес)
+
+**rvalue** - все остальное. То есть это выражение, которое не представляет собой объект, занимающий идентифицируемое место в памяти.
+
+lvalue можно менять, rvalue - нет.
+
+lvalue может быть преобразовано в rvalue, но **rvalue в lvalue преобразовано быть не может**.
+
+Ссылка на lvalue формируется приписыванием "&": `A& a_ref = a;`, а ссылка на rvalue - приписыванием "&&": `A&& a_ref = a;`.
+
+Оператор "\*" принимает rvalue, а возвращает lvalue: `*(p + 1) = 10`
+
+Оператор "&" - наоборот, принимает lvalue, а возвращает rvalue: `int *addr = &v;`, поэтому символ `&` еще называют "ссылкой на lvalue".
+
+Неконстантной ссылке на lvalue не может быть присвоено rvalue, так как это потребовало бы невалидного преобразования rvalue в lvalue. Однако если ссылка на lvalue - константна, то можно, так как в этом случае отсутствует проблема модификации rvalue:
+
+```
+const std::string &ref = std::string();
+```
+
+Именно благодаря этому свойству в функции можно передавать константные ссылки на значения:
+
+```cpp
+#include <iostream>
+
+int length (std::string& s) {
+  return s.size();
+}
+
+int lengthConst (const std::string& s) {
+  return s.size();
+}
+
+int main() {
+  std::cout << length("Hello!");		// не скомпилится, потому что пытаемся передать rvalue как неконстантную ссылку
+
+  std::string h = "Hello!";
+  std<<cout << length(h);				// а тут нормально скопилится, потому что передаем уже lvalue
+
+  std::cout << lengthConst("Hello!");	// скомпилится, потому что ссылка принимается константная
+
+  return 0;
+}
+```
+
+
+
+Копии rvalue обычно создаются конструктором перемещения, а копии lvalue - конструктором копирования.
+
+Если у нас есть такое объявление функции:
+
+```cpp
+void someFunc(Widget w);
+```
+
+vмы ничего не можем сказать о стоимости копирования `w` в функцию `someFunc`, так как не знаем, это rvalue или lvalue.
 
 # Конструктор
 
@@ -414,11 +474,86 @@ Vector& Vector::operator=(const Vector& a)
 
 Чтобы избежать копирования большого количества полей объекта, можно реализовать семантику перемещения через *конструктор перемещения* или *присваивание перемещением*. 
 
-Обе эти конструкции используют `&&`, что означает не ссылку на ссылку, а **rvalue reference**, то есть ссылку, к которой можно привязать правую часть выражения (об этом позже).
+Обе эти конструкции используют `&&`, что означает не ссылку на ссылку, а **rvalue reference**.
 
 Реализуется конструктор/присваивание таким образом, чтобы нужные поля "переместились" из правой части в левую, то есть из правой части значения пропадают, а в левой - появляются.
 
 Также мы можем "помочь" компилятору, указав явное перемещение командой `std::move`.
+
+При присваивании объекта, если компилятор находит у его типа операции перемещения, то использует их. Если нет = то находит и использует операции копирования. С `std::move` то же самое, если он не найдет операции перемещения, то воспользуется копированием.
+
+## std::move
+
+Все, что делает `std::move` - принимает аргумент в виде lvalue или rvalue и возвращает его как rvalue БЕЗ вызова конструктора копирования:
+
+```cpp
+template<class T>
+typename remove_reference<T>::type&&
+move(T&& a) {
+	return a;
+}
+```
+
+После этого в клиентском компилятор подбирает для копирования либо операцию перемещения, либо копирования, в зависимости от того, реализована ли операция перемещения (которая, напомню, принимает rvalue). Если не реализована, то rvalue превращается обратно в lvalue и подается в конструктор копирования.
+
+## Perfect forwarding
+
+Допустим, у нас есть такая функция:
+
+```cpp
+template <typename T, typename A1>
+std::unique_ptr<T> factory(A1& a1)
+{
+    return std::unique_ptr<T>(new T(a1));
+}
+```
+
+Мы не можем вызвать `factory<foo>(5)`, потому что 5 это rvalue, функция принимает `A1&` - lvalue, а rvalue к lvalue не приводится.
+
+Мы могли бы принимать константную ссылку:
+
+```cpp
+template <typename T, typename A1>
+std::unique_ptr<T> factory(const A1& a1)
+{
+    return std::unique_ptr<T>(new T(a1));
+}
+```
+
+но что если конструктор `T` должен принимать не-константные ссылки?
+
+Нам поможет использование rvalue и `std::forward`:
+
+```cpp
+template <typename T, typename A1>
+std::unique_ptr<T> factory(A1&& a1)
+{
+    return std::unique_ptr<T>(new T(std::forward<A1>(a1)));
+}
+```
+
+`std::forward` просто передает аргумент дальше, сохраняя его "rvalue/lvalue-ness". То есть rvalue он передает как rvalue, а lvalue - как lvalue.
+
+
+## Moveable но non-copyable типы
+
+Некоторые типы поддерживают присваивание только перемещением. К ним относятся:
+
+- `fstream`
+- `unique_ptr`
+- типы, представляющие треды
+
+Засчет того, что они всегда перемещаются, мы можем их спокойно возвращать из фабричных функций по значению, не боясь, что возникнет копия или протухнет ссылка.
+
+Так же мы можем такие типы спокойно передавать в стандартные контейнеры и если контейнеру нужно скопировать значение, то он обязательно сначала попробует его переместить:
+
+```cpp
+vector<unique_ptr<base>> v1, v2;
+v1.push_back(unique_ptr(new derived()));  // ok, moving, not copying
+...
+v2 = v1;             // Compile time error.  This is not a copyable type.
+v2 = move(v1);       // Move ok.  Ownership of pointers transferred to v2.
+```
 
 ## Конструктор перемещения
 
@@ -441,6 +576,14 @@ Vector::Vector(Vector&& a)
 ## Присваивание перемещением
 
 Имеет сигнатуру `Vector& operator=(Vector && a)`.
+
+## Автогенерируемые типы
+
+Конструктор перемещения и присваивание перемещением генерируются автоматически для типов, у которых не определены операции перемещения, копирования и деструктор.
+
+Конструктор копирования генерируется автоматически для типов, у которых он не определен, а так же удаляется если определена хотя бы одна операция перемещения.
+
+Оператор присваивания копированием генерируется автоматически для типов, у которых он не определен, а так же удаляется если определена хотя бы одна операция перемещения.
 
 # Шаблоны
 
@@ -491,7 +634,124 @@ void Foo<T>::doSomething(T param)
 }
 ```
 
-# Вариативные шаблоны
+## Вывод типов для шаблонов
+
+Допустим, у нас есть такое объявление функции:
+
+```cpp
+template<typename T>
+void f(ParamType param);   // ParamType - это какая-то производная от T, например, const T&
+```
+
+и вызов функции выглядит так:
+
+```cpp
+f(expr);
+```
+
+то в зависимости от типа `expr` будут получаться разные типы `T` и `ParamType`, причем вовсе не обязательно одинаковые. Неодинаковы они потому, что `ParamType` может содержать ограничения, такие как `const` или `&`. 
+
+При выводе этих типов есть 3 варианта:
+
+### ParamType является указателем или ссылкой
+
+В этом случае:
+
+1. если тип `expr` - ссылка, то она отбрасывается
+2. после этого тип `expr` паттерн-матчится против `ParamType` для определения `T`.
+
+Примеры:
+
+```cpp
+template <typename T>
+void f(T& param);
+
+int x = 27;
+f(x);		// T -> int, ParamType -> int&
+
+const int cx = x;
+f(cx);		// T -> const int, ParamType -> const int&
+
+const int& rx = x;
+f(rx);		// T -> const int, ParamType -> const int& (ссылка игнорится)
+```
+
+```cpp
+template <typename T>
+void f(const T& param);
+
+int x = 27;
+f(x);		// T -> int, ParamType -> const int&
+
+const int cx = x;
+f(cx);		// T -> int, ParamType -> const int&
+
+const int& rx = x;
+f(rx);		// T -> int, ParamType -> const int& (ссылка игнорится)
+```
+
+```cpp
+template <typename T>
+void f(T* param);
+
+int x = 27;
+f(&x);		// T -> int, ParamType -> int*
+
+const int *px = &x;
+f(px);		// T -> const int, ParamType -> const int*
+```
+
+### ParamType является универсальной ссылкой
+
+Универсальная ссылка - это когда объявление шаблонного типа выглядит как `T&&`. Универсальная - потому что это может означать как *rvalue*, так и *lvalue*.
+
+В этом случае:
+
+1. Если `expr` - *lvalue*, то `T` и `ParamType` выводятся как ссылки на *lvalue*.
+2. Если `expr` - *rvalue*, то используются "нормальные" правила, то есть как в 1 случае
+
+Примеры:
+
+```cpp
+template<typename T>
+void f(T&& param);
+
+int x = 27;
+f(x);		// x: lvalue, T -> int&, ParamType -> int&
+
+const int cx = x;
+f(cx);		// cx: lvalue, T -> const int&, ParamType -> const int&
+
+const int& rx = x;
+f(rx);		// rx: lvalue, T -> const int&, ParamType -> const int&
+
+f(27);		// 27: rvalue, T -> int, ParamType -> int&&
+```
+
+### ParamType - не указатель и не ссылка
+
+В этом случае:
+
+1. Если тип `expr` - ссылка, то она отбрасывается
+2. Если после отбрасывания ссылки `expr` является `const`, то это отбросить тоже. Если она `volatile`, то и это отбрасываем.
+
+Примеры:
+
+```cpp
+template<typename T>
+void f(T param);
+
+int x = 27;
+f(x);		// T -> int, ParamType -> int
+
+const int cx = x;
+f(cx);		// T -> int, ParamType -> int
+
+const int& rx = x;
+f(rx);		// T -> int, ParamType -> int
+```
+
+## Вариативные шаблоны
 
 Вариативные шаблоны - это шаблоны с заранее неизвестным числом аргументов.
 
@@ -665,6 +925,67 @@ for(const auto& p: list)
 
 Кстати, если бы мы объявили `x` как `X x;`, то достигли бы того же эффекта.
 
+`unique_ptr` без проблем приводится к `shared_ptr`, что очень удобно, когда мы вовзращаем результат из фабричных функций и не знаем, какая семантика владения понадобится клиенту:
+
+```cpp
+template<typename T>
+unique_ptr<T> create() {
+  return unique_ptr<T>(new T());
+}
+
+int main() {
+  unique_ptr<Foo> foo = create<Foo>();
+  shared_ptr<Foo> foo2 = create<Foo>();
+  ...
+}
+```
+
+В `unique_ptr` вторым параметром можно передать функцию deleter, которая будет вызвана для удаления ресурса (по умолчанию делается просто `delete`):
+
+```cpp
+using namespace std;
+
+template<typename T>
+unique_ptr<T, std::function<void(T*)>> create() {
+  return unique_ptr<T, std::function<void(T*)>>(new T(), [](T* data) {
+    cout << "Deleting " << typeid(T).name() << endl;
+    delete data;
+  });
+}
+
+int main() {
+  unique_ptr<Foo, std::function<void(Foo*)>> foo = create<Foo>();
+
+  return 0;
+}
+```
+
+Для удобства можно использовать `decltype`:
+
+```cpp
+using namespace std;
+
+class Foo {};
+
+template<typename T>
+void deleter(T* ptr) {
+  cout << "Deleting " << typeid(T).name() << endl;
+  delete ptr;
+};
+
+template<typename T>
+unique_ptr<T, decltype(&deleter<T>)> create() {
+  return unique_ptr<T, decltype(&deleter<T>)>(new T(), deleter<T>);
+}
+
+int main() {
+  auto foo = create<Foo>();
+
+  return 0;
+}
+```
+
+
 ## shared_ptr
 
 Семантика похожа на `unique_ptr`, только эти указатели копируются, а не перемещаются.
@@ -686,6 +1007,30 @@ void user(const string& name, ios_base::openmode mode)
 Файл, открытый конструктором `fp` будет уничтожен, когда последняя из использующих его функций (`user`, `f`, `g`) уничтожит свою копию указателя.
 
 `shared_ptr` усложняет рассуждения о времени жизни объекта, поэтому его стоит использовать только когда точно нужно разделяемое владение.
+
+Опасно создавать `shared_ptr` из указателя на объект:
+
+```cpp
+auto pw = new Widget;
+std::shared_ptr<Widget> spw1(pw, loggingDeleter);
+std::shared_ptr<Widget> spw2(pw, loggingDeleter);
+```
+
+потому что так может возникнуть несколько `shared_ptr` на один объект, когда закончится время жизни первого - объект будет уничтожен и тогда все остальные получает сегфолт при попытке обращения к нему. 
+
+Избежать этого помогает функция `make_shared`:
+
+```cpp
+std::shared_ptr<Widget> spw1 = std::make_shared<Widget>();
+std::shared_ptr<Widget> spw2 = std::make_shared<Widget>();
+```
+
+Но `make_shared` не принимает кастоный делитер. В таких случаях поможет правило - не сохранять указатель в переменную, а создавать его прям в конструкторе `shared_ptr`:
+
+```cpp
+std::shared_ptr<Widget> spw1(new Widget, loggingDeleter);
+std::shared_ptr<Widget> spw2(new Widget, loggingDeleter);
+```
 
 # Многопоточность
 
@@ -1483,4 +1828,27 @@ f(cx);		// T -> int, ParamType -> int
 
 const int& rx = x;
 f(rx);		// T -> int, ParamType -> int
+```
+
+# Вывод типа в рантайме
+
+```cpp
+std::cout << typeid(x).name() << '\n\''
+```
+
+Второй вариант, с использованием Boost:
+
+```cpp
+#include <boost/type_index.hpp>
+
+template<typename T>
+void f(const T& param)
+{
+	using std::cout;
+	using boost::typeindex::type_id_with_cvr;
+
+	cout << "T = " << type_id_with_cvr<T>().pretty_name() << "\n";
+
+	cout << "param = " << type_id_with_cvr<decltype(param)>().pretty_name() << "\n";
+}
 ```
