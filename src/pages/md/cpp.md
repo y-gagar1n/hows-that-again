@@ -906,24 +906,56 @@ for(const auto& p: list)
 
 ## unique_ptr
 
+Инициализируется двумя способами:
+
 ```cpp
-1  void f(int i, int j)
-2  {
-3  	X* p = new X;
-4	unique_ptr<X> sp {new X};
-5
-6	if(i<99) throw Z{};
-7	if(j<77) return;
-8	p->do_something();
-9	sp->do_something();
-10	//...
-11	delete p;
-12 }
+std::unique_ptr<Foo> foo(new Foo(param1, param2));
+auto foo = std::make_unique<Foo>(param1, param2); // начиная с C++ 14
+```
+Лучше использовать второй вариант, так как он короче и производительнее.
+
+
+Пример использования `unique_ptr`:
+
+```cpp
+void f(int i, int j)
+{
+	X* p = new X;
+	unique_ptr<X> sp {new X};
+
+	if(i<99) throw Z{};
+	if(j<77) return;
+	p->do_something();
+	sp->do_something();
+	//...
+	delete p;
+}
 ```
 
 В строчках 6-9 может произойти преждевременный выход и тогда указатель `p` не освободится. А указатель `sp` гарантирует, что его объект будет уничтожен не зависимо от того, каким образом мы выйдем из функции.
 
 Кстати, если бы мы объявили `x` как `X x;`, то достигли бы того же эффекта.
+
+`unique_ptr` **запрещено копировать**, можно только перемещать:
+
+```cpp
+auto bar = foo; // не скомпилируется
+auto bar2 = std::move(foo); // а здесь все норм
+```
+
+Можно взять обычный указатель, но это плохая практика, так как нарушается семантика эксклюзивного использования:
+
+```cpp
+Foo* f = foo.get();
+f->doWork();
+```
+
+Также на `unique_ptr` можно создавать ссылки и в этом уже ничего плохого нет, так как в этом случае владение объектом "одалживается на время", но обращение идет через все тот же умный указатель:
+
+```cpp
+auto ref = &foo;
+ref->doWork();
+```
 
 `unique_ptr` без проблем приводится к `shared_ptr`, что очень удобно, когда мы вовзращаем результат из фабричных функций и не знаем, какая семантика владения понадобится клиенту:
 
@@ -985,10 +1017,21 @@ int main() {
 }
 ```
 
+**ВАЖНО:** Если в умном указателе вы держите указатель на *массив* объектов, то обязаны указать `custom deleter`, вызывающий для этого массива `delete[]` вместо `delete`. Если этого не сделать, будет освобожден только первый объект из массива, остальные же утекут.
 
 ## shared_ptr
 
-Семантика похожа на `unique_ptr`, только эти указатели копируются, а не перемещаются.
+Семантика похожа на `unique_ptr`, только эти указатели можно как перемещать, так и копировать. Сам по себе является потокобезопасным, но не делает потокобезопасным внутренний объект.
+
+Так же как и `unique_ptr` создается двумя способами:
+
+```cpp
+std::shared_ptr<Foo> foo(new Foo(param1, param2));
+auto foo = std::make_shared<Foo>(param1, param2);
+```
+И здесь тоже лучше использовать второй вариант.
+
+Пример использования `shared_ptr`:
 
 ```cpp
 void f(shared_ptr<fstream>);
@@ -1030,6 +1073,49 @@ std::shared_ptr<Widget> spw2 = std::make_shared<Widget>();
 ```cpp
 std::shared_ptr<Widget> spw1(new Widget, loggingDeleter);
 std::shared_ptr<Widget> spw2(new Widget, loggingDeleter);
+```
+
+Интересная особенность `shared_ptr` - с его помощью можно создавать циклические ссылки, которые никогда не будут удалены. Эта проблема обходится при помощи `weak_ptr`. Он похож на `shared_ptr`, но не участвует в подсчете ссылок. И еще у него есть метод `lock()`, возвращающий временный `shared_ptr` на объект.
+
+`weak_ptr` не имеет конструктора, его можно создать только из `shared_ptr`.
+
+Пример:
+
+```cpp
+#include <memory>
+#include <iostream>
+
+class SomeClass {
+public:
+    void sayHello() {
+        std::cout << "Hello!" << std::endl;
+    }
+
+    ~SomeClass() {
+        std::cout << "~SomeClass" << std::endl;
+    }
+};
+
+int main() {
+    std::weak_ptr<SomeClass> wptr;
+
+    {
+        auto ptr = std::make_shared<SomeClass>();
+        wptr = ptr;
+
+        if(auto tptr = wptr.lock()) {
+            tptr->sayHello();
+        } else {
+            std::cout << "lock() failed" << std::endl;
+        }
+    }
+
+    if(auto tptr = wptr.lock()) {
+        tptr->sayHello();
+    } else {
+        std::cout << "lock() failed" << std::endl;
+    }
+}
 ```
 
 # Многопоточность
