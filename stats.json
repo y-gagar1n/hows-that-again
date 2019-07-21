@@ -96,6 +96,10 @@
       "path---blog-linux-debugging-2d1eabdd3caf05008f62.js",
       "path---blog-linux-debugging-2d1eabdd3caf05008f62.js.map"
     ],
+    "path---blog-gdb": [
+      "path---blog-gdb-1b8ecd9ea32b86157dbe.js",
+      "path---blog-gdb-1b8ecd9ea32b86157dbe.js.map"
+    ],
     "path---blog-architecture": [
       "path---blog-architecture-e499ab2115654d6ed9ad.js",
       "path---blog-architecture-e499ab2115654d6ed9ad.js.map"
@@ -105,8 +109,8 @@
       "path---blog-sed-6a7051bbefdd9def0839.js.map"
     ],
     "path---blog-gstreamer": [
-      "path---blog-gstreamer-d534b2159e0694a098a3.js",
-      "path---blog-gstreamer-d534b2159e0694a098a3.js.map"
+      "path---blog-gstreamer-5298189b6f670bfb7f51.js",
+      "path---blog-gstreamer-5298189b6f670bfb7f51.js.map"
     ],
     "path---blog-mvc-data-tampering": [
       "path---blog-mvc-data-tampering-3d0d565b8fbb7674f2e4.js",
@@ -225,16 +229,16 @@
       "path---blog-how-would-you-implement-2673484302e1346fc8da.js.map"
     ],
     "path---index": [
-      "path---index-d00fb64563540eabbbd3.js",
-      "path---index-d00fb64563540eabbbd3.js.map"
+      "path---index-d1303785da4ca665dba4.js",
+      "path---index-d1303785da4ca665dba4.js.map"
     ],
     "path---blog-nodejs": [
       "path---blog-nodejs-a4db1ba11ab71d87a276.js",
       "path---blog-nodejs-a4db1ba11ab71d87a276.js.map"
     ],
     "path---blog-cpp": [
-      "path---blog-cpp-bea2e716f2352be90211.js",
-      "path---blog-cpp-bea2e716f2352be90211.js.map"
+      "path---blog-cpp-6478d4e4dc045e454b92.js",
+      "path---blog-cpp-6478d4e4dc045e454b92.js.map"
     ],
     "path---blog-mvc-web-sockets": [
       "path---blog-mvc-web-sockets-86e449c7694174065fb9.js",
@@ -247,6 +251,10 @@
     "path---blog-python-2": [
       "path---blog-python-2-a5296659987e03ada440.js",
       "path---blog-python-2-a5296659987e03ada440.js.map"
+    ],
+    "path---blog-books-how-linux-works": [
+      "path---blog-books-how-linux-works-8b46613f32e612345785.js",
+      "path---blog-books-how-linux-works-8b46613f32e612345785.js.map"
     ],
     "path---blog-kazoo": [
       "path---blog-kazoo-2497377bd7253a7b95a2.js",
@@ -289,8 +297,8 @@
       "path---blog-video-kafka-under-highload-c9ba43a895234eb619dc.js.map"
     ],
     "path---blog-sh": [
-      "path---blog-sh-5dcb1acd2bf5a44349bd.js",
-      "path---blog-sh-5dcb1acd2bf5a44349bd.js.map"
+      "path---blog-sh-6d0f28c1629dabab7d29.js",
+      "path---blog-sh-6d0f28c1629dabab7d29.js.map"
     ],
     "path---blog-linux-networking": [
       "path---blog-linux-networking-fa7457ac2d7b179d8bdf.js",
@@ -357,9 +365,9 @@
       "path---blog-kafka-4e5cbf0c1f4416575a91.js.map"
     ],
     "app": [
-      "app-b41801cea765cd35c1df.js",
+      "app-6deeaf6ab25b9cb1c90a.js",
       "build-js-styles.css",
-      "app-b41801cea765cd35c1df.js.map",
+      "app-6deeaf6ab25b9cb1c90a.js.map",
       "build-js-styles.css.map"
     ],
     "path---blog-mongodb": [
@@ -367,8 +375,8 @@
       "path---blog-mongodb-a0072eebb3f25201f6b5.js.map"
     ],
     "path---blog-debian": [
-      "path---blog-debian-3260ec6fd0e91ef664a0.js",
-      "path---blog-debian-3260ec6fd0e91ef664a0.js.map"
+      "path---blog-debian-57c603b550b0b62faa97.js",
+      "path---blog-debian-57c603b550b0b62faa97.js.map"
     ],
     "path---blog-css": [
       "path---blog-css-293623988a319b100ba5.js",
@@ -411,8 +419,8 @@
       "path---blog-postcss-fc1a38ea5a4d5f6c1159.js.map"
     ],
     "path---blog-vim": [
-      "path---blog-vim-829dc97eae44e1d035b6.js",
-      "path---blog-vim-829dc97eae44e1d035b6.js.map"
+      "path---blog-vim-5e5110444cdff57e8c62.js",
+      "path---blog-vim-5e5110444cdff57e8c62.js.map"
     ],
     "path---blog-mvc-modules-handlers": [
       "path---blog-mvc-modules-handlers-44f1e163873a16c2c733.js",
