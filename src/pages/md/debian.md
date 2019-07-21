@@ -115,9 +115,13 @@ Tweak tool >> Typing >> Modifiers of input sources switch >> Alt shift.
 
 ## Поиск файлов, установленных пакетом
 
-`dpkg-query -l &lt;имя пакета&gt;`
+`dpkg-query -l <имя пакета>`
 
 Пример: `apt-get install yasm dpkg-query -l yasm`
+
+## Поиск пакета, установившего файл
+
+`dpkg -S /usr/lib/python3.4/bz2.py`
 
 ## Алиасы
 
@@ -193,7 +197,7 @@ Tweak tool >> Typing >> Modifiers of input sources switch >> Alt shift.
 Вывод всех папок, в которых gcc ищет хидеры:
     
     
-    LC_ALL=C gcc -v -E -xc - &lt; /dev/null 2&gt;&amp;1 |
+    LC_ALL=C gcc -v -E -xc - &lt; /dev/null 2>&1 |
     LC_ALL=C sed -ne '/starts here/,/End of/p'
     
 
@@ -205,7 +209,7 @@ Tweak tool >> Typing >> Modifiers of input sources switch >> Alt shift.
 
 ## Вывод процесса, занимающего порт:   
     
-    lsof -i -P -n | grep :&lt;port&gt;
+    lsof -i -P -n | grep :<port>;
     
 
 ## Вывод .so, которые нужны библиотеке и путей, по которым она их ищет:
