@@ -20,7 +20,7 @@
     "develop": "gatsby develop",
     "format": "rimraf public && rimraf .cache && prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gh-pages-clean && rimraf public && rimraf .cache && gatsby build --prefix-paths && gh-pages -d public",
+    "deploy": "gh-pages-clean && rimraf public && rimraf .cache && gatsby build --prefix-paths && gh-pages -d public -r https://github.com/y-gagar1n/hows-that-again.git",
     "heroku-postbuild": "npm run deploy"
   },
   "devDependencies": {
