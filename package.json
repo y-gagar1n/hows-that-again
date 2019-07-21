@@ -21,7 +21,7 @@
     "format": "rimraf public && rimraf .cache && prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "gh-pages-clean && rimraf public && rimraf .cache && gatsby build --prefix-paths && gh-pages -d public",
-    "heroku-postbuild": "deploy"
+    "heroku-postbuild": "npm run deploy"
   },
   "devDependencies": {
     "gatsby-plugin-sharp": "^2.0.12",
