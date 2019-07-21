@@ -1938,3 +1938,7 @@ void f(const T& param)
 	cout << "param = " << type_id_with_cvr<decltype(param)>().pretty_name() << "\n";
 }
 ```
+
+# fPIC
+
+https://www.collabora.com/about-us/blog/2014/10/01/dynamic-relocs,-runtime-overflows-and-fpic/
