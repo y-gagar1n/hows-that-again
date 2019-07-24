@@ -115,9 +115,14 @@ Tweak tool >> Typing >> Modifiers of input sources switch >> Alt shift.
 
 ## Поиск файлов, установленных пакетом
 
-`dpkg-query -l <имя пакета>`
+`dpkg -L <имя пакета>`
 
-Пример: `apt-get install yasm dpkg-query -l yasm`
+Пример: 
+
+```sh
+apt-get install yasm 
+dpkg -L yasm
+```
 
 ## Поиск пакета, установившего файл
 
