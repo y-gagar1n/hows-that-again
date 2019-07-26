@@ -161,6 +161,105 @@ done
 rm -f $FILE
 ```
 
+### IFS
+
+**IFS** = **i**nternal **f**ield **s**eparator. Значение этой переменной используется для представления строки в виде массива.
+
+Пример (не сработает в **zsh**, сработает в **bash**):
+
+```sh
+words=foo,bar,baz
+
+for word in $words
+do
+	echo $word
+done
+```
+
+В результате будет выведено:
+
+```sh
+foo
+bar
+baz
+```
+
+### Подстроки
+
+```sh
+FOO=Hello!
+BAR={FOO:1:3}	# взять 3 символа, начиная с 1-го. то есть получится "ell"
+```
+
+Если второе число не указано, то возьмется до конца строки:
+
+```sh
+FOO=Hello!
+BAR={FOO:3}	# lo!
+```
+
+### Парсинг опций
+
+```sh
+# command.sh
+
+while getopts 'srd:f:' c
+do
+  case $c in
+    s) ACTION=SAVE ;;
+    r) ACTION=RESTORE ;;
+    d) DB_DUMP=$OPTARG ;;
+    f) TARBALL=$OPTARG ;;
+  esac
+done
+``` 
+
+`srd:f:` - это список флагов, которые могут быть использованы. Причем если после флага стоит двоеточие, то для этого флага можно указать значение.
+
+Скрипт из примера можно запускать с такими параметрами:
+
+```sh
+./command.sh -sr -d dump.db -f ball.TARBALL
+```
+
+### Стили и цвета
+
+Для использования стилей текста сильно поможет такая функция:
+
+```sh
+#!/bin/bash
+# ANSI color--Use these variables to make output in different colors
+# and formats. Color names that end with 'f' are foreground colors,
+# and those ending with 'b' are background colors.
+initializeANSI()
+{
+ esc="\033" # If this doesn't work, enter an ESC directly.
+ # Foreground colors
+ blackf="${esc}[30m"; redf="${esc}[31m"; greenf="${esc}[32m"
+ yellowf="${esc}[33m" bluef="${esc}[34m"; purplef="${esc}[35m"
+ cyanf="${esc}[36m"; whitef="${esc}[37m"
+ # Background colors
+ blackb="${esc}[40m"; redb="${esc}[41m"; greenb="${esc}[42m"
+ yellowb="${esc}[43m" blueb="${esc}[44m"; purpleb="${esc}[45m"
+ cyanb="${esc}[46m"; whiteb="${esc}[47m"
+ # Bold, italic, underline, and inverse style toggles
+ boldon="${esc}[1m"; boldoff="${esc}[22m"
+ italicson="${esc}[3m"; italicsoff="${esc}[23m"
+ ulon="${esc}[4m"; uloff="${esc}[24m"
+ invon="${esc}[7m"; invoff="${esc}[27m"
+ reset="${esc}[0m"
+}
+```
+
+Использовать ее можно вот так:
+
+```sh
+initializeANSI
+
+echo ${boldon}this is in bold and ${italicson}this is \
+italics${italicsoff}within the bold${reset}
+```
+
 ## Утилиты
 
 ### basename
