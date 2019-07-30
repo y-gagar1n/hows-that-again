@@ -160,6 +160,10 @@
       "path---blog-gcc-2f6622c1c0f0846a2708.js",
       "path---blog-gcc-2f6622c1c0f0846a2708.js.map"
     ],
+    "path---blog-books-effective-modern-cpp": [
+      "path---blog-books-effective-modern-cpp-7033750f8d6539fe8011.js",
+      "path---blog-books-effective-modern-cpp-7033750f8d6539fe8011.js.map"
+    ],
     "path---blog-pip": [
       "path---blog-pip-abd64edaa0d15be853d7.js",
       "path---blog-pip-abd64edaa0d15be853d7.js.map"
@@ -181,8 +185,8 @@
       "path---blog-hardware-disk-306e6d689cb622b49051.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-6ed608cdf879d3b0dfb1.js",
-      "component---src-layouts-index-js-6ed608cdf879d3b0dfb1.js.map"
+      "component---src-layouts-index-js-896294bfaacae5837f68.js",
+      "component---src-layouts-index-js-896294bfaacae5837f68.js.map"
     ],
     "path---blog-algorithms": [
       "path---blog-algorithms-e375169a15a627e27332.js",
@@ -233,16 +237,16 @@
       "path---blog-how-would-you-implement-2673484302e1346fc8da.js.map"
     ],
     "path---index": [
-      "path---index-5d828f7969c6a5a5be25.js",
-      "path---index-5d828f7969c6a5a5be25.js.map"
+      "path---index-66873c14cf0b2c0a3398.js",
+      "path---index-66873c14cf0b2c0a3398.js.map"
     ],
     "path---blog-nodejs": [
       "path---blog-nodejs-a4db1ba11ab71d87a276.js",
       "path---blog-nodejs-a4db1ba11ab71d87a276.js.map"
     ],
     "path---blog-cpp": [
-      "path---blog-cpp-6478d4e4dc045e454b92.js",
-      "path---blog-cpp-6478d4e4dc045e454b92.js.map"
+      "path---blog-cpp-2731a59487992c3e4c68.js",
+      "path---blog-cpp-2731a59487992c3e4c68.js.map"
     ],
     "path---blog-mvc-web-sockets": [
       "path---blog-mvc-web-sockets-86e449c7694174065fb9.js",
@@ -301,8 +305,8 @@
       "path---blog-video-kafka-under-highload-c9ba43a895234eb619dc.js.map"
     ],
     "path---blog-sh": [
-      "path---blog-sh-6171eda06ba839bbe4eb.js",
-      "path---blog-sh-6171eda06ba839bbe4eb.js.map"
+      "path---blog-sh-9629588d187f53e5d9e4.js",
+      "path---blog-sh-9629588d187f53e5d9e4.js.map"
     ],
     "path---blog-linux-networking": [
       "path---blog-linux-networking-fa7457ac2d7b179d8bdf.js",
@@ -369,9 +373,9 @@
       "path---blog-kafka-4e5cbf0c1f4416575a91.js.map"
     ],
     "app": [
-      "app-f5de8f78c377ac2d1842.js",
+      "app-4622d6c3632bc96e5e93.js",
       "build-js-styles.css",
-      "app-f5de8f78c377ac2d1842.js.map",
+      "app-4622d6c3632bc96e5e93.js.map",
       "build-js-styles.css.map"
     ],
     "path---blog-mongodb": [
