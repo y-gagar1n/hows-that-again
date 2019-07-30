@@ -96,6 +96,10 @@
       "path---blog-linux-debugging-2d1eabdd3caf05008f62.js",
       "path---blog-linux-debugging-2d1eabdd3caf05008f62.js.map"
     ],
+    "path---blog-books-stackframes": [
+      "path---blog-books-stackframes-a750e700629fe8105cd2.js",
+      "path---blog-books-stackframes-a750e700629fe8105cd2.js.map"
+    ],
     "path---blog-gdb": [
       "path---blog-gdb-1b8ecd9ea32b86157dbe.js",
       "path---blog-gdb-1b8ecd9ea32b86157dbe.js.map"
@@ -165,8 +169,8 @@
       "path---blog-python-4c69d05159424d2e7402.js.map"
     ],
     "path---blog-call-conventions": [
-      "path---blog-call-conventions-e27a519ae0d79911dda9.js",
-      "path---blog-call-conventions-e27a519ae0d79911dda9.js.map"
+      "path---blog-call-conventions-4a3238dc1cc5325623ad.js",
+      "path---blog-call-conventions-4a3238dc1cc5325623ad.js.map"
     ],
     "path---blog-video-microservices-patterns-playbook": [
       "path---blog-video-microservices-patterns-playbook-789b40dcdf4d315ca285.js",
@@ -177,8 +181,8 @@
       "path---blog-hardware-disk-306e6d689cb622b49051.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-a1cf26f1207bbe923180.js",
-      "component---src-layouts-index-js-a1cf26f1207bbe923180.js.map"
+      "component---src-layouts-index-js-6ed608cdf879d3b0dfb1.js",
+      "component---src-layouts-index-js-6ed608cdf879d3b0dfb1.js.map"
     ],
     "path---blog-algorithms": [
       "path---blog-algorithms-e375169a15a627e27332.js",
@@ -229,8 +233,8 @@
       "path---blog-how-would-you-implement-2673484302e1346fc8da.js.map"
     ],
     "path---index": [
-      "path---index-33aeea7499ad3427ae34.js",
-      "path---index-33aeea7499ad3427ae34.js.map"
+      "path---index-5d828f7969c6a5a5be25.js",
+      "path---index-5d828f7969c6a5a5be25.js.map"
     ],
     "path---blog-nodejs": [
       "path---blog-nodejs-a4db1ba11ab71d87a276.js",
@@ -365,9 +369,9 @@
       "path---blog-kafka-4e5cbf0c1f4416575a91.js.map"
     ],
     "app": [
-      "app-2d6e2213d1b1f2fc1912.js",
+      "app-f5de8f78c377ac2d1842.js",
       "build-js-styles.css",
-      "app-2d6e2213d1b1f2fc1912.js.map",
+      "app-f5de8f78c377ac2d1842.js.map",
       "build-js-styles.css.map"
     ],
     "path---blog-mongodb": [
