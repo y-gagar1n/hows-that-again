@@ -409,11 +409,112 @@ struct MyAllocList {
 MyAllocList<Widget>::type lw;
 ```
 
- В С++11 мы можем так:
+Если же после этого мы захотим использовать этот шаблно внутри другого шаблонизированного класса, то придется писать `typename`:
+
+```cpp
+template<typename T>
+class Widget {
+private:
+	typename MyAllocList<T>::type list;
+... };
+```
+
+Кстати, при использовании type traits так и приходится писать, так как они были реализованы с использованием тайпдефов, а не алиасов, несмотря на то, что были введены в C++11. В С++14 признали эту ошибку и для каждого класса `std::transformation<T>::type` теперь есть соответствующий `std::transformation_t<T>`, реализованный через алиасы.
+
+Так вот, в С++11 есть алиасы и использовать их мы можем так:
 
 ```cpp
 template<typename T>
 using MyAllocList = std::list<T, MyAlloc<T>>;
 
 MyAllocList<Widget> lw;
+```
+
+## Используйте scoped enums вместо unscoped enums
+
+Есть такое правило, что имя, объявленное внутри фигурных скобок, видно только внутри области, ограниченной этими скобками. Это правило соблюдается всегда, кроме енумов в C++98.
+
+Поэтому енумы в C++98 - unscoped enums:
+
+```cpp
+enum Color {red, black, white};
+
+auto white = false;		// ОШИБКА КОМПИЛЯЦИИ! white уже определен
+```
+
+В С++11 им на замену пришли scoped enums:
+
+```cpp
+enum class Color {red, black, white};
+
+auto white = false;		// все норм
+Color c = white;		// ОШИБКА КОМПИЛЯЦИИ! нет имени white в текущем скоупе
+Color c = Color::white;	// ok
+auto c = Color::white;	// ok
+```
+
+Помимо ограниченной видимости, вторая причина, по которой стоит использовать scoped enums - более строгая типизация. Unscoped enums свободно неявно приводятся к целочисленным типам и типам с плавающей точкой:
+
+```cpp
+Color c = Color::red;
+
+if(c < 14.5) {	// ОШИБКА КОМПИЛЯЦИИ
+	...
+}
+
+if(static_vast<double>(c) < 14.5) {		// OK
+	...
+}
+```
+
+И еще одно преимущество - при использовании scoped enums не нужно перекомпиливать клиентов енума при добавлении в него нового значения. А с unscoped enums - нужно.
+
+Дефолтный тип для scoped enums - int, для unscoped enums - нет дефолтного.
+
+## Используйте deleted функции вместо private undefined
+
+В С++98 когда нужно запретить вызов какой-либо функции (обычно конструктора присваивания или копирования), то определяют ее как private и просто не пишут ее реализацию:
+
+```cpp
+template <class charT, class traits = char_traits<charT> >
+   class basic_ios : public ios_base {
+   public:
+...
+private:
+     basic_ios(const basic_ios& );            // not defined
+     basic_ios& operator=(const basic_ios&);  // not defined
+   };
+```
+
+**private** гарантирует, что внешний код не имеет доступ к этим функциям. Отсутствие реализации для таких функций гарантирует, что даже если какой-то какой-то код, имеющий к ним доступ, попытается их вызвать, он получит ошибку на этапе линковки.
+
+В C++11 такие функции определяются как удаленные:
+
+```cpp
+template <class charT, class traits = char_traits<charT> > 
+class basic_ios : public ios_base {
+public:
+	...
+	basic_ios(const basic_ios& ) = delete; 
+	basic_ios& operator=(const basic_ios&) = delete; 
+	...
+}
+```
+
+Удаленные функции никак не могут быть использованы и такие попытки приведт к ошибкам на этапе компиляции.
+
+А еще, используя удаленные функции, можно запредить использование шаблонных функций с определенными типами:
+
+```cpp
+template<typename T>
+void processPointer(T* ptr);
+
+template<>
+void processPointer<void>(void*) = delete;
+template<>
+void processPointer<char>(char*) = delete;
+template<>
+void processPointer<const void>(const void*) = delete;
+template<>
+void processPointer<const char>(const char*) = delete;
 ```
