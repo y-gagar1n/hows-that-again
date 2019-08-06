@@ -351,3 +351,69 @@ Widget w5{{}};	// ну или так
 
 
 Один из выводов из всего этого - если вы автор библиотеки, то не стоит добавлять конструктор, принимающий `initializer_list`, так как тогда возможно клиенты не смогут использовать ваши остальные конструкторы.
+
+## Используйте nullptr вместо 0 и NULL
+
+В С++98 использование 0 и NULL приводило к тому, что перегрузки, принимающие указатель, могли не вызываться:
+
+```cpp
+void f(int);
+void f(bool);
+void f(void*);
+
+f(0);			// f(int)
+f(NULL);		// могло не скомпилиться, но если компилилось, то вызывало f(int)
+```
+
+Все потому, что 0 - это целочисленный тип и NULL часто был определен тоже как численный тип.
+
+Преимущество **nullptr** - он не может быть интерпретирован как численный тип, только как указатель. Тип **nullptr** - `std::nullptr_t`. ЭТот тип неявно приводит к себе указатели всех типов, поэтому **nullptr** - универсальный указатель.
+
+```cpp
+f(nullptr);		// f(void*)
+```
+
+## Используйте alias вместо typedef
+
+В С++98 были **typedef**:
+
+```cpp
+typedef
+     std::unique_ptr<std::unordered_map<std::string, std::string>>
+     UPtrMapSS;
+```
+
+Они устарели, когда в C++11 появились алиасы:
+
+```cpp
+ using UPtrMapSS =
+     std::unique_ptr<std::unordered_map<std::string, std::string>>;
+```
+
+Еще один пример, демонстрирующий повышенную читаемость алиасов по сравнению с тайпдефом:
+
+```cpp
+typedef void (*FP)(int, const std::string&);
+
+using FP = void (*)(int, const std::string&);
+```
+
+Основное преимущество - алиасы могут быть шаблонизированы, а тайпдефы - нет. В С++98 приходилось извращаться и определять тайпдефы внутри шаблонизированных структур:
+
+```cpp
+template<typename T>
+struct MyAllocList { 
+	typedef std::list<T, MyAlloc<T>> type;
+};
+
+MyAllocList<Widget>::type lw;
+```
+
+ В С++11 мы можем так:
+
+```cpp
+template<typename T>
+using MyAllocList = std::list<T, MyAlloc<T>>;
+
+MyAllocList<Widget> lw;
+```
