@@ -165,7 +165,7 @@ private:
 
 ## Пример реализации
 
-```cpp
+```clike
 #include <initializer_list>
 #include <algorithm>
 

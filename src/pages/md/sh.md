@@ -7,7 +7,7 @@ path: "/blog/sh"
 
 ## Parameter expansion
 
-```
+```bash
 for i in 1 2 
 do
 	my_secret_process ${i}_tmp
