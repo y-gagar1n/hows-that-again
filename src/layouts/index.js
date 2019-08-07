@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/header'
 import './index.css'
-import 'prismjs/themes/prism-solarizedlight.css'
+import 'prism-themes/themes/prism-vs.css'
 
 const Layout = ({ children, data }) => (
   <div>
