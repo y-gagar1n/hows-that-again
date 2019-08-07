@@ -1,350 +1,308 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><link rel="preload" href="/hows-that-again/component---src-layouts-index-js-fc86867344fd33aec0ef.js" as="script"/><link rel="preload" href="/hows-that-again/component---src-templates-blog-template-js-40956da8f886eafeb36f.js" as="script"/><link rel="preload" href="/hows-that-again/path---blog-books-effective-modern-cpp-3259b4289ff9c9d022b9.js" as="script"/><link rel="preload" href="/hows-that-again/app-ee422ac8c8d975d4b355.js" as="script"/><link rel="preload" href="/hows-that-again/commons-afb5782224ac01f1fa03.js" as="script"/><title data-react-helmet="true">How&#x27;s that again?</title><meta data-react-helmet="true" name="description" content="Sample"/><meta data-react-helmet="true" name="keywords" content="sample, something"/><style id="gatsby-inlined-css">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:112.5%/1.45em georgia,serif;box-sizing:border-box;overflow-y:scroll}*,:after,:before{box-sizing:inherit}body{color:rgba(0,0,0,.8);font-family:georgia,serif;font-weight:400;word-wrap:break-word;-webkit-font-kerning:normal;font-kerning:normal;-ms-font-feature-settings:"kern","liga","clig","calt";-webkit-font-feature-settings:"kern","liga","clig","calt";font-feature-settings:"kern","liga","clig","calt","kern"}img{max-width:100%;margin:0 0 1.45rem;padding:0}h1{font-size:2.25rem}h1,h2{margin:0 0 1.45rem;padding:0;color:inherit;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;font-weight:700;text-rendering:optimizeLegibility;line-height:1.1}h2{font-size:1.62671rem}h3{font-size:1.38316rem}h3,h4{margin:0 0 1.45rem;padding:0;color:inherit;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;font-weight:700;text-rendering:optimizeLegibility;line-height:1.1}h4{font-size:1rem}h5{font-size:.85028rem}h5,h6{margin:0 0 1.45rem;padding:0;color:inherit;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;font-weight:700;text-rendering:optimizeLegibility;line-height:1.1}h6{font-size:.78405rem}hgroup{margin:0 0 1.45rem;padding:0}ol,ul{margin:0 0 1.45rem 1.45rem;padding:0;list-style-position:outside;list-style-image:none}dd,dl,figure,p{margin:0 0 1.45rem;padding:0}pre{padding:0;font-size:.85rem;line-height:1.42;background:rgba(0,0,0,.04);border-radius:3px;overflow:auto;word-wrap:normal;padding:1.45rem}pre,table{margin:0 0 1.45rem}table{padding:0;font-size:1rem;line-height:1.45rem;border-collapse:collapse;width:100%}fieldset{margin:0 0 1.45rem;padding:0}blockquote{margin:0 1.45rem 1.45rem;padding:0}form,iframe,noscript{margin:0 0 1.45rem;padding:0}hr{margin:0 0 calc(1.45rem - 1px);padding:0;background:rgba(0,0,0,.2);border:none;height:1px}address{margin:0 0 1.45rem;padding:0}b,dt,strong,th{font-weight:700}li{margin-bottom:.725rem}ol li,ul li{padding-left:0}li>ol,li>ul{margin-left:1.45rem;margin-bottom:.725rem;margin-top:.725rem}blockquote :last-child,li :last-child,p :last-child{margin-bottom:0}li>p{margin-bottom:.725rem}code,kbd,samp{font-size:.85rem;line-height:1.45rem}abbr,abbr[title],acronym{border-bottom:1px dotted rgba(0,0,0,.5);cursor:help}abbr[title]{text-decoration:none}td,th,thead{text-align:left}td,th{border-bottom:1px solid rgba(0,0,0,.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding:.725rem .96667rem calc(.725rem - 1px)}td:first-child,th:first-child{padding-left:0}td:last-child,th:last-child{padding-right:0}code,tt{background-color:rgba(0,0,0,.04);border-radius:3px;font-family:SFMono-Regular,Consolas,Roboto Mono,Droid Sans Mono,Liberation Mono,Menlo,Courier,monospace;padding:0;padding-top:.2em;padding-bottom:.2em}pre code{background:none;line-height:1.42}code:after,code:before,tt:after,tt:before{letter-spacing:-.2em;content:" "}pre code:after,pre code:before,pre tt:after,pre tt:before{content:""}@media only screen and (max-width:480px){html{font-size:100%}}</style></head><body><div id="___gatsby"><div data-reactroot="" data-reactid="1" data-react-checksum="-1309627061"><!-- react-empty: 2 --><div style="background:rebeccapurple;margin-bottom:1.45rem;" data-reactid="3"><div style="margin:0 auto;max-width:960px;padding:1.45rem 1.0875rem;" data-reactid="4"><h1 style="margin:0;" data-reactid="5"><a style="color:white;text-decoration:none;" href="/hows-that-again/" data-reactid="6">How&#x27;s that again?</a></h1></div></div><div style="margin:0 auto;max-width:960px;padding:0px 1.0875rem 1.45rem;padding-top:0;" data-reactid="7"><div class="blog-post-container" data-reactid="8"><div class="blog-post" data-reactid="9"><div class="blog-post-content" data-reactid="10"><h1>Effective Modern C++</h1>
+<!DOCTYPE html><html><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><link rel="preload" href="/hows-that-again/component---src-layouts-index-js-c249cbc2e05364980f1b.js" as="script"/><link rel="preload" href="/hows-that-again/component---src-templates-blog-template-js-40956da8f886eafeb36f.js" as="script"/><link rel="preload" href="/hows-that-again/path---blog-books-effective-modern-cpp-dfe0a57e8b4287161878.js" as="script"/><link rel="preload" href="/hows-that-again/app-6b7dca2c49cd4802be69.js" as="script"/><link rel="preload" href="/hows-that-again/commons-afb5782224ac01f1fa03.js" as="script"/><title data-react-helmet="true">How&#x27;s that again?</title><meta data-react-helmet="true" name="description" content="Sample"/><meta data-react-helmet="true" name="keywords" content="sample, something"/><style id="gatsby-inlined-css">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:112.5%/1.45em georgia,serif;box-sizing:border-box;overflow-y:scroll}*,:after,:before{box-sizing:inherit}body{color:rgba(0,0,0,.8);font-family:georgia,serif;font-weight:400;word-wrap:break-word;-webkit-font-kerning:normal;font-kerning:normal;-ms-font-feature-settings:"kern","liga","clig","calt";-webkit-font-feature-settings:"kern","liga","clig","calt";font-feature-settings:"kern","liga","clig","calt","kern"}img{max-width:100%;margin:0 0 1.45rem;padding:0}h1{font-size:2.25rem}h1,h2{margin:0 0 1.45rem;padding:0;color:inherit;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;font-weight:700;text-rendering:optimizeLegibility;line-height:1.1}h2{font-size:1.62671rem}h3{font-size:1.38316rem}h3,h4{margin:0 0 1.45rem;padding:0;color:inherit;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;font-weight:700;text-rendering:optimizeLegibility;line-height:1.1}h4{font-size:1rem}h5{font-size:.85028rem}h5,h6{margin:0 0 1.45rem;padding:0;color:inherit;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;font-weight:700;text-rendering:optimizeLegibility;line-height:1.1}h6{font-size:.78405rem}hgroup{margin:0 0 1.45rem;padding:0}ol,ul{margin:0 0 1.45rem 1.45rem;padding:0;list-style-position:outside;list-style-image:none}dd,dl,figure,p{margin:0 0 1.45rem;padding:0}pre{padding:0;font-size:.85rem;line-height:1.42;background:rgba(0,0,0,.04);border-radius:3px;overflow:auto;word-wrap:normal;padding:1.45rem}pre,table{margin:0 0 1.45rem}table{padding:0;font-size:1rem;line-height:1.45rem;border-collapse:collapse;width:100%}fieldset{margin:0 0 1.45rem;padding:0}blockquote{margin:0 1.45rem 1.45rem;padding:0}form,iframe,noscript{margin:0 0 1.45rem;padding:0}hr{margin:0 0 calc(1.45rem - 1px);padding:0;background:rgba(0,0,0,.2);border:none;height:1px}address{margin:0 0 1.45rem;padding:0}b,dt,strong,th{font-weight:700}li{margin-bottom:.725rem}ol li,ul li{padding-left:0}li>ol,li>ul{margin-left:1.45rem;margin-bottom:.725rem;margin-top:.725rem}blockquote :last-child,li :last-child,p :last-child{margin-bottom:0}li>p{margin-bottom:.725rem}code,kbd,samp{font-size:.85rem;line-height:1.45rem}abbr,abbr[title],acronym{border-bottom:1px dotted rgba(0,0,0,.5);cursor:help}abbr[title]{text-decoration:none}td,th,thead{text-align:left}td,th{border-bottom:1px solid rgba(0,0,0,.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding:.725rem .96667rem calc(.725rem - 1px)}td:first-child,th:first-child{padding-left:0}td:last-child,th:last-child{padding-right:0}code,tt{background-color:rgba(0,0,0,.04);border-radius:3px;font-family:SFMono-Regular,Consolas,Roboto Mono,Droid Sans Mono,Liberation Mono,Menlo,Courier,monospace;padding:0;padding-top:.2em;padding-bottom:.2em}pre code{background:none;line-height:1.42}code:after,code:before,tt:after,tt:before{letter-spacing:-.2em;content:" "}pre code:after,pre code:before,pre tt:after,pre tt:before{content:""}@media only screen and (max-width:480px){html{font-size:100%}}code[class*=language-],pre[class*=language-]{color:#657b83;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::-moz-selection,code[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection{background:#073642}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{background:#073642}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#fdf6e3}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#93a1a1}.token.punctuation{color:#586e75}.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#268bd2}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string,.token.url{color:#2aa198}.token.entity{color:#657b83;background:#eee8d5}.token.atrule,.token.attr-value,.token.keyword{color:#859900}.token.class-name,.token.function{color:#b58900}.token.important,.token.regex,.token.variable{color:#cb4b16}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style></head><body><div id="___gatsby"><div data-reactroot="" data-reactid="1" data-react-checksum="1804201874"><!-- react-empty: 2 --><div style="background:rebeccapurple;margin-bottom:1.45rem;" data-reactid="3"><div style="margin:0 auto;max-width:960px;padding:1.45rem 1.0875rem;" data-reactid="4"><h1 style="margin:0;" data-reactid="5"><a style="color:white;text-decoration:none;" href="/hows-that-again/" data-reactid="6">How&#x27;s that again?</a></h1></div></div><div style="margin:0 auto;max-width:960px;padding:0px 1.0875rem 1.45rem;padding-top:0;" data-reactid="7"><div class="blog-post-container" data-reactid="8"><div class="blog-post" data-reactid="9"><div class="blog-post-content" data-reactid="10"><h1>Effective Modern C++</h1>
 <h2>Вывод типов через auto</h2>
-<p>Тип для <code>auto</code> выводится так же, как и для шаблонов. В том выводе типов у нас есть определение шаблона и его вызов:</p>
-<pre><code class="language-cpp">template&#x3C;typename T>
-void f(ParamType param);
+<p>Тип для <code class="language-text">auto</code> выводится так же, как и для шаблонов. В том выводе типов у нас есть определение шаблона и его вызов:</p>
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">template<span class="token operator">&lt;</span>typename T<span class="token operator">></span>
+void <span class="token function">f</span><span class="token punctuation">(</span>ParamType param<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-f(expr);
-</code></pre>
-<p>Когда переменная объявляется через <code>auto</code>, то <code>auto</code> выступает в роли <strong>T</strong>, а спецификатор типа - как <code>ParamType</code>. Например:</p>
-<pre><code class="language-cpp">auto x = 27;            // auto -> T, auto -> ParamType
-const auto cx = x;      // auto -> T, const auto -> ParamType
-const auto&#x26; rx = x;     // auto -> T, const auto&#x26; -> ParamType
-</code></pre>
+<span class="token function">f</span><span class="token punctuation">(</span>expr<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>Когда переменная объявляется через <code class="language-text">auto</code>, то <code class="language-text">auto</code> выступает в роли <strong>T</strong>, а спецификатор типа - как <code class="language-text">ParamType</code>. Например:</p>
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">auto x <span class="token operator">=</span> <span class="token number">27</span><span class="token punctuation">;</span>			<span class="token comment">// auto -> T, auto -> ParamType</span>
+const auto cx <span class="token operator">=</span> x<span class="token punctuation">;</span>		<span class="token comment">// auto -> T, const auto -> ParamType</span>
+const auto<span class="token operator">&amp;</span> rx <span class="token operator">=</span> x<span class="token punctuation">;</span>		<span class="token comment">// auto -> T, const auto&amp; -> ParamType</span></code></pre></div>
 <p>Для вывода представим соответствующие им шаблоны и их вызовы:</p>
-<pre><code class="language-cpp">template&#x3C;typename T>
-void func_x(T param);
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">template<span class="token operator">&lt;</span>typename T<span class="token operator">></span>
+void <span class="token function">func_x</span><span class="token punctuation">(</span>T param<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-func_x(27);     // ParamTYpe -> int, T -> int
+<span class="token function">func_x</span><span class="token punctuation">(</span><span class="token number">27</span><span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">// ParamTYpe -> int, T -> int</span>
 
-template&#x3C;typename T>
-void func_cx(const T param);
+template<span class="token operator">&lt;</span>typename T<span class="token operator">></span>
+void <span class="token function">func_cx</span><span class="token punctuation">(</span>const T param<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-func_cx(x);     // ParamType -> const int, T -> int
+<span class="token function">func_cx</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">// ParamType -> const int, T -> int</span>
 
-template&#x3C;typename T>
-void func_rx(const T&#x26; param);
+template<span class="token operator">&lt;</span>typename T<span class="token operator">></span>
+void <span class="token function">func_rx</span><span class="token punctuation">(</span>const T<span class="token operator">&amp;</span> param<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-func_rx(x);     // ParamType -> const int&#x26;, T -> int
-</code></pre>
+<span class="token function">func_rx</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">// ParamType -> const int&amp;, T -> int</span></code></pre></div>
 <p>Во всех остальных случаях логика точно такая же как и для вывода типа шаблона. Но есть одно исключение, о нем дальше.</p>
 <h3>Особый случай для initializer_list</h3>
-<pre><code class="language-cpp">auto x1 = 27;       // int
-auto x2(27);        // int
-auto x3 = {27};     // std::initializer_list&#x3C;int> = {27}
-auto x4{27};        // std::initializer_list&#x3C;int> = {27}
-</code></pre>
-<p>Так происходит потому что в выводе типов через <code>auto</code> прописано особое правило: <strong>если значение для авто-объявленной переменной заключено в фигурные скобки, то тип ВСЕГДА выводится как std::initializer_list</strong>.</p>
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">auto x1 <span class="token operator">=</span> <span class="token number">27</span><span class="token punctuation">;</span>		<span class="token comment">// int</span>
+auto <span class="token function">x2</span><span class="token punctuation">(</span><span class="token number">27</span><span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">// int</span>
+auto x3 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">27</span><span class="token punctuation">}</span><span class="token punctuation">;</span>		<span class="token comment">// std::initializer_list&lt;int> = {27}</span>
+auto x4<span class="token punctuation">{</span><span class="token number">27</span><span class="token punctuation">}</span><span class="token punctuation">;</span>		<span class="token comment">// std::initializer_list&lt;int> = {27}</span></code></pre></div>
+<p>Так происходит потому что в выводе типов через <code class="language-text">auto</code> прописано особое правило: <strong>если значение для авто-объявленной переменной заключено в фигурные скобки, то тип ВСЕГДА выводится как std::initializer_list</strong>.</p>
 <p>При этом в выводе типов для шаблонов такого правила нет и это единственное место где алгоритмы различаются:</p>
-<pre><code class="language-cpp">template&#x3C;typename T>
-void f(T param);
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">template<span class="token operator">&lt;</span>typename T<span class="token operator">></span>
+void <span class="token function">f</span><span class="token punctuation">(</span>T param<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-f({ 11, 23, 9 }); // ОШИБКА КОМПИЛЯЦИИ!
+<span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">23</span><span class="token punctuation">,</span> <span class="token number">9</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// ОШИБКА КОМПИЛЯЦИИ!</span>
 
-template&#x3C;typename T>
-void f2(std::initializer_list&#x3C;T> list);
+template<span class="token operator">&lt;</span>typename T<span class="token operator">></span>
+void <span class="token function">f2</span><span class="token punctuation">(</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>initializer_list<span class="token operator">&lt;</span>T<span class="token operator">></span> list<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-fw({11,23,9});      // все ок, тип T выводится как int
-</code></pre>
+<span class="token function">fw</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token number">11</span><span class="token punctuation">,</span><span class="token number">23</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">// все ок, тип T выводится как int</span></code></pre></div>
 <h2>decltype</h2>
 <p><strong>decltype</strong> - это функция, которая принимает переменную, а возвращает ее тип. Может быть использована там, где ожидается указание типа.</p>
-<pre><code class="language-cpp">const int i = 0;            // decltype(i) -> const int
-bool f(const Widget&#x26;);      // decltype(w) -> const Widget&#x26;, decltype(f) -> bool(const Widget&#x26;)
-</code></pre>
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">const int i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>			<span class="token comment">// decltype(i) -> const int</span>
+bool <span class="token function">f</span><span class="token punctuation">(</span>const Widget<span class="token operator">&amp;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">// decltype(w) -> const Widget&amp;, decltype(f) -> bool(const Widget&amp;)</span></code></pre></div>
 <p>Обычно используется там, где тип возвращаемого значения зависит от типа аргумента:</p>
-<pre><code class="language-cpp">template&#x3C;typename Container, typename Index>
-auto authAndAccess(Container&#x26; c, Index i) -> decltype(c[i]) {
-    authenticateser();
-    return c[i];
-}
-</code></pre>
-<p>здесь <code>auto</code> не имеет отношения к выводу типов, а лишь указывает, что возвращаемый тип будет указан после списка параметров (trailing return type syntax). Такой синтаксис необходимо использовать, когда тип возвращаемого значения зависит от типов параметров.</p>
-<p>В C++14 можно возвращать из функций <code>auto</code>, не указывая тип после стрелочки, но с этим бывают проблемы, поэтому рекомендуется возвращать <code>decltype(auto)</code>.</p>
-<p>С <code>authAndAccess</code> осталась одна проблема - она не сможет принимать rvalue для контейнера. Модифицируем так, чтобы мог:</p>
-<pre><code class="language-cpp">template&#x3C;typename Container, typename Index>
-auto get(Container&#x26;&#x26; c, Index i) -> decltype(std::forward&#x3C;Container>(c)[i]) {
-  authenticateUser();
-  return std::forward&#x3C;Container>(c)[i];
-}
-</code></pre>
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">template<span class="token operator">&lt;</span>typename Container<span class="token punctuation">,</span> typename Index<span class="token operator">></span>
+auto <span class="token function">authAndAccess</span><span class="token punctuation">(</span>Container<span class="token operator">&amp;</span> c<span class="token punctuation">,</span> Index i<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token function">decltype</span><span class="token punctuation">(</span>c<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token function">authenticateser</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> c<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>здесь <code class="language-text">auto</code> не имеет отношения к выводу типов, а лишь указывает, что возвращаемый тип будет указан после списка параметров (trailing return type syntax). Такой синтаксис необходимо использовать, когда тип возвращаемого значения зависит от типов параметров.</p>
+<p>В C++14 можно возвращать из функций <code class="language-text">auto</code>, не указывая тип после стрелочки, но с этим бывают проблемы, поэтому рекомендуется возвращать <code class="language-text">decltype(auto)</code>.</p>
+<p>С <code class="language-text">authAndAccess</code> осталась одна проблема - она не сможет принимать rvalue для контейнера. Модифицируем так, чтобы мог:</p>
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">template<span class="token operator">&lt;</span>typename Container<span class="token punctuation">,</span> typename Index<span class="token operator">></span>
+auto <span class="token function">get</span><span class="token punctuation">(</span>Container<span class="token operator">&amp;&amp;</span> c<span class="token punctuation">,</span> Index i<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token function">decltype</span><span class="token punctuation">(</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>forward<span class="token operator">&lt;</span>Container<span class="token operator">></span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">authenticateUser</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> std<span class="token punctuation">:</span><span class="token punctuation">:</span>forward<span class="token operator">&lt;</span>Container<span class="token operator">></span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
 <p>Теперь для <strong>c</strong> типа lvalue функция будет возвращать lvalue, а для rvalue - rvalue.</p>
 <h3>Особенность поведения decltype</h3>
 <p>Применение <strong>decltype</strong> к имени переменной возвращает тип этого имени. Однако применение к lvalue, котороя является чем-то более сложным, чем имя, возвращает ссылку на lvalue. То есть <strong>decltype</strong> над выражением не-именем, имеющим тип <strong>T</strong> вернет тип <strong>T&#x26;</strong>. Такое поведение редко на что-либо влияет, однако есть интересное следствие:</p>
-<pre><code class="language-cpp">int x = 0;
-decltype(x);    // int
-decltype((x));  // int&#x26;
-</code></pre>
-<p>Как видно, оборачивание значения в скобки может поменять значение, возвращаемое <strong>decltype</strong>. Это особенно важно в C++14, где можно возвращать из функции <code>decltype(auto)</code> и случайно можно вернуть ссылку на элемент вместо элемента.</p>
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">int x <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token function">decltype</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// int</span>
+<span class="token function">decltype</span><span class="token punctuation">(</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// int&amp;</span></code></pre></div>
+<p>Как видно, оборачивание значения в скобки может поменять значение, возвращаемое <strong>decltype</strong>. Это особенно важно в C++14, где можно возвращать из функции <code class="language-text">decltype(auto)</code> и случайно можно вернуть ссылку на элемент вместо элемента.</p>
 <h2>Используйте auto вместо явных определений типов</h2>
 <h3>auto не даст создать неинициализированный объект</h3>
-<pre><code class="language-cpp">int x;  // не инициализирован!
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">int x<span class="token punctuation">;</span>	<span class="token comment">// не инициализирован!</span>
 
-auto x; // не скомпилится!
-</code></pre>
+auto x<span class="token punctuation">;</span> <span class="token comment">// не скомпилится!</span></code></pre></div>
 <h3>Позволяет не писать сложные типы</h3>
-<pre><code class="language-cpp">template&#x3C;typename It>
-void dwim(It b, It e)
-{
-  while (b != e) {
-    typename std::iterator_traits&#x3C;It>::value_type currValue = *b;
-    auto currValue2 = *b;
-    ...
-  }
-}
-</code></pre>
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">template<span class="token operator">&lt;</span>typename It<span class="token operator">></span>
+void <span class="token function">dwim</span><span class="token punctuation">(</span>It b<span class="token punctuation">,</span> It e<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>b <span class="token operator">!=</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	typename std<span class="token punctuation">:</span><span class="token punctuation">:</span>iterator_traits<span class="token operator">&lt;</span>It<span class="token operator">></span><span class="token punctuation">:</span><span class="token punctuation">:</span>value_type currValue <span class="token operator">=</span> <span class="token operator">*</span>b<span class="token punctuation">;</span>
+	auto currValue2 <span class="token operator">=</span> <span class="token operator">*</span>b<span class="token punctuation">;</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
 <h3>Экономить память при использовании функторов</h3>
-<p>Тип лямбды неизвестен до компиляции, поэтому описать его точно - невозможно. Приходится использовать тип <code>std::function</code>. </p>
-<pre><code class="language-cpp">std::function&#x3C;bool(const std::unique_ptr&#x3C;Widget>&#x26;, const std::unique_ptr&#x3C;Widget>&#x26;)>
-    funcs = [](const std::unique_ptr&#x3C;Widget>&#x26; a, const std::unique_ptr&#x3C;Widget>&#x26; b) {
-        return *a &#x3C; *b;
-    }
-</code></pre>
+<p>Тип лямбды неизвестен до компиляции, поэтому описать его точно - невозможно. Приходится использовать тип <code class="language-text">std::function</code>. </p>
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">std<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token keyword">function</span><span class="token operator">&lt;</span><span class="token function">bool</span><span class="token punctuation">(</span>const std<span class="token punctuation">:</span><span class="token punctuation">:</span>unique_ptr<span class="token operator">&lt;</span>Widget<span class="token operator">></span><span class="token operator">&amp;</span><span class="token punctuation">,</span> const std<span class="token punctuation">:</span><span class="token punctuation">:</span>unique_ptr<span class="token operator">&lt;</span>Widget<span class="token operator">></span><span class="token operator">&amp;</span><span class="token punctuation">)</span><span class="token operator">></span>
+	funcs <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span>const std<span class="token punctuation">:</span><span class="token punctuation">:</span>unique_ptr<span class="token operator">&lt;</span>Widget<span class="token operator">></span><span class="token operator">&amp;</span> a<span class="token punctuation">,</span> const std<span class="token punctuation">:</span><span class="token punctuation">:</span>unique_ptr<span class="token operator">&lt;</span>Widget<span class="token operator">></span><span class="token operator">&amp;</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">return</span> <span class="token operator">*</span>a <span class="token operator">&lt;</span> <span class="token operator">*</span>b<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span></code></pre></div>
 <p>Но у него есть недостаток - он всегда занимает фиксированный размер в памяти, и если его не хватает, то аллоцирует память в куче. Тогда как реальный тип замыкания, выводимый во время компиляции и используемый с помощью <strong>auto</strong> всегда занимает ровно столько места, сколько ему требуется.</p>
-<p>Плюс к этому, из-за особенностей реализации, при вызове функции через <code>std::function</code> запрещается инлайнинг и добавляется непрямой вызов функции (indirect function calls), что ухудшает производительность по сравнению с <strong>auto</strong>.</p>
+<p>Плюс к этому, из-за особенностей реализации, при вызове функции через <code class="language-text">std::function</code> запрещается инлайнинг и добавляется непрямой вызов функции (indirect function calls), что ухудшает производительность по сравнению с <strong>auto</strong>.</p>
 <h3>Неявные приведения типов</h3>
 <p>Допустим, есть такой код:</p>
-<pre><code class="language-cpp">std::vector&#x3C;int> v;
-unsigned sz = v.size();
-</code></pre>
-<p>Все бы ничего, да только <code>v.size()</code> возвращает вовсе не <strong>unsigned</strong>, а <code>std::vector&#x3C;int>::size_type</code>.</p>
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">std<span class="token punctuation">:</span><span class="token punctuation">:</span>vector<span class="token operator">&lt;</span>int<span class="token operator">></span> v<span class="token punctuation">;</span>
+unsigned sz <span class="token operator">=</span> v<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>Все бы ничего, да только <code class="language-text">v.size()</code> возвращает вовсе не <strong>unsigned</strong>, а <code class="language-text">std::vector&lt;int&gt;::size_type</code>.</p>
 <p>Другой пример:</p>
-<pre><code class="language-cpp">std::unordered_map&#x3C;std::string, int> m;
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">std<span class="token punctuation">:</span><span class="token punctuation">:</span>unordered_map<span class="token operator">&lt;</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>string<span class="token punctuation">,</span> int<span class="token operator">></span> m<span class="token punctuation">;</span>
 
-for(const std::pair&#x3C;std::string, int>&#x26; p: m) {
-    ...
-}
-</code></pre>
-<p>Реальный тип элементов, содержащихся в <code>unordered_map</code> - <code>std::pair&#x3C;const std::string, int></code>. В результате компилятор не сможет привести <code>std::pair&#x3C;const std::string, int></code> к <code>std::pair&#x3C;std::string, int></code> и будет для каждого члена создавать временный объект, ссылку на который копировать в <strong>p</strong>. После каждой итерации временный объект будет уничтожен.</p>
+<span class="token keyword">for</span><span class="token punctuation">(</span>const std<span class="token punctuation">:</span><span class="token punctuation">:</span>pair<span class="token operator">&lt;</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>string<span class="token punctuation">,</span> int<span class="token operator">></span><span class="token operator">&amp;</span> p<span class="token punctuation">:</span> m<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>Реальный тип элементов, содержащихся в <code class="language-text">unordered_map</code> - <code class="language-text">std::pair&lt;const std::string, int&gt;</code>. В результате компилятор не сможет привести <code class="language-text">std::pair&lt;const std::string, int&gt;</code> к <code class="language-text">std::pair&lt;std::string, int&gt;</code> и будет для каждого члена создавать временный объект, ссылку на который копировать в <strong>p</strong>. После каждой итерации временный объект будет уничтожен.</p>
 <p>Использование <strong>auto</strong> в этом случае делает код проще и производительнее:</p>
-<pre><code class="language-cpp">std::unordered_map&#x3C;std::string, int> m;
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">std<span class="token punctuation">:</span><span class="token punctuation">:</span>unordered_map<span class="token operator">&lt;</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>string<span class="token punctuation">,</span> int<span class="token operator">></span> m<span class="token punctuation">;</span>
 
-for(const auto&#x26; p: m) {...}
-</code></pre>
+<span class="token keyword">for</span><span class="token punctuation">(</span>const auto<span class="token operator">&amp;</span> p<span class="token punctuation">:</span> m<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span></code></pre></div>
 <h2>Иногда auto выводит не то, что нужно</h2>
-<pre><code class="language-cpp">std::vector&#x3C;bool> features(const Widget&#x26; w);
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">std<span class="token punctuation">:</span><span class="token punctuation">:</span>vector<span class="token operator">&lt;</span>bool<span class="token operator">></span> <span class="token function">features</span><span class="token punctuation">(</span>const Widget<span class="token operator">&amp;</span> w<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-Widget w;
-auto highPriority = features(w)[5];
-processWidget(w, highPriority);
-</code></pre>
-<p>Как ни удивительно, этот код приводит к undefined behavior. Дело в том, что оператор <code>[]</code> для <code>std::vector&#x3C;bool></code> возвращает <code>std::vector&#x3C;bool>::reference</code>. Так происходит потому, что булевого типа у вектора есть специальная реализация, которая хранит по одному биту на элемент. Теперь оператор <code>[]</code> должен возвращать ссылку на бит, но в C++ запрещены ссылки на биты. Поэтому приходится возвращать тип, который <em>ведет себя</em> как <code>bool&#x26;</code>. ЭТо означает, что он, помимо прочего, должен быть неявно приводим к <code>bool</code>. </p>
-<p>Получается, что когда мы делаем <code>bool highPriority = features(w)[5]</code>, то возвращается <code>std::vector&#x3C;bool>::reference</code>, который приводится к <code>bool</code> и дальше все нормально.</p>
-<p>А вот когда мы делаем <code>auto highPriority = features(w)[5]</code>, то дальше все зависит от реализации типа <code>std::vector&#x3C;bool>::reference</code>. Одна из реализаций представляет из себя:</p>
+Widget w<span class="token punctuation">;</span>
+auto highPriority <span class="token operator">=</span> <span class="token function">features</span><span class="token punctuation">(</span>w<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token function">processWidget</span><span class="token punctuation">(</span>w<span class="token punctuation">,</span> highPriority<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>Как ни удивительно, этот код приводит к undefined behavior. Дело в том, что оператор <code class="language-text">[]</code> для <code class="language-text">std::vector&lt;bool&gt;</code> возвращает <code class="language-text">std::vector&lt;bool&gt;::reference</code>. Так происходит потому, что булевого типа у вектора есть специальная реализация, которая хранит по одному биту на элемент. Теперь оператор <code class="language-text">[]</code> должен возвращать ссылку на бит, но в C++ запрещены ссылки на биты. Поэтому приходится возвращать тип, который <em>ведет себя</em> как <code class="language-text">bool&amp;</code>. ЭТо означает, что он, помимо прочего, должен быть неявно приводим к <code class="language-text">bool</code>. </p>
+<p>Получается, что когда мы делаем <code class="language-text">bool highPriority = features(w)[5]</code>, то возвращается <code class="language-text">std::vector&lt;bool&gt;::reference</code>, который приводится к <code class="language-text">bool</code> и дальше все нормально.</p>
+<p>А вот когда мы делаем <code class="language-text">auto highPriority = features(w)[5]</code>, то дальше все зависит от реализации типа <code class="language-text">std::vector&lt;bool&gt;::reference</code>. Одна из реализаций представляет из себя:</p>
 <ul>
 <li>указатель на машинное слово вектора, в котором содержится интересующий бит</li>
 <li>сдвиг в этом слове</li>
 </ul>
-<p>Итак, вызов <code>features</code> возвращает временный объект-вектор. Оператор <code>[]</code> возвращает <code>std::vector&#x3C;bool>::reference</code>, в котором содержится ссылка на элемент внутри временного объекта-вектора. Мы записываем это в <code>highPriority</code>, после чего временный объект уничтожается, а в <code>highPriority</code> остается висячая ссылка на уничтоженный объект.</p>
-<p>Здесь <code>std::vector&#x3C;bool>::reference</code> - это прокси-класс, который не предназначен для того, чтобы жить дольше, чем одно выражение. Поэтому <strong>auto</strong> очень плохо дружит с прокси-классами.</p>
+<p>Итак, вызов <code class="language-text">features</code> возвращает временный объект-вектор. Оператор <code class="language-text">[]</code> возвращает <code class="language-text">std::vector&lt;bool&gt;::reference</code>, в котором содержится ссылка на элемент внутри временного объекта-вектора. Мы записываем это в <code class="language-text">highPriority</code>, после чего временный объект уничтожается, а в <code class="language-text">highPriority</code> остается висячая ссылка на уничтоженный объект.</p>
+<p>Здесь <code class="language-text">std::vector&lt;bool&gt;::reference</code> - это прокси-класс, который не предназначен для того, чтобы жить дольше, чем одно выражение. Поэтому <strong>auto</strong> очень плохо дружит с прокси-классами.</p>
 <p>Такие прокси-классы очень тяжело найти заранее, однако когда стало понятно, что проблема в прокси-классе, не стоит избавляться от <strong>auto</strong>. Лучший способ - использовать явное приведение типа:</p>
-<pre><code class="language-cpp">auto highPriority = static_cast&#x3C;bool>(features(w)[5]);
-</code></pre>
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">auto highPriority <span class="token operator">=</span> static_cast<span class="token operator">&lt;</span>bool<span class="token operator">></span><span class="token punctuation">(</span><span class="token function">features</span><span class="token punctuation">(</span>w<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <h2>Различия между () и {} при инициализации объектов</h2>
 <p>Для начало важно отличать инициализацию от присвоения:</p>
-<pre><code class="language-cpp">Widget w1;          // инициализация, вызван дефолтный конструктор
-Widget w2 = w1;     // инициализация, вызывается конструктор копирования
-w1 = w2;            // присвоение, вызывается оператор =
-</code></pre>
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">Widget w1<span class="token punctuation">;</span>			<span class="token comment">// инициализация, вызван дефолтный конструктор</span>
+Widget w2 <span class="token operator">=</span> w1<span class="token punctuation">;</span>		<span class="token comment">// инициализация, вызывается конструктор копирования</span>
+w1 <span class="token operator">=</span> w2<span class="token punctuation">;</span>			<span class="token comment">// присвоение, вызывается оператор =</span></code></pre></div>
 <p>В C++ 11 представлена <em>uniform initialization</em> - предпочтительный способ инициализации:</p>
-<pre><code class="language-cpp">int x{0};
-std::vector&#x3C;int> v{1,2,3,4,5};
-</code></pre>
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">int x<span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+std<span class="token punctuation">:</span><span class="token punctuation">:</span>vector<span class="token operator">&lt;</span>int<span class="token operator">></span> v<span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
 <p>Тот же синтаксис можно использовать и для задания дефолтных значений не-статическим полям классов, наравне с синтаксисом через <strong>=</strong>:</p>
-<pre><code class="language-cpp">class Widget {
-private:
-    int x{0};   // ОК
-    int y = 0;  // тоже ок
-    int z(0);   // ошибка компиляции!
-}
-</code></pre>
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">class <span class="token class-name">Widget</span> <span class="token punctuation">{</span>
+private<span class="token punctuation">:</span>
+	int x<span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>	<span class="token comment">// ОК</span>
+	int y <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>	<span class="token comment">// тоже ок</span>
+	int <span class="token function">z</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// ошибка компиляции!</span>
+<span class="token punctuation">}</span></code></pre></div>
 <p>Однако если инициализируем не-копируемый тип, то <strong>{}</strong> валиден наравне с синтаксисом через <strong>()</strong>:</p>
-<pre><code class="language-cpp">std::atomic&#x3C;int>ai1{0};     // OK
-std::atomic&#x3C;int>ai2(0);     // OK
-std::atomic&#x3C;int>ai3 = 0;    // ошибка!
-</code></pre>
-<p>Поэтому, чтобы не путаться, лучше всегда использовать универсальную (uniform) инициализацию вида <code>int x{0};</code>.</p>
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">std<span class="token punctuation">:</span><span class="token punctuation">:</span>atomic<span class="token operator">&lt;</span>int<span class="token operator">></span>ai1<span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>		<span class="token comment">// OK</span>
+std<span class="token punctuation">:</span><span class="token punctuation">:</span>atomic<span class="token operator">&lt;</span>int<span class="token operator">></span><span class="token function">ai2</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">// OK</span>
+std<span class="token punctuation">:</span><span class="token punctuation">:</span>atomic<span class="token operator">&lt;</span>int<span class="token operator">></span>ai3 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>	<span class="token comment">// ошибка!</span></code></pre></div>
+<p>Поэтому, чтобы не путаться, лучше всегда использовать универсальную (uniform) инициализацию вида <code class="language-text">int x{0};</code>.</p>
 <h3>{} запрещает преобразование типа с потерей точности</h3>
-<pre><code class="language-cpp">double x,y,z;
-int sum1{ x+y+z };      // не скомпилится, так как сумма даблов может быть невыразима через int
-int sum2( x+y+z );      // спокойно компилится и приводит к неожиданному поведению при выполнении
-int sum3 = x + y + z;   // аналогично sum2
-</code></pre>
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">double x<span class="token punctuation">,</span>y<span class="token punctuation">,</span>z<span class="token punctuation">;</span>
+int sum1<span class="token punctuation">{</span> x<span class="token operator">+</span>y<span class="token operator">+</span>z <span class="token punctuation">}</span><span class="token punctuation">;</span>		<span class="token comment">// не скомпилится, так как сумма даблов может быть невыразима через int</span>
+int <span class="token function">sum2</span><span class="token punctuation">(</span> x<span class="token operator">+</span>y<span class="token operator">+</span>z <span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">// спокойно компилится и приводит к неожиданному поведению при выполнении</span>
+int sum3 <span class="token operator">=</span> x <span class="token operator">+</span> y <span class="token operator">+</span> z<span class="token punctuation">;</span>	<span class="token comment">// аналогично sum2</span></code></pre></div>
 <h3>{} не подвержена most vexing parse</h3>
 <p>В С++ есть такое правило - все, что может быть интерпретировано как объявелние, должно быть интерпретировано как объявление.</p>
 <p>Поэтому часто, когда хотим инициализировать переменную дефолтным конструктором через скобки, вместо этого получается объявление функции:</p>
-<pre><code class="language-cpp">Widget w1(10);  // когда у конструктора есть параметры, то все норм
-Widget w2();    // а вот когда хотис использовать дефолтный конструктор, то получается объявление функции
-</code></pre>
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">Widget <span class="token function">w1</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// когда у конструктора есть параметры, то все норм</span>
+Widget <span class="token function">w2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// а вот когда хотис использовать дефолтный конструктор, то получается объявление функции</span></code></pre></div>
 <p>С использованием <strong>{}</strong> код выглядит так и не содержит этой проблемы:</p>
-<pre><code class="language-cpp">Widget w3{};
-</code></pre>
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">Widget w3<span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
 <h3>Недостаток: опять проблемы с initializer_list</h3>
-<p>Если при инициализации через <strong>{}</strong> имеется конструктор, принимающий <code>initializer_list</code>, и он может быть теоретически использован, то будет использован именно он:</p>
-<pre><code class="language-cpp">class Widget {
-public:
-    Widget(int i, bool b);
-    Widget(int i, double d);
-    Widget(std::initializer_list&#x3C;long double> il);
-};
+<p>Если при инициализации через <strong>{}</strong> имеется конструктор, принимающий <code class="language-text">initializer_list</code>, и он может быть теоретически использован, то будет использован именно он:</p>
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">class <span class="token class-name">Widget</span> <span class="token punctuation">{</span>
+public<span class="token punctuation">:</span>
+	<span class="token function">Widget</span><span class="token punctuation">(</span>int i<span class="token punctuation">,</span> bool b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">Widget</span><span class="token punctuation">(</span>int i<span class="token punctuation">,</span> double d<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">Widget</span><span class="token punctuation">(</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>initializer_list<span class="token operator">&lt;</span>long double<span class="token operator">></span> il<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-Widget w1(10, true);    // будет вызван первый конструктор
-Widget w2{10, true};    // 3-й
-Widget w3(10, 5.0);     // 2-й
-Widget w4{10, 5.0};     // 3-й
-</code></pre>
+Widget <span class="token function">w1</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// будет вызван первый конструктор</span>
+Widget w2<span class="token punctuation">{</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">;</span>	<span class="token comment">// 3-й</span>
+Widget <span class="token function">w3</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">5.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">// 2-й</span>
+Widget w4<span class="token punctuation">{</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">5.0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>		<span class="token comment">// 3-й</span></code></pre></div>
 <p>Причем иногда путь довольно непрост:</p>
-<pre><code class="language-cpp">class Widget {
-public:
-  Widget(int i, bool b);
-  Widget(int i, double d);
-  Widget(std::initializer_list&#x3C;long double> il);
-  operator float() const;       // оператор преобразования Widget во float
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">class <span class="token class-name">Widget</span> <span class="token punctuation">{</span>
+public<span class="token punctuation">:</span>
+  <span class="token function">Widget</span><span class="token punctuation">(</span>int i<span class="token punctuation">,</span> bool b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">Widget</span><span class="token punctuation">(</span>int i<span class="token punctuation">,</span> double d<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">Widget</span><span class="token punctuation">(</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>initializer_list<span class="token operator">&lt;</span>long double<span class="token operator">></span> il<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  operator <span class="token function">float</span><span class="token punctuation">(</span><span class="token punctuation">)</span> const<span class="token punctuation">;</span>		<span class="token comment">// оператор преобразования Widget во float</span>
 
-  // конструктор копирования
-  // конструктор перемещения
-... };
-Widget w5(w4);              // вызывается конструктор копирования 
-Widget w6{w4};              // вызывается преобразование к float и затем конструктор с initializer_list, так как float может быть преобразован к long double
-Widget w7(std::move(w4));   // конструктор перемещения
-Widget w8{std::move(w4)};   // опять конструктор с initializer_list через преобразование к float
-</code></pre>
-<p>Более того, компилятор настолько сильно хочет использовать <code>initializer_list</code>, что даже идеально подходящие другие конструкторы ему не помеха:</p>
-<pre><code class="language-cpp">class Widget {
-public:
-  Widget(int i, bool b);
-  Widget(int i, double d);
-  Widget(std::initializer_list&#x3C;bool> il);
-... 
-};
+  <span class="token comment">// конструктор копирования</span>
+  <span class="token comment">// конструктор перемещения</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+Widget <span class="token function">w5</span><span class="token punctuation">(</span>w4<span class="token punctuation">)</span><span class="token punctuation">;</span>				<span class="token comment">// вызывается конструктор копирования </span>
+Widget w6<span class="token punctuation">{</span>w4<span class="token punctuation">}</span><span class="token punctuation">;</span>				<span class="token comment">// вызывается преобразование к float и затем конструктор с initializer_list, так как float может быть преобразован к long double</span>
+Widget <span class="token function">w7</span><span class="token punctuation">(</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">move</span><span class="token punctuation">(</span>w4<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// конструктор перемещения</span>
+Widget w8<span class="token punctuation">{</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">move</span><span class="token punctuation">(</span>w4<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">;</span>	<span class="token comment">// опять конструктор с initializer_list через преобразование к float</span></code></pre></div>
+<p>Более того, компилятор настолько сильно хочет использовать <code class="language-text">initializer_list</code>, что даже идеально подходящие другие конструкторы ему не помеха:</p>
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">class <span class="token class-name">Widget</span> <span class="token punctuation">{</span>
+public<span class="token punctuation">:</span>
+  <span class="token function">Widget</span><span class="token punctuation">(</span>int i<span class="token punctuation">,</span> bool b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">Widget</span><span class="token punctuation">(</span>int i<span class="token punctuation">,</span> double d<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">Widget</span><span class="token punctuation">(</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>initializer_list<span class="token operator">&lt;</span>bool<span class="token operator">></span> il<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> 
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-Widget w{10, 5.0};  // ошибка компиляции!
-</code></pre>
-<p>Компилятор, несмотря на то, что есть конструктор, принимающий <strong>int</strong> и <strong>double</strong>, опять попытался использовать конструктор с <code>initializer_list</code> и не смог, потому что для этого требуется сужающее приведение <strong>int</strong> и <strong>double</strong> к <strong>bool</strong>, а сужающие приведения запрещены в инициализации через <strong>{}</strong>.</p>
-<p>Однако и из этого правила есть исключение - если есть дефолтный конструктор и мы вызываем инициализацию без параметров, то дефолтный конструктор имеет высший приоритет над конструктором с <code>initializer_list</code>:</p>
-<pre><code class="language-cpp"> class Widget {
-public:
-  Widget();
-  Widget(std::initializer_list&#x3C;int> il);
-... };
-Widget w1;      // дефолтный конструктор
-Widget w2{};    // дефолтный конструктор
-Widget w3();    // most vexing parse! объявляет функцию
+Widget w<span class="token punctuation">{</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">5.0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>	<span class="token comment">// ошибка компиляции!</span></code></pre></div>
+<p>Компилятор, несмотря на то, что есть конструктор, принимающий <strong>int</strong> и <strong>double</strong>, опять попытался использовать конструктор с <code class="language-text">initializer_list</code> и не смог, потому что для этого требуется сужающее приведение <strong>int</strong> и <strong>double</strong> к <strong>bool</strong>, а сужающие приведения запрещены в инициализации через <strong>{}</strong>.</p>
+<p>Однако и из этого правила есть исключение - если есть дефолтный конструктор и мы вызываем инициализацию без параметров, то дефолтный конструктор имеет высший приоритет над конструктором с <code class="language-text">initializer_list</code>:</p>
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike"> class <span class="token class-name">Widget</span> <span class="token punctuation">{</span>
+public<span class="token punctuation">:</span>
+  <span class="token function">Widget</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">Widget</span><span class="token punctuation">(</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>initializer_list<span class="token operator">&lt;</span>int<span class="token operator">></span> il<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+Widget w1<span class="token punctuation">;</span>		<span class="token comment">// дефолтный конструктор</span>
+Widget w2<span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>	<span class="token comment">// дефолтный конструктор</span>
+Widget <span class="token function">w3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// most vexing parse! объявляет функцию</span>
 
-Widget w4({});  // только так мы в этом случае можем вызвать конструктор с initializer_list
-Widget w5{{}};  // ну или так
-</code></pre>
-<p>Один из выводов из всего этого - если вы автор библиотеки, то не стоит добавлять конструктор, принимающий <code>initializer_list</code>, так как тогда возможно клиенты не смогут использовать ваши остальные конструкторы.</p>
+Widget <span class="token function">w4</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">// только так мы в этом случае можем вызвать конструктор с initializer_list</span>
+Widget w5<span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span>	<span class="token comment">// ну или так</span></code></pre></div>
+<p>Один из выводов из всего этого - если вы автор библиотеки, то не стоит добавлять конструктор, принимающий <code class="language-text">initializer_list</code>, так как тогда возможно клиенты не смогут использовать ваши остальные конструкторы.</p>
 <h2>Используйте nullptr вместо 0 и NULL</h2>
 <p>В С++98 использование 0 и NULL приводило к тому, что перегрузки, принимающие указатель, могли не вызываться:</p>
-<pre><code class="language-cpp">void f(int);
-void f(bool);
-void f(void*);
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">void <span class="token function">f</span><span class="token punctuation">(</span>int<span class="token punctuation">)</span><span class="token punctuation">;</span>
+void <span class="token function">f</span><span class="token punctuation">(</span>bool<span class="token punctuation">)</span><span class="token punctuation">;</span>
+void <span class="token function">f</span><span class="token punctuation">(</span>void<span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-f(0);           // f(int)
-f(NULL);        // могло не скомпилиться, но если компилилось, то вызывало f(int)
-</code></pre>
+<span class="token function">f</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>			<span class="token comment">// f(int)</span>
+<span class="token function">f</span><span class="token punctuation">(</span>NULL<span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">// могло не скомпилиться, но если компилилось, то вызывало f(int)</span></code></pre></div>
 <p>Все потому, что 0 - это целочисленный тип и NULL часто был определен тоже как численный тип.</p>
-<p>Преимущество <strong>nullptr</strong> - он не может быть интерпретирован как численный тип, только как указатель. Тип <strong>nullptr</strong> - <code>std::nullptr_t</code>. ЭТот тип неявно приводит к себе указатели всех типов, поэтому <strong>nullptr</strong> - универсальный указатель.</p>
-<pre><code class="language-cpp">f(nullptr);     // f(void*)
-</code></pre>
+<p>Преимущество <strong>nullptr</strong> - он не может быть интерпретирован как численный тип, только как указатель. Тип <strong>nullptr</strong> - <code class="language-text">std::nullptr_t</code>. ЭТот тип неявно приводит к себе указатели всех типов, поэтому <strong>nullptr</strong> - универсальный указатель.</p>
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike"><span class="token function">f</span><span class="token punctuation">(</span>nullptr<span class="token punctuation">)</span><span class="token punctuation">;</span>		<span class="token comment">// f(void*)</span></code></pre></div>
 <h2>Используйте alias вместо typedef</h2>
 <p>В С++98 были <strong>typedef</strong>:</p>
-<pre><code class="language-cpp">typedef
-     std::unique_ptr&#x3C;std::unordered_map&#x3C;std::string, std::string>>
-     UPtrMapSS;
-</code></pre>
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">typedef
+     std<span class="token punctuation">:</span><span class="token punctuation">:</span>unique_ptr<span class="token operator">&lt;</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>unordered_map<span class="token operator">&lt;</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>string<span class="token punctuation">,</span> std<span class="token punctuation">:</span><span class="token punctuation">:</span>string<span class="token operator">></span><span class="token operator">></span>
+     UPtrMapSS<span class="token punctuation">;</span></code></pre></div>
 <p>Они устарели, когда в C++11 появились алиасы:</p>
-<pre><code class="language-cpp"> using UPtrMapSS =
-     std::unique_ptr&#x3C;std::unordered_map&#x3C;std::string, std::string>>;
-</code></pre>
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike"> using UPtrMapSS <span class="token operator">=</span>
+     std<span class="token punctuation">:</span><span class="token punctuation">:</span>unique_ptr<span class="token operator">&lt;</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>unordered_map<span class="token operator">&lt;</span>std<span class="token punctuation">:</span><span class="token punctuation">:</span>string<span class="token punctuation">,</span> std<span class="token punctuation">:</span><span class="token punctuation">:</span>string<span class="token operator">></span><span class="token operator">></span><span class="token punctuation">;</span></code></pre></div>
 <p>Еще один пример, демонстрирующий повышенную читаемость алиасов по сравнению с тайпдефом:</p>
-<pre><code class="language-cpp">typedef void (*FP)(int, const std::string&#x26;);
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">typedef void <span class="token punctuation">(</span><span class="token operator">*</span>FP<span class="token punctuation">)</span><span class="token punctuation">(</span>int<span class="token punctuation">,</span> const std<span class="token punctuation">:</span><span class="token punctuation">:</span>string<span class="token operator">&amp;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-using FP = void (*)(int, const std::string&#x26;);
-</code></pre>
+using FP <span class="token operator">=</span> void <span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">(</span>int<span class="token punctuation">,</span> const std<span class="token punctuation">:</span><span class="token punctuation">:</span>string<span class="token operator">&amp;</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <p>Основное преимущество - алиасы могут быть шаблонизированы, а тайпдефы - нет. В С++98 приходилось извращаться и определять тайпдефы внутри шаблонизированных структур:</p>
-<pre><code class="language-cpp">template&#x3C;typename T>
-struct MyAllocList { 
-    typedef std::list&#x3C;T, MyAlloc&#x3C;T>> type;
-};
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">template<span class="token operator">&lt;</span>typename T<span class="token operator">></span>
+struct MyAllocList <span class="token punctuation">{</span> 
+	typedef std<span class="token punctuation">:</span><span class="token punctuation">:</span>list<span class="token operator">&lt;</span>T<span class="token punctuation">,</span> MyAlloc<span class="token operator">&lt;</span>T<span class="token operator">></span><span class="token operator">></span> type<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-MyAllocList&#x3C;Widget>::type lw;
-</code></pre>
-<p>Если же после этого мы захотим использовать этот шаблно внутри другого шаблонизированного класса, то придется писать <code>typename</code>:</p>
-<pre><code class="language-cpp">template&#x3C;typename T>
-class Widget {
-private:
-    typename MyAllocList&#x3C;T>::type list;
-... };
-</code></pre>
-<p>Кстати, при использовании type traits так и приходится писать, так как они были реализованы с использованием тайпдефов, а не алиасов, несмотря на то, что были введены в C++11. В С++14 признали эту ошибку и для каждого класса <code>std::transformation&#x3C;T>::type</code> теперь есть соответствующий <code>std::transformation_t&#x3C;T></code>, реализованный через алиасы.</p>
+MyAllocList<span class="token operator">&lt;</span>Widget<span class="token operator">></span><span class="token punctuation">:</span><span class="token punctuation">:</span>type lw<span class="token punctuation">;</span></code></pre></div>
+<p>Если же после этого мы захотим использовать этот шаблно внутри другого шаблонизированного класса, то придется писать <code class="language-text">typename</code>:</p>
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">template<span class="token operator">&lt;</span>typename T<span class="token operator">></span>
+class <span class="token class-name">Widget</span> <span class="token punctuation">{</span>
+private<span class="token punctuation">:</span>
+	typename MyAllocList<span class="token operator">&lt;</span>T<span class="token operator">></span><span class="token punctuation">:</span><span class="token punctuation">:</span>type list<span class="token punctuation">;</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
+<p>Кстати, при использовании type traits так и приходится писать, так как они были реализованы с использованием тайпдефов, а не алиасов, несмотря на то, что были введены в C++11. В С++14 признали эту ошибку и для каждого класса <code class="language-text">std::transformation&lt;T&gt;::type</code> теперь есть соответствующий <code class="language-text">std::transformation_t&lt;T&gt;</code>, реализованный через алиасы.</p>
 <p>Так вот, в С++11 есть алиасы и использовать их мы можем так:</p>
-<pre><code class="language-cpp">template&#x3C;typename T>
-using MyAllocList = std::list&#x3C;T, MyAlloc&#x3C;T>>;
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">template<span class="token operator">&lt;</span>typename T<span class="token operator">></span>
+using MyAllocList <span class="token operator">=</span> std<span class="token punctuation">:</span><span class="token punctuation">:</span>list<span class="token operator">&lt;</span>T<span class="token punctuation">,</span> MyAlloc<span class="token operator">&lt;</span>T<span class="token operator">></span><span class="token operator">></span><span class="token punctuation">;</span>
 
-MyAllocList&#x3C;Widget> lw;
-</code></pre>
+MyAllocList<span class="token operator">&lt;</span>Widget<span class="token operator">></span> lw<span class="token punctuation">;</span></code></pre></div>
 <h2>Используйте scoped enums вместо unscoped enums</h2>
 <p>Есть такое правило, что имя, объявленное внутри фигурных скобок, видно только внутри области, ограниченной этими скобками. Это правило соблюдается всегда, кроме енумов в C++98.</p>
 <p>Поэтому енумы в C++98 - unscoped enums:</p>
-<pre><code class="language-cpp">enum Color {red, black, white};
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">enum Color <span class="token punctuation">{</span>red<span class="token punctuation">,</span> black<span class="token punctuation">,</span> white<span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-auto white = false;     // ОШИБКА КОМПИЛЯЦИИ! white уже определен
-</code></pre>
+auto white <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>		<span class="token comment">// ОШИБКА КОМПИЛЯЦИИ! white уже определен</span></code></pre></div>
 <p>В С++11 им на замену пришли scoped enums:</p>
-<pre><code class="language-cpp">enum class Color {red, black, white};
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">enum class <span class="token class-name">Color</span> <span class="token punctuation">{</span>red<span class="token punctuation">,</span> black<span class="token punctuation">,</span> white<span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-auto white = false;     // все норм
-Color c = white;        // ОШИБКА КОМПИЛЯЦИИ! нет имени white в текущем скоупе
-Color c = Color::white; // ok
-auto c = Color::white;  // ok
-</code></pre>
+auto white <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>		<span class="token comment">// все норм</span>
+Color c <span class="token operator">=</span> white<span class="token punctuation">;</span>		<span class="token comment">// ОШИБКА КОМПИЛЯЦИИ! нет имени white в текущем скоупе</span>
+Color c <span class="token operator">=</span> Color<span class="token punctuation">:</span><span class="token punctuation">:</span>white<span class="token punctuation">;</span>	<span class="token comment">// ok</span>
+auto c <span class="token operator">=</span> Color<span class="token punctuation">:</span><span class="token punctuation">:</span>white<span class="token punctuation">;</span>	<span class="token comment">// ok</span></code></pre></div>
 <p>Помимо ограниченной видимости, вторая причина, по которой стоит использовать scoped enums - более строгая типизация. Unscoped enums свободно неявно приводятся к целочисленным типам и типам с плавающей точкой:</p>
-<pre><code class="language-cpp">Color c = Color::red;
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">Color c <span class="token operator">=</span> Color<span class="token punctuation">:</span><span class="token punctuation">:</span>red<span class="token punctuation">;</span>
 
-if(c &#x3C; 14.5) {  // ОШИБКА КОМПИЛЯЦИИ
-    ...
-}
+<span class="token keyword">if</span><span class="token punctuation">(</span>c <span class="token operator">&lt;</span> <span class="token number">14.5</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>	<span class="token comment">// ОШИБКА КОМПИЛЯЦИИ</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
 
-if(static_vast&#x3C;double>(c) &#x3C; 14.5) {     // OK
-    ...
-}
-</code></pre>
+<span class="token keyword">if</span><span class="token punctuation">(</span>static_vast<span class="token operator">&lt;</span>double<span class="token operator">></span><span class="token punctuation">(</span>c<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">14.5</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>		<span class="token comment">// OK</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span></code></pre></div>
 <p>И еще одно преимущество - при использовании scoped enums не нужно перекомпиливать клиентов енума при добавлении в него нового значения. А с unscoped enums - нужно.</p>
 <p>Дефолтный тип для scoped enums - int, для unscoped enums - нет дефолтного.</p>
 <h2>Используйте deleted функции вместо private undefined</h2>
 <p>В С++98 когда нужно запретить вызов какой-либо функции (обычно конструктора присваивания или копирования), то определяют ее как private и просто не пишут ее реализацию:</p>
-<pre><code class="language-cpp">template &#x3C;class charT, class traits = char_traits&#x3C;charT> >
-   class basic_ios : public ios_base {
-   public:
-...
-private:
-     basic_ios(const basic_ios&#x26; );            // not defined
-     basic_ios&#x26; operator=(const basic_ios&#x26;);  // not defined
-   };
-</code></pre>
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">template <span class="token operator">&lt;</span>class <span class="token class-name">charT</span><span class="token punctuation">,</span> class <span class="token class-name">traits</span> <span class="token operator">=</span> char_traits<span class="token operator">&lt;</span>charT<span class="token operator">></span> <span class="token operator">></span>
+   class <span class="token class-name">basic_ios</span> <span class="token punctuation">:</span> public ios_base <span class="token punctuation">{</span>
+   public<span class="token punctuation">:</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+private<span class="token punctuation">:</span>
+     <span class="token function">basic_ios</span><span class="token punctuation">(</span>const basic_ios<span class="token operator">&amp;</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token comment">// not defined</span>
+     basic_ios<span class="token operator">&amp;</span> operator<span class="token operator">=</span><span class="token punctuation">(</span>const basic_ios<span class="token operator">&amp;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// not defined</span>
+   <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
 <p><strong>private</strong> гарантирует, что внешний код не имеет доступ к этим функциям. Отсутствие реализации для таких функций гарантирует, что даже если какой-то какой-то код, имеющий к ним доступ, попытается их вызвать, он получит ошибку на этапе линковки.</p>
 <p>В C++11 такие функции определяются как удаленные:</p>
-<pre><code class="language-cpp">template &#x3C;class charT, class traits = char_traits&#x3C;charT> > 
-class basic_ios : public ios_base {
-public:
-    ...
-    basic_ios(const basic_ios&#x26; ) = delete; 
-    basic_ios&#x26; operator=(const basic_ios&#x26;) = delete; 
-    ...
-}
-</code></pre>
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">template <span class="token operator">&lt;</span>class <span class="token class-name">charT</span><span class="token punctuation">,</span> class <span class="token class-name">traits</span> <span class="token operator">=</span> char_traits<span class="token operator">&lt;</span>charT<span class="token operator">></span> <span class="token operator">></span> 
+class <span class="token class-name">basic_ios</span> <span class="token punctuation">:</span> public ios_base <span class="token punctuation">{</span>
+public<span class="token punctuation">:</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+	<span class="token function">basic_ios</span><span class="token punctuation">(</span>const basic_ios<span class="token operator">&amp;</span> <span class="token punctuation">)</span> <span class="token operator">=</span> delete<span class="token punctuation">;</span> 
+	basic_ios<span class="token operator">&amp;</span> operator<span class="token operator">=</span><span class="token punctuation">(</span>const basic_ios<span class="token operator">&amp;</span><span class="token punctuation">)</span> <span class="token operator">=</span> delete<span class="token punctuation">;</span> 
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span></code></pre></div>
 <p>Удаленные функции никак не могут быть использованы и такие попытки приведт к ошибкам на этапе компиляции.</p>
 <p>А еще, используя удаленные функции, можно запредить использование шаблонных функций с определенными типами:</p>
-<pre><code class="language-cpp">template&#x3C;typename T>
-void processPointer(T* ptr);
+<div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">template<span class="token operator">&lt;</span>typename T<span class="token operator">></span>
+void <span class="token function">processPointer</span><span class="token punctuation">(</span>T<span class="token operator">*</span> ptr<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-template&#x3C;>
-void processPointer&#x3C;void>(void*) = delete;
-template&#x3C;>
-void processPointer&#x3C;char>(char*) = delete;
-template&#x3C;>
-void processPointer&#x3C;const void>(const void*) = delete;
-template&#x3C;>
-void processPointer&#x3C;const char>(const char*) = delete;
-</code></pre></div></div></div></div></div></div><script id="webpack-manifest">/*<![CDATA[*/window.webpackManifest={"231608221292675":"app-ee422ac8c8d975d4b355.js","122212659448958":"component---src-templates-blog-template-js-40956da8f886eafeb36f.js","162898551421021":"component---src-pages-404-js-4503918ea3a16cfcdb75.js","213534597649335":"component---src-pages-index-jsx-ed5f83543216989c42c9.js","218538773642512":"component---src-pages-page-2-js-65f0147ecb0dc4da2a2b.js","60335399758886":"path----312dbf55939ed237922c.js","229226591425695":"path---blog-video-microservices-what-we-learned-f5a90a189b44da7a91be.js","100364315975247":"path---blog-video-dapp-introduction-18a08af6d97c4f55c2fa.js","55495657889055":"path---blog-video-after-ddos-defense-d7f2f630e6f10d653de7.js","139359830059626":"path---blog-video-microservices-introduction-f3e72db12b0fbbb3d580.js","192092705425134":"path---blog-react-code-review-3639de61a5c8ec40c288.js","92226880614288":"path---howto-mips-gcc-0880423397eebc2bc371.js","186363950922344":"path---blog-video-kafka-under-highload-c9ba43a895234eb619dc.js","226923551111508":"path---blog-video-http-balancing-6eec4894584ee04d7a77.js","160831456888542":"path---blog-books-xv-6-9023bac90e984ef3e566.js","184279855636086":"path---blog-x-64-7781a52988fda6ca93ef.js","53213360603775":"path---blog-wget-b2276cddc4105ace9aa7.js","27547127271145":"path---blog-virtualenv-3ed97f2ead9054836cf6.js","24818581494570":"path---blog-hardware-virtual-memory-79d5b2f9932e063d2b8c.js","98763693551004":"path---blog-hardware-video-a882f7233cbbe8420a8f.js","130591662829648":"path---blog-hardware-usb-2902438d72114310e6d2.js","9365413787972":"path---blog-tmux-18af5c3ee5786bc23e5e.js","162551281273053":"path---blog-systemd-bde979ddc87b1e7c9bf1.js","186644301018450":"path---blog-sh-f7b638fc99a971b4aa88.js","73744929748382":"path---blog-sed-6a7051bbefdd9def0839.js","104991713993326":"path---blog-pip-abd64edaa0d15be853d7.js","264201604445726":"path---blog-pdb-cbd483343d11c66f1e7c.js","133853690878566":"path---blog-npm-4f38b5dbca23541666f7.js","109648760230997":"path---blog-video-microservices-patterns-playbook-789b40dcdf4d315ca285.js","159123021256651":"path---blog-kazoo-2497377bd7253a7b95a2.js","104310528048563":"path---blog-gcc-2f6622c1c0f0846a2708.js","110067976222435":"path---blog-hardware-disk-306e6d689cb622b49051.js","132138994540798":"path---blog-hardware-cpu-4cd2e518ccf742e8026f.js","55889076892030":"path---blog-books-computer-organization-and-design-b9fec2d6c985ad44539f.js","77570552653218":"path---blog-books-build-systems-da90c07c93f61b8f655a.js","131670063006948":"path---blog-webpack-9d3fd355b7a49f15c82d.js","48555064563601":"path---blog-webpack-2-613f06922b155eeb86aa.js","36163852562177":"path---blog-web-components-143a7e086a55de724af5.js","274395942926096":"path---blog-vim-5e5110444cdff57e8c62.js","207874380873722":"path---blog-typescript-288e7095a7260887c28e.js","1112656806016":"path---blog-storybook-5a29d2baa4a10d8b7a27.js","65468590155737":"path---blog-books-stackframes-a750e700629fe8105cd2.js","85756719843508":"path---blog-spring-boot-374ccfd3bfa67ded83ed.js","94230034957513":"path---blog-mvc-sessionless-state-12281ec2091582c9e1ae.js","34503133861313":"path---blog-swig-2cbe0b7c6b6e1e3d1ec3.js","9783932336651":"path---blog-ssl-3f1addd4570a6d554687.js","30778352477470":"path---blog-sql-recursive-cte-e643e27fb3c8145e3a0a.js","218031196284409":"path---blog-sql-fizzbuzz-a19125265b020c668aaf.js","123969815895874":"path---blog-ruby-10341037f2e8234a4d30.js","254035159982288":"path---blog-riak-017c27a09cb33adc6bc9.js","204811817341229":"path---blog-redux-4fed98bde112a019015a.js","92818489627367":"path---blog-redux-2-8275ec87d46ada9ec530.js","62231134199178":"path---blog-react-1772bc9452377966cb75.js","148854442917752":"path---blog-rabbitmq-f591f04c8eff604d8f41.js","38855089869933":"path---blog-hardware-ram-11c6c8f0b951e307c6d9.js","148886276492926":"path---blog-python-2-a5296659987e03ada440.js","105666842049118":"path---blog-python-4c69d05159424d2e7402.js","269087443385385":"path---blog-postcss-fc1a38ea5a4d5f6c1159.js","256307876683203":"path---blog-oauth-58b2881d3b6fe2cf98ae.js","143217941000248":"path---blog-nodejs-a4db1ba11ab71d87a276.js","28480827339995":"path---blog-nginx-95158fa4765cbc4e89cf.js","244296159480370":"path---blog-mongodb-a0072eebb3f25201f6b5.js","250734049749304":"path---blog-maven-da6909564d3fe9fc05b3.js","189813236319561":"path---blog-linux-networking-fa7457ac2d7b179d8bdf.js","64880211853811":"path---blog-linux-debugging-2d1eabdd3caf05008f62.js","79569183618093":"path---blog-linux-api-92a99c0e0ec520076abb.js","197411268609348":"path---blog-knockout-7c4cfbd4a1c286e3ac1b.js","229750489612856":"path---blog-kafka-4e5cbf0c1f4416575a91.js","123278874046992":"path---blog-javascript-bf38942f9fb919cc14c6.js","53396112491056":"path---blog-java-1bdcc1887eeecc89a78d.js","18938219703366":"path---blog-js-event-loop-f72490c1078996bba861.js","142042848561750":"path---blog-how-would-you-implement-2673484302e1346fc8da.js","154704496480088":"path---blog-books-how-linux-works-38446ba99539e818f42a.js","76495366757855":"path---blog-gstreamer-5298189b6f670bfb7f51.js","190181808776960":"path---blog-google-test-516e9734941f59461e2c.js","130613441630911":"path---blog-gitlab-ci-9cdb9c5b7a3c03e85974.js","60149745945718":"path---blog-git-a176b80686ca6e70bf81.js","68448465120492":"path---blog-gdb-1b8ecd9ea32b86157dbe.js","191388377664321":"path---blog-flexbox-d2727e853a6da977e9a1.js","259445767305737":"path---blog-express-00cc4f3d5211bb03edae.js","104734089325636":"path---blog-books-effective-modern-cpp-3259b4289ff9c9d022b9.js","267150169503670":"path---blog-docker-compose-4a43b0829173eab4e471.js","97711108842923":"path---blog-docker-9d4ff6fc5df7945b590e.js","838797986268":"path---blog-books-designing-data-intensive-applications-1eaeffd06f5df9f3bbba.js","175567745484808":"path---blog-debian-bootstrap-a4183455e2eea7aeb7ca.js","246498121182663":"path---blog-debian-9965d1c337457bf36996.js","109290739445578":"path---blog-call-conventions-4a3238dc1cc5325623ad.js","249667644861725":"path---blog-css-293623988a319b100ba5.js","257759292890660":"path---blog-web-security-2ad6831319dac386d275.js","226785351346532":"path---blog-cmake-a37c0e87876c6ccec47d.js","143229806240817":"path---blog-cpp-2731a59487992c3e4c68.js","159223318109625":"path---blog-backstopjs-6e9ff9bcf4f8661b9ce4.js","69801897094251":"path---blog-architecture-e499ab2115654d6ed9ad.js","117626492464451":"path---blog-algorithms-e375169a15a627e27332.js","215540810942742":"path---blog-mvc-async-controllers-c3cc24f140a51a9e6bb0.js","27779406687296":"path---blog-mvc-web-farms-9cb51abf17a7815a45a8.js","146292636605172":"path---blog-mvc-web-sockets-86e449c7694174065fb9.js","279780729786774":"path---blog-mvc-modules-handlers-44f1e163873a16c2c733.js","77216212851623":"path---blog-mvc-data-tampering-3d0d565b8fbb7674f2e4.js","13218921337688":"path---blog-video-10-ways-to-get-highload-and-bigdata-2a40a94753b968a20eda.js","225240287407359":"path---blog-dotnet-9c981bcf9de4c6440961.js","44704367536930":"path---blog-dotnet-monitor-0ee8745d0cde9bdafe90.js","254022195166212":"path---404-a0e39f21c11f6a62c5ab.js","142629428675168":"path---index-23fa3d0bb2ec71bdb247.js","135728916539164":"path---page-2-a0e39f21c11f6a62c5ab.js","178698757827068":"path---404-html-a0e39f21c11f6a62c5ab.js","114276838955818":"component---src-layouts-index-js-fc86867344fd33aec0ef.js"}/*]]>*/</script><script>/*<![CDATA[*/!function(e,t,r){function n(){for(;d[0]&&"loaded"==d[0][f];)c=d.shift(),c[o]=!i.parentNode.insertBefore(c,i)}for(var s,a,c,d=[],i=e.scripts[0],o="onreadystatechange",f="readyState";s=r.shift();)a=e.createElement(t),"async"in i?(a.async=!1,e.head.appendChild(a)):i[f]?(d.push(a),a[o]=n):e.write("<"+t+' src="'+s+'" defer></'+t+">"),a.src=s}(document,"script",["/hows-that-again/commons-afb5782224ac01f1fa03.js","/hows-that-again/app-ee422ac8c8d975d4b355.js","/hows-that-again/path---blog-books-effective-modern-cpp-3259b4289ff9c9d022b9.js","/hows-that-again/component---src-templates-blog-template-js-40956da8f886eafeb36f.js","/hows-that-again/component---src-layouts-index-js-fc86867344fd33aec0ef.js"])/*]]>*/</script></body></html>
+template<span class="token operator">&lt;</span><span class="token operator">></span>
+void processPointer<span class="token operator">&lt;</span>void<span class="token operator">></span><span class="token punctuation">(</span>void<span class="token operator">*</span><span class="token punctuation">)</span> <span class="token operator">=</span> delete<span class="token punctuation">;</span>
+template<span class="token operator">&lt;</span><span class="token operator">></span>
+void processPointer<span class="token operator">&lt;</span>char<span class="token operator">></span><span class="token punctuation">(</span>char<span class="token operator">*</span><span class="token punctuation">)</span> <span class="token operator">=</span> delete<span class="token punctuation">;</span>
+template<span class="token operator">&lt;</span><span class="token operator">></span>
+void processPointer<span class="token operator">&lt;</span>const void<span class="token operator">></span><span class="token punctuation">(</span>const void<span class="token operator">*</span><span class="token punctuation">)</span> <span class="token operator">=</span> delete<span class="token punctuation">;</span>
+template<span class="token operator">&lt;</span><span class="token operator">></span>
+void processPointer<span class="token operator">&lt;</span>const char<span class="token operator">></span><span class="token punctuation">(</span>const char<span class="token operator">*</span><span class="token punctuation">)</span> <span class="token operator">=</span> delete<span class="token punctuation">;</span></code></pre></div></div></div></div></div></div></div><script id="webpack-manifest">/*<![CDATA[*/window.webpackManifest={"231608221292675":"app-6b7dca2c49cd4802be69.js","122212659448958":"component---src-templates-blog-template-js-40956da8f886eafeb36f.js","162898551421021":"component---src-pages-404-js-4503918ea3a16cfcdb75.js","213534597649335":"component---src-pages-index-jsx-ed5f83543216989c42c9.js","218538773642512":"component---src-pages-page-2-js-65f0147ecb0dc4da2a2b.js","60335399758886":"path----312dbf55939ed237922c.js","229226591425695":"path---blog-video-microservices-what-we-learned-0884ad4603e69e1dcac2.js","100364315975247":"path---blog-video-dapp-introduction-b548e90718755ab19522.js","55495657889055":"path---blog-video-after-ddos-defense-0241be743ee49cbcf1c0.js","139359830059626":"path---blog-video-microservices-introduction-f3e72db12b0fbbb3d580.js","192092705425134":"path---blog-react-code-review-697d9acae8840b307adf.js","92226880614288":"path---howto-mips-gcc-a505e830d55ddf565e89.js","186363950922344":"path---blog-video-kafka-under-highload-7498bfc9a5f83fd88fbf.js","226923551111508":"path---blog-video-http-balancing-04a5d6bc3748744e2ccb.js","160831456888542":"path---blog-books-xv-6-77976c50122a2b12ef53.js","184279855636086":"path---blog-x-64-027becd65117534a097c.js","53213360603775":"path---blog-wget-3d0a2fa8d5d5aadf4073.js","27547127271145":"path---blog-virtualenv-5c46b5003c80cb6daffc.js","24818581494570":"path---blog-hardware-virtual-memory-fad50d4c43f973017653.js","98763693551004":"path---blog-hardware-video-a882f7233cbbe8420a8f.js","130591662829648":"path---blog-hardware-usb-2902438d72114310e6d2.js","9365413787972":"path---blog-tmux-18af5c3ee5786bc23e5e.js","162551281273053":"path---blog-systemd-3c5d81a37ef2bf9633a3.js","186644301018450":"path---blog-sh-5beeef3257141fa4537d.js","73744929748382":"path---blog-sed-524bf25b9638fccdbe6a.js","104991713993326":"path---blog-pip-0c3afd51fac4a25801c0.js","264201604445726":"path---blog-pdb-76c1660f2df57c525180.js","133853690878566":"path---blog-npm-bb10bfcf6f9c0e0bf4dc.js","109648760230997":"path---blog-video-microservices-patterns-playbook-789b40dcdf4d315ca285.js","159123021256651":"path---blog-kazoo-c5baddaecdbd8e79e06f.js","104310528048563":"path---blog-gcc-60cab66f382244efa6e5.js","110067976222435":"path---blog-hardware-disk-219303244426b14efd34.js","132138994540798":"path---blog-hardware-cpu-4cd2e518ccf742e8026f.js","55889076892030":"path---blog-books-computer-organization-and-design-551b64c038cd8a8a7db3.js","77570552653218":"path---blog-books-build-systems-61c7d7daaeea78630813.js","131670063006948":"path---blog-webpack-eea4c423ab2c581a7173.js","48555064563601":"path---blog-webpack-2-6ce1d63fcafb568abf3c.js","36163852562177":"path---blog-web-components-8bed9122b7db08e720e7.js","274395942926096":"path---blog-vim-306d161ecf3d14f805cd.js","207874380873722":"path---blog-typescript-60246b269a52e1ceeb2b.js","1112656806016":"path---blog-storybook-2791d3ca1e40cfc49940.js","65468590155737":"path---blog-books-stackframes-b8b40710ce69894b0c5a.js","85756719843508":"path---blog-spring-boot-0449fae4827a3a8079dc.js","94230034957513":"path---blog-mvc-sessionless-state-12281ec2091582c9e1ae.js","34503133861313":"path---blog-swig-e65ae73a99dd8664b742.js","9783932336651":"path---blog-ssl-ac8e7af60f8e442f001f.js","30778352477470":"path---blog-sql-recursive-cte-e309358783bcfe2098be.js","218031196284409":"path---blog-sql-fizzbuzz-76358ca446199abcc715.js","123969815895874":"path---blog-ruby-14fdae3024d52c4eec60.js","254035159982288":"path---blog-riak-23ed851bd2d7245a8d3a.js","204811817341229":"path---blog-redux-e7409d89c1574466a4e4.js","92818489627367":"path---blog-redux-2-6f2fe56d9b8eadc3bdcb.js","62231134199178":"path---blog-react-325a394f30627b1112cd.js","148854442917752":"path---blog-rabbitmq-53a39cc32af408eb651c.js","38855089869933":"path---blog-hardware-ram-5a3202a5e17f7bf17eb9.js","105666842049118":"path---blog-python-b15e3998e19f05894e7d.js","148886276492926":"path---blog-python-2-16aba90ef642ebadf689.js","269087443385385":"path---blog-postcss-1e8634868bcf12e36017.js","256307876683203":"path---blog-oauth-b2ee92c5f2c99aa16bac.js","143217941000248":"path---blog-nodejs-4fbe4ecce764a2f99586.js","28480827339995":"path---blog-nginx-d1b296a6d40b27eec596.js","244296159480370":"path---blog-mongodb-67d8fb27ae9d35cedec3.js","250734049749304":"path---blog-maven-37bfd707207a90b5fa91.js","189813236319561":"path---blog-linux-networking-c9e3f2c395c2ab7524bc.js","64880211853811":"path---blog-linux-debugging-f1c50eefb0f497f26571.js","79569183618093":"path---blog-linux-api-30868a1fc86617d91ac5.js","197411268609348":"path---blog-knockout-9d7309f5a90674955f0e.js","229750489612856":"path---blog-kafka-c729d024b265bd63649c.js","123278874046992":"path---blog-javascript-b32a8b5f65b78b7a63cc.js","53396112491056":"path---blog-java-c1052aeaac33bb5e3a0c.js","18938219703366":"path---blog-js-event-loop-f72490c1078996bba861.js","142042848561750":"path---blog-how-would-you-implement-1fc9253bee637ec5ea87.js","154704496480088":"path---blog-books-how-linux-works-95b7a473303526894b85.js","76495366757855":"path---blog-gstreamer-17e17ee2f5b769d89761.js","190181808776960":"path---blog-google-test-83b826a7e7901cc8fbfb.js","130613441630911":"path---blog-gitlab-ci-2bd6e341f1d29fa93fee.js","60149745945718":"path---blog-git-015c63e61f9bb5306562.js","68448465120492":"path---blog-gdb-edd9b2ffeadf11d89b94.js","191388377664321":"path---blog-flexbox-febdf9ef23ed0060a9fd.js","259445767305737":"path---blog-express-ec7a288889ccaeb70088.js","104734089325636":"path---blog-books-effective-modern-cpp-dfe0a57e8b4287161878.js","267150169503670":"path---blog-docker-compose-3910951dddf38c7a76f4.js","97711108842923":"path---blog-docker-0631f164426a92770b94.js","838797986268":"path---blog-books-designing-data-intensive-applications-1c92402b0c9668547088.js","175567745484808":"path---blog-debian-bootstrap-d2cb7ffc79ddd7123412.js","246498121182663":"path---blog-debian-8c0de52efafae3b00dd1.js","109290739445578":"path---blog-call-conventions-2e16a9a1d1ec666883a4.js","249667644861725":"path---blog-css-6860c1a2a8a9f8c71bcf.js","257759292890660":"path---blog-web-security-de5391424f8c2eff59c4.js","226785351346532":"path---blog-cmake-3b43990862b85e4c37ad.js","143229806240817":"path---blog-cpp-5dbf5accd220298d64cf.js","159223318109625":"path---blog-backstopjs-440f435b6f9dfe842bf7.js","69801897094251":"path---blog-architecture-2f5dae4941f3222c6147.js","117626492464451":"path---blog-algorithms-d93de066b8df0a88705f.js","215540810942742":"path---blog-mvc-async-controllers-c3cc24f140a51a9e6bb0.js","27779406687296":"path---blog-mvc-web-farms-9cb51abf17a7815a45a8.js","146292636605172":"path---blog-mvc-web-sockets-f514dc5c70b846e58e06.js","279780729786774":"path---blog-mvc-modules-handlers-44f1e163873a16c2c733.js","77216212851623":"path---blog-mvc-data-tampering-118028cf133af5b92d65.js","13218921337688":"path---blog-video-10-ways-to-get-highload-and-bigdata-94abfce78af88d7ab06d.js","225240287407359":"path---blog-dotnet-f3909ed15ac55af9cb3d.js","44704367536930":"path---blog-dotnet-monitor-1f18de743523b22605b1.js","254022195166212":"path---404-a0e39f21c11f6a62c5ab.js","142629428675168":"path---index-f7404bb42f1d01cd0f02.js","135728916539164":"path---page-2-a0e39f21c11f6a62c5ab.js","178698757827068":"path---404-html-a0e39f21c11f6a62c5ab.js","114276838955818":"component---src-layouts-index-js-c249cbc2e05364980f1b.js"}/*]]>*/</script><script>/*<![CDATA[*/!function(e,t,r){function n(){for(;d[0]&&"loaded"==d[0][f];)c=d.shift(),c[o]=!i.parentNode.insertBefore(c,i)}for(var s,a,c,d=[],i=e.scripts[0],o="onreadystatechange",f="readyState";s=r.shift();)a=e.createElement(t),"async"in i?(a.async=!1,e.head.appendChild(a)):i[f]?(d.push(a),a[o]=n):e.write("<"+t+' src="'+s+'" defer></'+t+">"),a.src=s}(document,"script",["/hows-that-again/commons-afb5782224ac01f1fa03.js","/hows-that-again/app-6b7dca2c49cd4802be69.js","/hows-that-again/path---blog-books-effective-modern-cpp-dfe0a57e8b4287161878.js","/hows-that-again/component---src-templates-blog-template-js-40956da8f886eafeb36f.js","/hows-that-again/component---src-layouts-index-js-c249cbc2e05364980f1b.js"])/*]]>*/</script></body></html>
