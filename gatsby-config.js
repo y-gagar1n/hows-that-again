@@ -16,7 +16,16 @@ module.exports = {
         options: {
             plugins: [
                 'gatsby-remark-images',
-                'gatsby-remark-prismjs'
+                {
+                    resolve: 'gatsby-remark-prismjs',
+                    options: {
+                        aliases: {
+                            sh: "bash",
+                            cpp: "clike",
+                            js: "javascript"
+                        }
+                    }
+                }
             ]
         }
     }
