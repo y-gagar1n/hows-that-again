@@ -152,6 +152,10 @@
       "path---blog-hardware-video-a882f7233cbbe8420a8f.js",
       "path---blog-hardware-video-a882f7233cbbe8420a8f.js.map"
     ],
+    "path---blog-books-voice-user-interfaces": [
+      "path---blog-books-voice-user-interfaces-1e8899030550fccf1732.js",
+      "path---blog-books-voice-user-interfaces-1e8899030550fccf1732.js.map"
+    ],
     "path---blog-video-dapp-introduction": [
       "path---blog-video-dapp-introduction-b548e90718755ab19522.js",
       "path---blog-video-dapp-introduction-b548e90718755ab19522.js.map"
@@ -161,8 +165,8 @@
       "path---blog-gcc-60cab66f382244efa6e5.js.map"
     ],
     "path---blog-books-effective-modern-cpp": [
-      "path---blog-books-effective-modern-cpp-dfe0a57e8b4287161878.js",
-      "path---blog-books-effective-modern-cpp-dfe0a57e8b4287161878.js.map"
+      "path---blog-books-effective-modern-cpp-8cb6cd4d45a1bed4b50b.js",
+      "path---blog-books-effective-modern-cpp-8cb6cd4d45a1bed4b50b.js.map"
     ],
     "path---blog-pip": [
       "path---blog-pip-0c3afd51fac4a25801c0.js",
@@ -185,8 +189,8 @@
       "path---blog-hardware-disk-219303244426b14efd34.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-c249cbc2e05364980f1b.js",
-      "component---src-layouts-index-js-c249cbc2e05364980f1b.js.map"
+      "component---src-layouts-index-js-f8a77a5b5221663390db.js",
+      "component---src-layouts-index-js-f8a77a5b5221663390db.js.map"
     ],
     "path---blog-algorithms": [
       "path---blog-algorithms-d93de066b8df0a88705f.js",
@@ -237,8 +241,8 @@
       "path---blog-how-would-you-implement-1fc9253bee637ec5ea87.js.map"
     ],
     "path---index": [
-      "path---index-f7404bb42f1d01cd0f02.js",
-      "path---index-f7404bb42f1d01cd0f02.js.map"
+      "path---index-6e962acac7e6f8cfe361.js",
+      "path---index-6e962acac7e6f8cfe361.js.map"
     ],
     "path---blog-nodejs": [
       "path---blog-nodejs-4fbe4ecce764a2f99586.js",
@@ -373,9 +377,9 @@
       "path---blog-kafka-c729d024b265bd63649c.js.map"
     ],
     "app": [
-      "app-6b7dca2c49cd4802be69.js",
+      "app-8c809396004fb3a4bd9a.js",
       "build-js-styles.css",
-      "app-6b7dca2c49cd4802be69.js.map",
+      "app-8c809396004fb3a4bd9a.js.map",
       "build-js-styles.css.map"
     ],
     "path---blog-mongodb": [
