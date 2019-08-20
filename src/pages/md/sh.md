@@ -410,3 +410,11 @@ $ cat > test.txt << EOF
 ```sh
 cmp -l file1.bin file2.bin | gawk '{printf "%08X %02X %02X\n", $1, strtonum(0$2), strtonum(0$3)}'
 ```
+
+### Вывод кода нажатой клавиши
+
+```shell
+showkey -a
+```
+
+Выводит в том числе и коды сочетаний клавиш, например, `Ctrl+Shift+F8`
