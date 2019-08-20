@@ -1040,10 +1040,44 @@ std::unique_ptr<T> make_unique(Ts&&... params)
 }
 ```
 
+## Understand std::move and std::forward
 
+`std::move` ничего не перемещает, а `std::forward` ничего не форвардит. В рантайме они не делают ничего, потому что даже не генерируют исполняемого кода. Все что они делают - конвертируют типы.
 
+`std::move` приводит аргумент к *rvalue*.
 
+`std::forward` тоже приводит к *rvalue*, но только если аргумент был инициализирован как *rvalue*.
 
+Пример реализации `std::move`: 
+
+```cpp
+template<typename T>
+typename remove_reference<T>::type&&
+move(T&& param) {
+  using ReturnType = typename remove_reference<T>::type&&;
+
+  return static_cast<ReturnType>(param);
+}
+```
+
+Так как тип аргумента `T&&` может означать как `rvalue`, так и `lvalue`, то нам нужен тип `remove_reference`. Он снимает ссылку, если `T` - ссылочный тип и оставляет все как есть, если нет.
+
+Все `rvalue` передаются перемещением, поэтому после применения `std::move` на объекте, он сможет быть переданным куда-то путем перемещения, а не копирования.
+
+Однако не всегда `rvalue` передаются перемещением, а значит и `std::move` не всегда будет перемещать. Например, значение не будет перещеаться из константы:
+
+```cpp
+class Annotation {
+public:
+  explicit Annotation(const std::string text)
+    : value(std::move(text))
+    { ... }
+private:
+  std::string value;    
+};
+```
+
+В примере выше text в value попадет путем копирования, так как он не может переместиться из константы.
 
 
 
