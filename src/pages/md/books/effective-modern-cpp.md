@@ -932,3 +932,132 @@ auto upv = std::make_unique<std::vector<int>>(10, 20);
 Здесь будет создан вектор с 10 элементами, каждый из которых равен 20. А значит внутри для инициализации используется синтаксис с круглыми скобками, а не с фигурными.
 
 - контрольный блок должен существовать, пока не будет уничтоен последний `shared_ptr`, ссылающийся на него **И** последний `weak_ptr`, ссылающийся на него. А так как `make_shared` аллоцирует один кусок памяти для контрольного блока и для объекта, то и память, выделенная для объекта не может быть освобождена, пока не уничтожится последний `std::weak_ptr`. То есть объект давно уничтожился, но он продолжает занимать память. В случае использования `new` память освободится, как только объект уничтожится, независимо от наличия `weak_ptr`, ссылающися на него.
+
+## When using the Pimpl Idiom, define special member function in the implementation file
+
+Pimpl Idiom - техника, используемая для уменьшения времени билда. Члены класса заменяются на указатель на класс/структуру реализации, члены класса перемещаются в класс реализации и обращение к ним осуществляется через указатель.
+
+До применения:
+
+```cpp
+// Widget.h
+
+#include "Gadget.h"
+#include <string>
+#include <vector>
+
+class Widget {
+public:
+  Widget();
+  ...
+private:
+  std::string name;
+  std::vector<double> data;
+  Gadget g1, g2, g3;
+};
+```
+
+Клиенты `Widget` должны включать `<string>`, `<vector>` и `gadget.h`. Главная проблема здесь в том, что если заголовок `gadget.h` меняется, то все клиенты должны перестроиться.
+
+После применения для С++98:
+
+```cpp
+// Widget.h
+class Widget {
+public:
+  Widget();
+  ~Widget();
+  ...
+private:
+  struct Impl;
+  Impl *pImpl;
+}
+```
+Структура `Widget::Impl` определена где-то в другом файле. Здесь мы видим *неполный тип*. С таким типом можно сделать очень мало вещей, и одна из них - определение указателя.
+
+Вторая часть паттерна - динамическое создание и уничтожение `Widget::Impl`:
+
+```cpp
+// Widget.cpp
+
+#include "Widget.h"
+#include "Gadget.h"
+#include <string>
+#include <vector>
+
+struct Widget::Impl {
+  std::string name;
+  std::vector<double> data;
+  Gadget g1, g2, g3;
+};
+
+Widget::Widget(): pImpl(new Impl) {}
+
+Widget::~Widget() { delete pImpl; }
+```
+
+Зависимости от `std::string`, `std::vector` и `Gadget` остались, но они переехали из `Widget.h` в `Widget.cpp`.
+
+В С++11 можем использовать `std::unique_ptr`:
+
+```cpp
+// Widget.h
+
+class Widget {
+public: 
+  Widget();
+  ...
+private:
+  struct Impl;
+  std::unique_ptr<Impl> pImpl;
+};
+```
+
+```cpp
+// Widget.cpp
+
+#include "Widget.h"
+#include "Gadget.h"
+#include <string>
+#include <vector>
+
+struct Widget::Impl {
+  std::string name;
+  std::vector<double> data;
+  Gadget g1, g2, g3;
+};
+
+Widget::Widget(): pImpl(std::make_unique<Impl>()) {}
+```
+
+Реализация `make_unique` в C++11 может выглядеть так:
+
+```cpp
+template<typename T, typename... Ts>
+std::unique_ptr<T> make_unique(Ts&&... params)
+{
+  return std::unique_ptr<T>(new T(std::forward<Ts>(params)...));
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
