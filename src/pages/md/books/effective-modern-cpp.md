@@ -1079,10 +1079,85 @@ private:
 
 В примере выше text в value попадет путем копирования, так как он не может переместиться из константы.
 
+## Distinquish universal references from rvalue references
 
+`T&&` имеет два значения:
 
+- rvalue reference
+- universal reference
 
+Универсальная ссылка может быть привязана к rvalue, lvalue, константам, не-константам, volatile, не-volatile, и даже к `const volatile`-объектам.
 
+Обычно универсальные ссылки используются в типах шаблонов и в auto-декларациях:
+
+```cpp
+template<typename T>
+void f(T&& param);
+
+auto&& var2 = var1;
+```
+
+В обоих этих случаях присутствует вывод типа, поэтому используется универсальная ссылка. 
+
+Если вывода типа (к которому относится **&&**) нет, то `T&&` означает ссылку на rvalue:
+
+```cpp
+void f(Widget&& param);
+
+Widget&& var1 = Widget();
+```
+
+Форма вывода типа очень важна, чтобы использовалась универсальная ссылка, тип **обязательно** должен быть `T&&`. В следующем примере правило не соблюдается и поэтому используется ссылка на rvalue:
+
+```cpp
+template<typename T>
+void f(std::vector<T>&& param);
+
+template<typename T>
+void f2(const T&& param);
+
+std::vector<int> v;
+f(v);   // ОШИБКА, lvalue не принимается
+
+f2(v);   // ОШИБКА, lvalue не принимается
+```
+
+Более того, не всегда присутствие `T&&` в шаблоне означает использование универсальной ссылки. Вот пример:
+
+```cpp
+template<class T, class Allocator = allocator<T>>
+class vector {
+public:
+  void push_back(T&& x);
+  ...
+};
+```
+
+Это не является универсальной ссылкой, так как `T` полностью определяется конкретным классом с подставленными типамию Например, для класса `Widget`:
+
+```cpp
+class vector<Widget, allocator<Widget>> {
+public:
+  void push_back(Widget&& x);
+  ...
+};
+```
+
+Никакого вывода типов здесь нет.
+
+В то же время, функция `employ_back` *использует* вывод типа, а значит и универсальную ссылку:
+
+```cpp
+template<class T, class Allocator = allocator<T>>
+class vector {
+public:
+  template <class... Args>
+  void emplace_back(Args&&... args);
+  ...
+};
+```
+
+Если поьзователь сам указывает типы при использовании шаблона, то вывода типов опять нет и универсальная ссылка не используется.
 
 
 
