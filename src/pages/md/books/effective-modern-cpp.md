@@ -1392,6 +1392,31 @@ public:
 
 ## Understand reference collapsing
 
+При использовании универсальных ссылок в шаблное выводитмый тип T содержит в себе информацию, была ли передана ссылка на lvalue или rvalue. Например, если есть такое определение шаблона:
+
+```cpp
+template<typename T>
+void func(T&& param);
+```
+
+тип T будет выведен как:
+
+- lvalue reference, если в качестве аргумента передана lvalue
+- non-reference, если передана rvalue
+
+Пример для нашего шаблона `func`:
+
+```cpp
+Widget w;
+Widget widgetFactory();
+
+func(w);                  // T => Widget&
+
+func(widgetFactory());    // T => Widget
+```
+
+Благодаря этому правилу работают универсальные ссылки и `std::forward`.
+
 Пользователю нельзя делать ссылки на ссылки:
 
 ```cpp
@@ -1512,3 +1537,74 @@ auto func =
       std::make_unique<Widget>()
 );
 ```
+
+## Use decltype on auto&& parameters to std::forward them
+
+В C++14 появились джененрик лямбды, у которых в списке параметров можно использовать тип `auto`:
+
+```cpp
+auto f = [](auto x){ return func(normalize(x)); };
+```
+
+Сгенерированный класс замыкания выглядит так:
+
+```cpp
+class SomeCompilerGeneratedClassName {
+public:
+  template<typename T>
+  auto operator()(T x) const
+  { return func(normalize(x)); }
+  ...
+};
+```
+
+Но ва этой лямбде есть недостаток - она плохо работает со ссылками на rvalue, а именно не форвардит их.
+
+Исправленный вариант:
+
+```cpp
+auto f = [](auto&& x)
+         { return func(normalize(std::forward<decltype(x)>(x))); };
+```
+
+Если нужна лямбда, принимающая множество параметров, можем применить вариадичный шаблон:
+
+```cpp
+auto f = [](auto&&... params)
+{
+  return func(normalize(std::forward<decltype(params)>(params)...));
+};
+```
+
+## Prefer lambdas to std::bind
+
+- Лямбды намного более читабельны. 
+- Лямбды могут инлайниться, бинды - нет.
+- У биндов неочевидная семантика копирования аргументов - при создании бинда аргументы копируются по значению, а при использовании результата аргументы передаются по функции. И это из кода нигде не понятно, это можно только запомнить.
+
+В С++11 без использования бинда не обойтись, когда:
+
+- хотим передать аргументы в замыкание перемещением
+- дженерик лямбда
+
+Дженерик лямбда через бинд реализуется так:
+
+```cpp
+class PolyWidget {
+public:
+  template<typename T>
+  void operator()(const T& param);
+  ...
+};
+
+PolyWidget pw;
+
+auto boundPW = std::bind(pw, _1);
+
+boundPW(1930);
+boundPW(nullptr);
+boundPW("Rosebud");
+```
+
+В С++14 лямбды поддерживают оба этих пункта, поэтому там смысла использовать бинд нет вообще никогда.
+
