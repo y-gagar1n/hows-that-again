@@ -201,3 +201,21 @@ git rebase -i HEAD~N
 git commit --amend --reset-author
 git rebase --continue
 ```
+
+## Пуш/пулл без ввода логина и пароля
+
+Открываем .git/config
+
+В поле `url` должна быть запись следующего вида:
+
+```
+url = ssh://git@github.com/y-gagar1n/dotfiles.git
+```
+
+Чтобы у коммита в гитхабе выставился правильный ник, отличный от установленного глобально на системе, нужно его указать дополнительно:
+
+```
+[user]                                                                                                                                                                                                   
+name = y-gagar1n                                                                                                                                                                                     
+email = yggr1n@gmail.com
+```  
