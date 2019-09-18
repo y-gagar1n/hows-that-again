@@ -185,7 +185,7 @@ git config --local user.name y-gagar1n
 git config --local user.email "y.timofeyev@gmail.com"
 ```
 
-Затем интерактивно проходим по каждому коммиту и выставляем ем нового автора.
+Затем интерактивно проходим по каждому коммиту и выставляем ему нового автора.
 
 ```shell
 git rebase -i HEAD~N
