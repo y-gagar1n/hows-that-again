@@ -147,9 +147,11 @@ https://vim.rtorr.com
 
 ```
 :compiler pyunit
-:set makeprg=python
-:make test.py
+:set makeprg=python\ %  
+:make
 ```
+
+Строчкой `python\ %` мы указали, что нужно вызвать python, подав аргументом путь к текущему файлу.
 
 ## Прочее
 
