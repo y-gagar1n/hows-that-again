@@ -28,6 +28,17 @@ module.exports = {
                 }
             ]
         }
+    },
+    {
+      resolve: `gatsby-plugin-yandex-metrica`,
+      options: {
+        trackingId: "56098288",
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        trackHash: true,
+        webvisor: true,
+      }
     }
   ],
   pathPrefix: '/hows-that-again'
