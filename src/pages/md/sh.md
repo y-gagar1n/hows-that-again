@@ -598,3 +598,18 @@ du -k DIRECTORY
 exec > >(tee script.log)
 exec 2>&1
 ```
+
+### Вывод информации о дистрибутиве
+
+```sh
+$ uname –srmpio
+Linux 3.13.0-36-generic x86_64 x86_64 x86_64 GNU/Linux
+```
+Либо
+```sh
+$ cat /etc/lsb-release
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=14.04
+DISTRIB_CODENAME=trusty
+DISTRIB_DESCRIPTION="Ubuntu 14.04.1 LTS"
+```
