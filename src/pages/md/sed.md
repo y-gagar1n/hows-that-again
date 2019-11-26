@@ -14,6 +14,12 @@ path: "/blog/sed"
 sed -i -- "s/hello/goodbye/g" ./example.txt
 ```
 
+## Удаление строк, содержащих одну из подстрок
+
+```shell
+sed -ir -- '/string1\|string2\|string3/d' ./file.txt
+```
+
 ## Экранирование
 
 Символы `$.*/[\]^` экранируются бэкслэшэм (\\)
