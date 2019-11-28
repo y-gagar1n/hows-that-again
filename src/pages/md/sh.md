@@ -467,6 +467,33 @@ ldconfig -p | grep gstreamer
 
 Выведет путь к либе, если найдет такую.
 
+## Службы
+
+### System V
+
+```sh
+service --status-all # вывод всех служб
+service <service> start/stop # старт/остановка службы
+service <service> status # вывод статуса службы
+```
+
+### systemd
+
+```sh
+systemctl # вывод всех служб
+systemctl --failed # вывод упавших служб
+systemctl start/stop/reload/restart/status [service-name] # запуск/остановка/чтение конфига/перезапуск/вывод статуса службы
+systemctl enable/disable [service-name] # включение/выключение службы
+systemctl is-enabled/is-active [service-name] # проверка, запускается ли на старте системы/запущена ли сейчас служба
+systemctl daemon-reload # перезапуск systemd
+```
+
+```sh
+journalctl -t [service-name] # вывод логов службы
+tail -f /var/log/messages # вывод логов для служб, которые не пишут в journalctl
+tail -f /var/log/secure # вывод логов для привилегированных служб
+tail -f /var/log/[service-name] # если служба не пишет в /var/log/messages, возможно у нее свой личный лог
+
 ## Tips & tricks
 
 ### Отладка
