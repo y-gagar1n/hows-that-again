@@ -134,6 +134,12 @@ run blk new| used  buff  cach  free|  in   out | read  writ| int   csw |usr sys 
 
 Позволяет сдампить сетевой трафик в файл, чтобы потом его открыть через `wireshark`.
 
+## Опции запуска
+
+- `-n` - не преобразовывать численные адреса в имена
+- `-v/vv/vvv` - verbose output
+- `-X` - помимо заголовков пакетов, печатать так же их тела
+
 Пример:
 
 ```shell
@@ -192,6 +198,25 @@ ip.src == 192.168.1.3 or ip.dst == 192.168.1.3
 
 ```
 ip.addr == 192.168.1.3
+```
+
+## Scapy
+
+Scapy это интерпретатор на основе питона, позволяющий отправлять, перехватывать, декодировать и анализивовать сетевые пакеты.
+
+Отправка пакета:
+
+```sh
+$ scapy
+>>> send(IP(dst="10.0.0.1")/ICMP()/"This is an ICMP packet") 
+```
+
+Анализ .pcap:
+
+```sh
+$ scapy
+>>> pcap = rdpcap('traffic.pcap')
+>>> str = ''.join(str(p.payload.payload.payload) for p in pcap)
 ```
 
 # perf
