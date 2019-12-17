@@ -5,6 +5,8 @@ path: "/blog/gdb"
 
 # GDB
 
+Хороший туториал - https://beej.us/guide/bggdb/
+
 ## peda
 
 peda - удобное окружение для GDB
