@@ -8,6 +8,99 @@ path: "/blog/kotlin"
 Полная грамматика языка: https://kotlinlang.org/docs/reference/grammar.html
 Полная документация: https://kotlinlang.org/docs/kotlin-docs.pdf
 
+## Определение функций
+
+```kotlin
+fun sum(a: Int, b: Int): Int {
+    return a + b
+}
+```
+
+Если содержит не более одного выражения, то можно использовать сокращенную версию:
+
+```kotlin
+fun sum(a: Int, b: Int) = a + b
+```
+
+Если ничего не возвращает, то возвращаемый тип должен быть `Unit`.
+
+## Function types
+
+Тип-функция имеет такой синтаксис:
+
+```kotlin
+# (Int) -> String 
+val onClick: () -> Unit = ...
+val a = { i: Int -> i + 1 }
+```
+
+### Receiver type
+
+Для типов-фукнций может быть указан тип-получатель:
+
+```kotlin
+A.(B) -> C
+```
+
+Это значит, что будет вызываться функция с заголовком `(B) -> C` для инстанса типа `A`. К инстансу в теле функции можно будет обратиться через **this**.
+
+Пример:
+
+```kotlin
+val repeatFun: String.(Int) -> String = { times -> this.repeat(times) }
+```
+
+Причем тип "функция с ресивером" взаимозаменяем с типом "функция без ресивера", если ресивер во втором случае передавать первым аргументом:
+
+```kotlin
+val repeatFun: String.(Int) -> String = { times -> this.repeat(times) }
+val twoParameters: (String, Int) -> String = repeatFun // OK
+
+fun runTransformation(f: (String, Int) -> String): String {
+    return f("hello", 3)
+}
+val result = runTransformation(repeatFun) // OK
+```
+
+## Лямбды
+
+```kotlin
+max(strings, { a, b -> a.length < b.length })
+val sum: (Int, Int) -> Int = { x: Int, y: Int -> x + y }
+val sum = { x, y -> x + y }
+```
+
+Есть такое соглашение: если последний аргумент функции является функцией, то его можно вынести за скобки:
+
+```kotlin
+val product = items.fold(1) { acc, e -> acc * e }
+```
+
+Этот синтаксис называется *trailing lambda*.
+
+### it
+
+Если у лямбды только 1 аргумент, то при объявлении лямбды список аргументов можно опустить и потом в теле обращаться к аргументу через **it**:
+
+```kotlin
+ints.filter { it > 0 } // this literal is of type '(it: Int) -> Boolean'
+```
+
+### Возврат значения из лямбды
+
+```
+ints.filter {
+    val shouldFilter = it > 0 
+    shouldFilter                # автоматически возвращается результат последнего выражения
+}
+
+ints.filter {
+    val shouldFilter = it > 0 
+    return@filter shouldFilter  # если сделать просто return, то произойдет выход из функции, в которой объявляется эта лямбда
+}
+```
+
+
 ## Интерполяция строк
 
 ```kotlin
