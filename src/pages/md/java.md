@@ -3,8 +3,93 @@ title: "Java"
 path: "/blog/java"
 ---
 
+# Java
 
-# Запрос сетевого ресурса
+## Многопоточность
+
+https://github.com/LeonardoZ/java-concurrency-patterns
+
+### Java concurrency API
+
+Базовые классы:
+
+- класс `Thread`
+- интерфейс `Runnable`
+- класс `ThreadLocal`
+- интерфейс `ThreadFactory`
+
+Механизмы синхронизации:
+
+- ключевое слово `synchronized`
+- интерфейс `Lock`  и его реализации
+  - `ReentrantLock`
+  - `ReentrantReadWriteLock`
+  - `StampedLock`
+
+- класс `Semaphore` - позволяет ограничивать доступ к общему ресурсу
+- класс `CountDownLatch` (https://howtodoinjava.com/java/multi-threading/when-to-use-countdownlatch-java-concurrency-example-tutorial/) - позволяет дождаться завершения нескольких операций
+- класс `CyclicBarrier` - для сихнронизации нескольких потоков в одной точке
+- класс `Phaser` - для контроля над выполнением таска, состоящего из нескольких фаз. Следующая таска не начинается, пока все потоки не завершили текущую.
+
+Экзекуторы:
+
+- интерфейсы `Executor` и `ExecutorService`
+- класс `ThreadPoolExecutor` - тред-пул
+- класс `ScheduledThreadPoolExecutor` - тред-пул с возможностью отложенного либо периодического выполнения
+- класс `Executors` - статический класс, упрощающий создание экзекуторов
+- интерфейс `Callable` - альтернатива `Runnable`: таска, возвращающая значение
+- интерфейс `Future` - интерфейс, позволяющий получить значение, возвращенное из `Callable`
+
+Конкурентные структуры данных:
+
+- `ConcurrentLinkedDeque`
+- `ConcurrentLinkedQueue`
+- `LinkedBlockingDeque`
+- `LinkedBlockingQueue`
+- `PriorityBlockingQueue`
+- `ConcurrentSkipListMap`
+- `ConcurrentHashMap`
+- `AtomicBoolean`, `AtomicInteger`, `AtomicLong`, `AtomicReference`
+
+### Паттерны
+
+#### Сигналирование
+
+Таска хочет сообщить о событии другой таске. Проще всего реализовать, используя семафор `Semaphore`, мьютекс `ReentrantLock`, либо же используя методы `wait()` и `notify()` класса `Object`:
+
+```java
+public void task1() {
+     section1();
+     commonObject.notify();
+}
+
+public void task2() {
+     commonObject.wait();
+     section2();
+}
+```
+
+#### Рандеву
+
+Таска А ждет события от таски Б, а таска Б ждет события от А. То есть то же самое, что и в сигналировании, только нужно два примитива синхронизации:
+
+```java
+public void task1() {
+     section1_1();
+     commonObject1.notify();
+     commonObject2.wait();
+     section1_2();
+   }
+   public void task2() {
+     section2_1();
+     commonObject2.notify();
+     commonObject1.wait();
+     section2_2();
+}
+```
+
+
+## Запрос сетевого ресурса
 
 ```java
 URL url = new URL("https://adventofcode.com/2018/day/1/input");
@@ -40,11 +125,11 @@ HttpsURLConnection conn = (HttpsURLConnection)url.openConnection(new Proxy(Proxy
 conn.setRequestProperty("cookie", "COOKIE_CONTENTS");
 ```
 
-# Работа с I/O
+## Работа с I/O
 
 В Java NIO основные концепции - каналы и буферы. При чтении данных каналы читают их из источника в буффер. При записи - буфер пишет в канал.
 
-## Каналы
+### Каналы
 
 Самые важные реализации каналов:
 
@@ -79,7 +164,7 @@ aFile.close();
 
 Строка `buf.flip()` очень важна - она переводит буфер из режима записи **в** буфер в режим чтения **из** буфера.
 
-## Буферы
+### Буферы
 
 Работа с буфером состоит из 4 шагов:
 
@@ -99,7 +184,7 @@ aFile.close();
 - LongBuffer
 - ShortBuffer
 
-### Создание буфера
+#### Создание буфера
 
 Каждый класс-наследник `Buffer` имеет метод `allocate()`, который аллоцирует новый буфер:
 
@@ -108,7 +193,7 @@ ByteBuffer buf = ByteBuffer.allocate(48);
 CharBuffer buf2 = CharBuffer.allocate(48);
 ```
 
-### Запись данных в буфер
+#### Запись данных в буфер
 
 В буфер можно записать данные 2 способами:
 
@@ -129,7 +214,7 @@ buf.put(127);
 
 У `put()` есть много перегрузок, можно писать одно значение, массив значений, и даже значения из другого буфера.
 
-### Чтение данных из буфера
+#### Чтение данных из буфера
 
 Так же как и с записью, есть 2 способа.
 
@@ -145,6 +230,6 @@ int bytesWritten = inChannel.write(buf);
 byte aByte = buf.get();
 ```
 
-### Очистка буфера
+#### Очистка буфера
 
 При вызове `clear()` внутренний `position` выставляется в 0, а `limit` - в `capacity`. Это означает, что данные не очищаются, но следующая запись будет поверх старых данных.
