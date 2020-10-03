@@ -1,5 +1,5 @@
 ---
-title: "Как сбилдить GCC для компилции под MIPS на OS X"
+title: "Как сбилдить GCC для компиляции под MIPS на OS X"
 path: "/howto/mips-gcc"
 ---
 

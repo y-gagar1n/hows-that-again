@@ -8,43 +8,18 @@ const compareByPath = (a, b) => {
 }
 
 export default ({children}) => (
-    <StaticQuery 
-        query={
-            graphql`
-              query MdFilesQuery {
-                allFile {
-                  edges {
-                    node {
-                      relativePath
-                      extension
-                    }
-                  }
-                }
-              }
-            `
-        }
-        render={data => {
-              const nodes = data.allFile.edges.map(({ node }) => node)
-              return (
-                  <Layout>
-                        <div>
-                      {nodes
-                        .sort(compareByPath)
-                        .filter(node => node.extension === 'md')
-                        .map(node => {
-                          const title = node.relativePath.substr(
-                            0,
-                            node.relativePath.length - 3
-                          )
-                          return (
-                            <div>
-                              <Link to={'/blog/' + title}>{title}</Link>
-                            </div>
-                          )
-                        })}
-                    </div>
-                  </Layout>
-              )
-        }}
-    />
+  <Layout>
+    <div>
+      <Link to={'/cheats'}>cheats</Link>
+    </div>
+    <div>
+      <Link to={'/books'}>books</Link>
+    </div>
+    <div>
+      <Link to={'/video'}>videos</Link>
+    </div>
+    <div>
+      <Link to={'/hardware'}>hardware</Link>
+    </div>
+  </Layout>
 )
