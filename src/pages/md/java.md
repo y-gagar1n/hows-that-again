@@ -55,7 +55,9 @@ https://github.com/LeonardoZ/java-concurrency-patterns
 
 #### Сигналирование
 
-Таска хочет сообщить о событии другой таске. Проще всего реализовать, используя семафор `Semaphore`, мьютекс `ReentrantLock`, либо же используя методы `wait()` и `notify()` класса `Object`:
+Когда использовать: Таска хочет сообщить о событии другой таске. 
+
+Проще всего реализовать, используя семафор `Semaphore`, мьютекс `ReentrantLock`, либо же используя методы `wait()` и `notify()` класса `Object`:
 
 ```java
 public void task1() {
@@ -71,7 +73,9 @@ public void task2() {
 
 #### Рандеву
 
-Таска А ждет события от таски Б, а таска Б ждет события от А. То есть то же самое, что и в сигналировании, только нужно два примитива синхронизации:
+Когда использовать: Таска А ждет события от таски Б, а таска Б ждет события от А. 
+
+То же самое, что и в сигналировании, только нужно два примитива синхронизации:
 
 ```java
 public void task1() {
@@ -88,6 +92,70 @@ public void task1() {
 }
 ```
 
+#### Мьютекс
+
+Когда использовать: когда только один таск одновременно должен иметь доступ к куску кода.
+
+Реализуется, используя `synchronized`, `ReentrantLock`  или `Semaphore`.
+
+```java
+public void task() {
+     preCriticalSection();
+     lockObject.lock() // The critical section begins
+     criticalSection();
+     lockObject.unlock(); // The critical section ends
+     postCriticalSection();
+}
+```
+
+#### Мультиплекс
+
+Когда использовать: когда не больше N тасков должны выполнять кусок кода.
+
+То есть как мьютекс, только не один, а N. Для решения подходит `Semaphore`.
+
+```java
+public void task() {
+    preCriticalSection();
+    semaphoreObject.acquire();
+    criticalSection();
+    semaphoreObject.release();
+    postCriticalSection();
+}
+```
+
+### Барьер
+
+Когда использовать: когда несколько тасков должны сихнронизироваться в одной точке. Ни один из таском не может продолжать выполнение, пока все таски не достигнут этой строчки.
+
+Используется `CyclicBarrier`. Он называется **cyclic**, потому что может быть переиспользован. Первым аргументом принимает количество таском, а вторым может принимать `Runnable`, который будет запущен как только все потоки достигли точки синхронизации, но перед тем, как они пошли дальше.
+
+```java
+public void task() {
+     preSyncPoint();
+     barrierObject.await();
+     postSyncPoint();
+}
+```
+
+#### Read-write lock
+
+Когда использовать: когда потоков, которые хотят писать, меньше, чем потоков, которые хотят читать.
+
+Использовать `ReentrantReadWriteLock`
+
+#### Thread pool
+
+Использовать классы, реализующие интерфейс `ExecutorService`.
+
+## Executor Framework
+
+Базовые компоненты:
+
+- интерфейс [`Executor`](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Executor.html): имеет единственный метод `execute`, который принимает `Runnable`-таску. Эта таска будет запущена, а вот когда и как - решит конкретная реализация экзекутора.
+- интерфейс [`ExecutorService`](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ExecutorService.html): расширение `Executor`, наделяющее его дополнительными возможностями. Позволяет прервать выполнеие тасков и получать футуры для получения прогресса/результата выполнения тасков. Содержит методы `invokeAll`, `invokeAny` для выполнения всех или любого из переданных тасков.
+- класс [`ThreadPoolExecutor`](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ThreadPoolExecutor.html) - реализация `ExecutorService`, использующая непосредственно thread pool. Для создания рекомендуется использовать фабричные методы `Executors.newCachedThreadPool()`, `Executors.newFixedThreadPool(int)` и `Executors.newSingleThreadExecutor()`. Предоставляет расширяемые методы `beforeExecute` и `afterExecute`, посредством которых может быть расширен.
+- класс [`Executors`](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Executors.html) - предоставляет статические фабричные методы для создания реализаций `Executor`, `ExecutorService`, `ScheduledExecutorService`, `ThreadFactory`, и `Callable`.
 
 ## Запрос сетевого ресурса
 
@@ -233,3 +301,30 @@ byte aByte = buf.get();
 #### Очистка буфера
 
 При вызове `clear()` внутренний `position` выставляется в 0, а `limit` - в `capacity`. Это означает, что данные не очищаются, но следующая запись будет поверх старых данных.
+
+## Чтение файла построчно
+
+```java
+try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+    String line;
+    while ((line = br.readLine()) != null) {
+       // process the line.
+    }
+}
+```
+
+## List to array
+
+```java
+List<Double> exampleList = new ArrayList<Double>();
+...
+Double[] example = new Double[exampleList.size()];
+example = exampleList.toArray(example);
+```
+
+## Map array to array
+
+```java
+String[] parts = Stream.of(line.split(";")).map(x -> x.trim())
+    .toArray(String[]::new);
+```
