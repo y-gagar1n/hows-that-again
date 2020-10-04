@@ -65,7 +65,7 @@ https://www.slideshare.net/jboner/scalability-availability-stability-patterns/
 
 Обычно процесс переключения не так прост:
 
-[Failback](failback.png)
+![Failback](./failback.png)
 
 ## Репликация
 
@@ -78,13 +78,13 @@ https://www.slideshare.net/jboner/scalability-availability-stability-patterns/
 
 ### Tree Replication
 
-[Tree Replication](tree-replication.png)
+![Tree Replication](./tree-replication.png)
 
 ### Buddy Replication
 
-[Buddy Replication before](buddy-replication1.png)
+![Buddy Replication before](buddy-replication1.png)
 
-[Buddy Replication after](buddy-replication2.png)
+![Buddy Replication after](buddy-replication2.png)
 
 # Паттерны масштабируемости
 
