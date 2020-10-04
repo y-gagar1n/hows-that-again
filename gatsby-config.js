@@ -16,6 +16,17 @@ module.exports = {
         options: {
             plugins: [
                 'gatsby-remark-images',
+                `gatsby-remark-autolink-headers`,
+                 {
+                    resolve: `gatsby-remark-table-of-contents`,
+                    options: {
+                        exclude: "Table of Contents",
+                        tight: true,
+                        fromHeading: 1,
+                        toHeading: 6,
+                        className: "table-of-contents"
+                    },
+                },
                 {
                     resolve: 'gatsby-remark-prismjs',
                     options: {

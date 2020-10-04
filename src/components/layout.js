@@ -5,6 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Header from '../components/header'
 import './index.css'
+import './custom.css'
 import 'prismjs/themes/prism-solarizedlight.css'
 
 const Layout = ({ children }) => (

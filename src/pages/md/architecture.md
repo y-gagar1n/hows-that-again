@@ -3,6 +3,9 @@ title: "Architecture"
 path: "/blog/architecture"
 ---
 
+```toc
+```
+
 # Паттерны мастабируемости, доступности, стабильности
 
 https://www.slideshare.net/jboner/scalability-availability-stability-patterns/
