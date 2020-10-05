@@ -48,10 +48,106 @@
         }
       }
     })
-  </script><link as="script" rel="preload" href="/hows-that-again/webpack-runtime-06b5f96d64641643f933.js"/><link as="script" rel="preload" href="/hows-that-again/framework-81279cacaab4bdba7685.js"/><link as="script" rel="preload" href="/hows-that-again/app-7d9fdb4491436253569b.js"/><link as="script" rel="preload" href="/hows-that-again/styles-e9d24b1846c7d6eb9685.js"/><link as="script" rel="preload" href="/hows-that-again/5b1f6c3ae453a75c31534982c76a9b2e93122bd4-6115ecfc022f312609ad.js"/><link as="script" rel="preload" href="/hows-that-again/component---src-templates-blog-template-js-6473a4537c7d0dd3d746.js"/><link as="fetch" rel="preload" href="/hows-that-again/page-data/blog/books/xv6/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/hows-that-again/page-data/sq/d/3649515864.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/hows-that-again/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><div style="background:rebeccapurple;margin-bottom:1.45rem"><div style="margin:0 auto;max-width:960px;padding:1.45rem 1.0875rem;display:flex;justify-content:space-between"><h1 style="margin:0"><a style="color:white;text-decoration:none" href="/hows-that-again/">How&#x27;s that again?</a></h1><span style="margin:auto 0"><form style="margin-bottom:0" method="get" action="https://encrypted.google.com/search"><input type="hidden" name="as_sitesearch" value="y-gagar1n.github.io/hows-that-again"/><input type="text" name="as_q"/><input type="submit" style="margin-left:5px" value="Search"/></form></span></div></div><div style="margin:0 auto;max-width:960px;padding:0px 1.0875rem 1.45rem;padding-top:0"><div class="blog-post-container"><div class="blog-post"><div class="blog-post-content"><p><a href="https://pdos.csail.mit.edu/6.828/2018/xv6/book-rev11.pdf">Комментарии к исходному коду</a>
+  </script><link as="script" rel="preload" href="/hows-that-again/webpack-runtime-06b5f96d64641643f933.js"/><link as="script" rel="preload" href="/hows-that-again/framework-81279cacaab4bdba7685.js"/><link as="script" rel="preload" href="/hows-that-again/app-7d9fdb4491436253569b.js"/><link as="script" rel="preload" href="/hows-that-again/styles-e9d24b1846c7d6eb9685.js"/><link as="script" rel="preload" href="/hows-that-again/5b1f6c3ae453a75c31534982c76a9b2e93122bd4-6115ecfc022f312609ad.js"/><link as="script" rel="preload" href="/hows-that-again/component---src-templates-blog-template-js-6473a4537c7d0dd3d746.js"/><link as="fetch" rel="preload" href="/hows-that-again/page-data/blog/books/xv6/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/hows-that-again/page-data/sq/d/3649515864.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/hows-that-again/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><div style="background:rebeccapurple;margin-bottom:1.45rem"><div style="margin:0 auto;max-width:960px;padding:1.45rem 1.0875rem;display:flex;justify-content:space-between"><h1 style="margin:0"><a style="color:white;text-decoration:none" href="/hows-that-again/">How&#x27;s that again?</a></h1><span style="margin:auto 0"><form style="margin-bottom:0" method="get" action="https://encrypted.google.com/search"><input type="hidden" name="as_sitesearch" value="y-gagar1n.github.io/hows-that-again"/><input type="text" name="as_q"/><input type="submit" style="margin-left:5px" value="Search"/></form></span></div></div><div style="margin:0 auto;max-width:960px;padding:0px 1.0875rem 1.45rem;padding-top:0"><div class="blog-post-container"><div class="blog-post"><div class="blog-post-content"><h1 id="xv6" style="position:relative;"><a href="#xv6" aria-label="xv6 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>xv6</h1>
+<div class="table-of-contents">
+<ul>
+<li>
+<p><a href="#%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D1%8B%D0%B5-%D0%BF%D0%BE%D0%BD%D1%8F%D1%82%D0%B8%D1%8F">Основные понятия</a></p>
+<ul>
+<li><a href="#%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81">Процесс</a></li>
+<li><a href="#fork">fork</a></li>
+<li><a href="#exec">exec</a></li>
+<li><a href="#sh">sh</a></li>
+<li>
+<p><a href="#%D0%B4%D0%B5%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%BE%D1%80%D1%8B-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2">Дескрипторы файлов</a></p>
+<ul>
+<li><a href="#%D0%BF%D0%B5%D1%80%D0%B5%D0%BD%D0%B0%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-io">Перенаправление I/O</a></li>
+<li><a href="#%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%B4%D0%B5%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%BE%D1%80%D0%BE%D0%B2-%D0%B2-fork">Использование дескрипторов в fork</a></li>
+<li><a href="#dup">dup</a></li>
+</ul>
+</li>
+<li><a href="#pipes">pipes</a></li>
+<li><a href="#%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D0%B0%D1%8F-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0">Файловая система</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%D0%BE%D1%80%D0%B3%D0%B0%D0%BD%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%BE%D0%B9-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B">Организация операционной системы</a></p>
+<ul>
+<li><a href="#%D0%B7%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D1%87%D0%B8%D0%BA">Загрузчик</a></li>
+<li><a href="#%D1%81%D1%82%D0%B0%D1%80%D1%82-%D1%8F%D0%B4%D1%80%D0%B0">Старт ядра</a></li>
+<li><a href="#%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%B3%D0%BE-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%B0">Создание первого процесса</a></li>
+<li><a href="#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D0%BF%D0%B5%D1%80%D0%B2%D0%BE%D0%B3%D0%BE-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%B0">Запуск первого процесса</a></li>
+<li><a href="#%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%B9-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%BD%D1%8B%D0%B9-%D0%B2%D1%8B%D0%B7%D0%BE%D0%B2-exec">Первый системный вызов: exec</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#context-switch">Context switch</a></p>
+<ul>
+<li><a href="#%D0%B0%D0%BA%D1%82%D0%B8%D0%B2%D0%B0%D1%86%D0%B8%D1%8F-%D0%BF%D1%80%D0%B5%D1%80%D1%8B%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-%D0%BF%D0%BE-%D1%82%D0%B0%D0%B9%D0%BC%D0%B5%D1%80%D1%83">Активация прерывания по таймеру</a></li>
+<li><a href="#%D0%B2%D1%8B%D0%B7%D0%BE%D0%B2-%D1%88%D0%B5%D0%B4%D1%83%D0%BB%D0%B5%D1%80%D0%B0">Вызов шедулера</a></li>
+<li><a href="#%D0%BF%D0%B5%D1%80%D0%B5%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BA%D1%81%D1%82%D0%B0">Переключение контекста</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%D0%BE%D1%80%D0%B3%D0%B0%D0%BD%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%87%D0%BD%D0%BE%D0%B9-%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8">Организация страничной памяти</a></p>
+<ul>
+<li><a href="#%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D0%B0%D0%B4%D1%80%D0%B5%D1%81%D0%BD%D0%BE%D0%B3%D0%BE-%D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%B0-%D1%8F%D0%B4%D1%80%D0%B0">Создание адресного пространства ядра</a></li>
+<li><a href="#%D0%B0%D0%BB%D0%BB%D0%BE%D0%BA%D0%B0%D1%86%D0%B8%D1%8F-%D1%84%D0%B8%D0%B7%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9-%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%B8-%D0%B4%D0%BB%D1%8F-%D1%8F%D0%B4%D1%80%D0%B0">Аллокация физической памяти для ядра</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B5-%D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%BE">Пользовательское пространство</a></p>
+<ul>
+<li><a href="#exec-1">exec</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%D1%82%D1%80%D1%8D%D0%BF%D1%8B%D0%B8%D1%81%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D1%8F-%D0%BF%D1%80%D0%B5%D1%80%D1%8B%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B8-%D0%B4%D1%80%D0%B0%D0%B9%D0%B2%D0%B5%D1%80%D0%B0">Трэпы/исключения, прерывания и драйвера</a></p>
+<ul>
+<li><a href="#%D0%B7%D0%B0%D1%89%D0%B8%D1%82%D0%B0-x86">Защита X86</a></li>
+<li><a href="#%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE-%D0%B2%D1%8B%D0%B7%D0%BE%D0%B2%D0%B0">Реализация системного вызова</a></li>
+<li><a href="#%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F-%D0%BF%D1%80%D0%B5%D1%80%D1%8B%D0%B2%D0%B0%D0%BD%D0%B8%D0%B9">Реализация прерываний</a></li>
+<li><a href="#%D0%B4%D1%80%D0%B0%D0%B9%D0%B2%D0%B5%D1%80%D0%B0">Драйвера</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%D0%BF%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%B2%D0%B0%D1%8F-%D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F">Потоковая синхронизация</a></p>
+<ul>
+<li>
+<p><a href="#%D0%BB%D0%BE%D0%BA%D0%B8">Локи</a></p>
+<ul>
+<li><a href="#%D1%81%D0%BF%D0%B8%D0%BD%D0%BB%D0%BE%D0%BA%D0%B8">Спинлоки</a></li>
+<li><a href="#%D1%81%D0%BB%D0%B8%D0%BF%D0%BB%D0%BE%D0%BA%D0%B8">Слиплоки</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D0%B0%D1%8F-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-1">Файловая система</a></p>
+<ul>
+<li><a href="#%D1%81%D0%BB%D0%BE%D0%B9-%D0%B1%D1%83%D1%84%D0%B5%D1%80%D0%BD%D0%BE%D0%B3%D0%BE-%D0%BA%D1%8D%D1%88%D0%B0">Слой буферного кэша</a></li>
+<li>
+<p><a href="#%D1%81%D0%BB%D0%BE%D0%B9-%D0%BB%D0%BE%D0%B3%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F">Слой логирования</a></p>
+<ul>
+<li><a href="#%D0%B0%D0%BB%D0%BB%D0%BE%D0%BA%D0%B0%D1%82%D0%BE%D1%80-%D0%B1%D0%BB%D0%BE%D0%BA%D0%BE%D0%B2">Аллокатор блоков</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%D1%81%D0%BB%D0%BE%D0%B9-%D0%B0%D0%B9%D0%BD%D0%BE%D0%B4%D0%BE%D0%B2">Слой айнодов</a></p>
+<ul>
+<li><a href="#%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B8%D0%BC%D0%BE%D0%B5-%D0%B0%D0%B9%D0%BD%D0%BE%D0%B4%D0%BE%D0%B2">Содержимое айнодов</a></li>
+</ul>
+</li>
+<li><a href="#%D1%81%D0%BB%D0%BE%D0%B9-%D0%B4%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%B9">Слой директорий</a></li>
+<li><a href="#%D1%81%D0%BB%D0%BE%D0%B9-%D0%BF%D1%83%D1%82%D0%B5%D0%B9">Слой путей</a></li>
+<li><a href="#%D1%81%D0%BB%D0%BE%D0%B9-%D0%B4%D0%B5%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%BE%D1%80%D0%BE%D0%B2-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2">Слой дескрипторов файлов</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p><a href="https://pdos.csail.mit.edu/6.828/2018/xv6/book-rev11.pdf">Комментарии к исходному коду</a>
 <a href="https://github.com/YehudaShapira/xv6-explained/blob/master/Explanations.md">Еще комментарии</a></p>
 <p><a href="https://pdos.csail.mit.edu/6.828/2018/xv6/xv6-rev11.pdf">Исходный код</a></p>
-<h1 id="xv6" style="position:relative;"><a href="#xv6" aria-label="xv6 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>xv6</h1>
 <p>Важное замечание для начала: во всех ассемблерах UNIX, включая используемый здесь, команда mov имеет следующий синтаксис: <code class="language-text">MOV src dest</code>.</p>
 <p>То есть <code class="language-text">mov $a $b</code> означает, что значение регистра a будет присвоено регистру b.</p>
 <h2 id="основные-понятия" style="position:relative;"><a href="#%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D1%8B%D0%B5-%D0%BF%D0%BE%D0%BD%D1%8F%D1%82%D0%B8%D1%8F" aria-label="основные понятия permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Основные понятия</h2>

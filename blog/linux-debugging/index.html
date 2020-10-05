@@ -48,7 +48,69 @@
         }
       }
     })
-  </script><link as="script" rel="preload" href="/hows-that-again/webpack-runtime-06b5f96d64641643f933.js"/><link as="script" rel="preload" href="/hows-that-again/framework-81279cacaab4bdba7685.js"/><link as="script" rel="preload" href="/hows-that-again/app-7d9fdb4491436253569b.js"/><link as="script" rel="preload" href="/hows-that-again/styles-e9d24b1846c7d6eb9685.js"/><link as="script" rel="preload" href="/hows-that-again/5b1f6c3ae453a75c31534982c76a9b2e93122bd4-6115ecfc022f312609ad.js"/><link as="script" rel="preload" href="/hows-that-again/component---src-templates-blog-template-js-6473a4537c7d0dd3d746.js"/><link as="fetch" rel="preload" href="/hows-that-again/page-data/blog/linux-debugging/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/hows-that-again/page-data/sq/d/3649515864.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/hows-that-again/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><div style="background:rebeccapurple;margin-bottom:1.45rem"><div style="margin:0 auto;max-width:960px;padding:1.45rem 1.0875rem;display:flex;justify-content:space-between"><h1 style="margin:0"><a style="color:white;text-decoration:none" href="/hows-that-again/">How&#x27;s that again?</a></h1><span style="margin:auto 0"><form style="margin-bottom:0" method="get" action="https://encrypted.google.com/search"><input type="hidden" name="as_sitesearch" value="y-gagar1n.github.io/hows-that-again"/><input type="text" name="as_q"/><input type="submit" style="margin-left:5px" value="Search"/></form></span></div></div><div style="margin:0 auto;max-width:960px;padding:0px 1.0875rem 1.45rem;padding-top:0"><div class="blog-post-container"><div class="blog-post"><div class="blog-post-content"><h1 id="strace" style="position:relative;"><a href="#strace" aria-label="strace permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>strace</h1>
+  </script><link as="script" rel="preload" href="/hows-that-again/webpack-runtime-06b5f96d64641643f933.js"/><link as="script" rel="preload" href="/hows-that-again/framework-81279cacaab4bdba7685.js"/><link as="script" rel="preload" href="/hows-that-again/app-7d9fdb4491436253569b.js"/><link as="script" rel="preload" href="/hows-that-again/styles-e9d24b1846c7d6eb9685.js"/><link as="script" rel="preload" href="/hows-that-again/5b1f6c3ae453a75c31534982c76a9b2e93122bd4-6115ecfc022f312609ad.js"/><link as="script" rel="preload" href="/hows-that-again/component---src-templates-blog-template-js-6473a4537c7d0dd3d746.js"/><link as="fetch" rel="preload" href="/hows-that-again/page-data/blog/linux-debugging/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/hows-that-again/page-data/sq/d/3649515864.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/hows-that-again/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><div style="background:rebeccapurple;margin-bottom:1.45rem"><div style="margin:0 auto;max-width:960px;padding:1.45rem 1.0875rem;display:flex;justify-content:space-between"><h1 style="margin:0"><a style="color:white;text-decoration:none" href="/hows-that-again/">How&#x27;s that again?</a></h1><span style="margin:auto 0"><form style="margin-bottom:0" method="get" action="https://encrypted.google.com/search"><input type="hidden" name="as_sitesearch" value="y-gagar1n.github.io/hows-that-again"/><input type="text" name="as_q"/><input type="submit" style="margin-left:5px" value="Search"/></form></span></div></div><div style="margin:0 auto;max-width:960px;padding:0px 1.0875rem 1.45rem;padding-top:0"><div class="blog-post-container"><div class="blog-post"><div class="blog-post-content"><h1 id="linux-debugging-tools" style="position:relative;"><a href="#linux-debugging-tools" aria-label="linux debugging tools permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Linux debugging tools</h1>
+<div class="table-of-contents">
+<ul>
+<li>
+<p><a href="#strace">strace</a></p>
+<ul>
+<li><a href="#%D1%84%D0%BB%D0%B0%D0%B3%D0%B8">Флаги</a></li>
+<li><a href="#%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D1%8B%D0%B5-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%BD%D1%8B%D0%B5-%D0%B2%D1%8B%D0%B7%D0%BE%D0%B2%D1%8B">Основные системные вызовы</a></li>
+<li><a href="#%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80">Пример</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#dstat">dstat</a></p>
+<ul>
+<li><a href="#%D1%84%D0%BB%D0%B0%D0%B3%D0%B8-1">Флаги</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#tcpdump">tcpdump</a></p>
+<ul>
+<li><a href="#%D0%BE%D0%BF%D1%86%D0%B8%D0%B8-%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%B0">Опции запуска</a></li>
+<li><a href="#%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B0-%D1%84%D0%B8%D0%BB%D1%8C%D1%82%D1%80%D0%B0%D1%86%D0%B8%D0%B8">Правила фильтрации</a></li>
+<li><a href="#wireshark">Wireshark</a></li>
+<li><a href="#scapy">Scapy</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#perf">perf</a></p>
+<ul>
+<li><a href="#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0">Установка</a></li>
+<li><a href="#%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F">Пример использования</a></li>
+<li><a href="#%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B">Полезные команды</a></li>
+<li><a href="#%D1%84%D0%BB%D1%8D%D0%B9%D0%BC-%D0%B3%D1%80%D0%B0%D1%84%D1%8B">Флэйм-графы</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#vmstat">vmstat</a></p>
+<ul>
+<li>
+<p><a href="#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B9">Описание полей:</a></p>
+<ul>
+<li><a href="#procs">Procs</a></li>
+<li><a href="#memory">Memory</a></li>
+<li><a href="#swap">Swap</a></li>
+<li><a href="#io">IO</a></li>
+<li><a href="#system">System</a></li>
+<li><a href="#cpu">CPU</a></li>
+</ul>
+</li>
+<li><a href="#%D0%B4%D0%B8%D1%81%D0%BA%D0%BE%D0%B2%D1%8B%D0%B9-%D1%80%D0%B5%D0%B6%D0%B8%D0%BC">Дисковый режим</a></li>
+<li>
+<p><a href="#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B9-1">Описание полей</a></p>
+<ul>
+<li><a href="#reads">Reads</a></li>
+<li><a href="#writes">Writes</a></li>
+<li><a href="#io-1">IO</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="strace" style="position:relative;"><a href="#strace" aria-label="strace permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>strace</h1>
 <p>Выводит все системные вызовы программы. Пример запуска:</p>
 <p><code class="language-text">strace ls</code></p>
 <p>Выводит кучу строк следующего вида:</p>

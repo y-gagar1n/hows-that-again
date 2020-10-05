@@ -49,6 +49,119 @@
       }
     })
   </script><link as="script" rel="preload" href="/hows-that-again/webpack-runtime-06b5f96d64641643f933.js"/><link as="script" rel="preload" href="/hows-that-again/framework-81279cacaab4bdba7685.js"/><link as="script" rel="preload" href="/hows-that-again/app-7d9fdb4491436253569b.js"/><link as="script" rel="preload" href="/hows-that-again/styles-e9d24b1846c7d6eb9685.js"/><link as="script" rel="preload" href="/hows-that-again/5b1f6c3ae453a75c31534982c76a9b2e93122bd4-6115ecfc022f312609ad.js"/><link as="script" rel="preload" href="/hows-that-again/component---src-templates-blog-template-js-6473a4537c7d0dd3d746.js"/><link as="fetch" rel="preload" href="/hows-that-again/page-data/blog/books/effective-modern-cpp/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/hows-that-again/page-data/sq/d/3649515864.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/hows-that-again/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><div style="background:rebeccapurple;margin-bottom:1.45rem"><div style="margin:0 auto;max-width:960px;padding:1.45rem 1.0875rem;display:flex;justify-content:space-between"><h1 style="margin:0"><a style="color:white;text-decoration:none" href="/hows-that-again/">How&#x27;s that again?</a></h1><span style="margin:auto 0"><form style="margin-bottom:0" method="get" action="https://encrypted.google.com/search"><input type="hidden" name="as_sitesearch" value="y-gagar1n.github.io/hows-that-again"/><input type="text" name="as_q"/><input type="submit" style="margin-left:5px" value="Search"/></form></span></div></div><div style="margin:0 auto;max-width:960px;padding:0px 1.0875rem 1.45rem;padding-top:0"><div class="blog-post-container"><div class="blog-post"><div class="blog-post-content"><h1 id="effective-modern-c" style="position:relative;"><a href="#effective-modern-c" aria-label="effective modern c permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Effective Modern C++</h1>
+<div class="table-of-contents">
+<ul>
+<li>
+<p><a href="#%D0%B2%D1%8B%D0%B2%D0%BE%D0%B4-%D1%82%D0%B8%D0%BF%D0%BE%D0%B2-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-auto">Вывод типов через auto</a></p>
+<ul>
+<li><a href="#%D0%BE%D1%81%D0%BE%D0%B1%D1%8B%D0%B9-%D1%81%D0%BB%D1%83%D1%87%D0%B0%D0%B9-%D0%B4%D0%BB%D1%8F-initializer_list">Особый случай для initializer_list</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#decltype">decltype</a></p>
+<ul>
+<li><a href="#%D0%BE%D1%81%D0%BE%D0%B1%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D1%8C-%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F-decltype">Особенность поведения decltype</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D1%83%D0%B9%D1%82%D0%B5-auto-%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%BE-%D1%8F%D0%B2%D0%BD%D1%8B%D1%85-%D0%BE%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B9-%D1%82%D0%B8%D0%BF%D0%BE%D0%B2">Используйте auto вместо явных определений типов</a></p>
+<ul>
+<li><a href="#auto-%D0%BD%D0%B5-%D0%B4%D0%B0%D1%81%D1%82-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D1%82%D1%8C-%D0%BD%D0%B5%D0%B8%D0%BD%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D0%B7%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82">auto не даст создать неинициализированный объект</a></li>
+<li><a href="#%D0%BF%D0%BE%D0%B7%D0%B2%D0%BE%D0%BB%D1%8F%D0%B5%D1%82-%D0%BD%D0%B5-%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C-%D1%81%D0%BB%D0%BE%D0%B6%D0%BD%D1%8B%D0%B5-%D1%82%D0%B8%D0%BF%D1%8B">Позволяет не писать сложные типы</a></li>
+<li><a href="#%D1%8D%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D1%82%D1%8C-%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D1%8C-%D0%BF%D1%80%D0%B8-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B8-%D1%84%D1%83%D0%BD%D0%BA%D1%82%D0%BE%D1%80%D0%BE%D0%B2">Экономить память при использовании функторов</a></li>
+<li><a href="#%D0%BD%D0%B5%D1%8F%D0%B2%D0%BD%D1%8B%D0%B5-%D0%BF%D1%80%D0%B8%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F-%D1%82%D0%B8%D0%BF%D0%BE%D0%B2">Неявные приведения типов</a></li>
+</ul>
+</li>
+<li><a href="#%D0%B8%D0%BD%D0%BE%D0%B3%D0%B4%D0%B0-auto-%D0%B2%D1%8B%D0%B2%D0%BE%D0%B4%D0%B8%D1%82-%D0%BD%D0%B5-%D1%82%D0%BE-%D1%87%D1%82%D0%BE-%D0%BD%D1%83%D0%B6%D0%BD%D0%BE">Иногда auto выводит не то, что нужно</a></li>
+<li>
+<p><a href="#%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D1%87%D0%B8%D1%8F-%D0%BC%D0%B5%D0%B6%D0%B4%D1%83--%D0%B8--%D0%BF%D1%80%D0%B8-%D0%B8%D0%BD%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%BE%D0%B2">Различия между () и {} при инициализации объектов</a></p>
+<ul>
+<li><a href="#-%D0%B7%D0%B0%D0%BF%D1%80%D0%B5%D1%89%D0%B0%D0%B5%D1%82-%D0%BF%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D1%82%D0%B8%D0%BF%D0%B0-%D1%81-%D0%BF%D0%BE%D1%82%D0%B5%D1%80%D0%B5%D0%B9-%D1%82%D0%BE%D1%87%D0%BD%D0%BE%D1%81%D1%82%D0%B8">{} запрещает преобразование типа с потерей точности</a></li>
+<li><a href="#-%D0%BD%D0%B5-%D0%BF%D0%BE%D0%B4%D0%B2%D0%B5%D1%80%D0%B6%D0%B5%D0%BD%D0%B0-most-vexing-parse">{} не подвержена most vexing parse</a></li>
+<li><a href="#%D0%BD%D0%B5%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D1%82%D0%BE%D0%BA-%D0%BE%D0%BF%D1%8F%D1%82%D1%8C-%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D1%8B-%D1%81-initializer_list">Недостаток: опять проблемы с initializer_list</a></li>
+</ul>
+</li>
+<li><a href="#%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D1%83%D0%B9%D1%82%D0%B5-nullptr-%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%BE-0-%D0%B8-null">Используйте nullptr вместо 0 и NULL</a></li>
+<li><a href="#%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D1%83%D0%B9%D1%82%D0%B5-alias-%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%BE-typedef">Используйте alias вместо typedef</a></li>
+<li><a href="#%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D1%83%D0%B9%D1%82%D0%B5-scoped-enums-%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%BE-unscoped-enums">Используйте scoped enums вместо unscoped enums</a></li>
+<li><a href="#%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D1%83%D0%B9%D1%82%D0%B5-deleted-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8-%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%BE-private-undefined">Используйте deleted функции вместо private undefined</a></li>
+<li><a href="#declare-overriding-functions-override">Declare overriding functions override.</a></li>
+<li><a href="#prefer-const_terators-to-iterators">Prefer const_terators to iterators</a></li>
+<li>
+<p><a href="#declare-functions-noexcept-if-they-wont-emit-exceptions">Declare functions noexcept if they won't emit exceptions</a></p>
+<ul>
+<li><a href="#%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%BD%D1%8B%D0%B9-noexcept">Условный noexcept</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#use-constexpr-whenever-possible">Use constexpr whenever possible</a></p>
+<ul>
+<li><a href="#constexpr-objects">constexpr objects</a></li>
+<li><a href="#constexpr-functions">constexpr functions</a></li>
+</ul>
+</li>
+<li><a href="#make-const-member-functions-thread-safe">Make const member functions thread safe</a></li>
+<li>
+<p><a href="#understand-special-member-function-generation">Understand special member function generation</a></p>
+<ul>
+<li><a href="#%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D1%8F-%D0%BA%D0%BE%D0%BF%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B8-%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F">Генерация копирования и перемещения</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#use-stdunique_ptr-for-exclusive-ownership-resource-management">Use std::unique_ptr for exclusive-ownership resource management</a></p>
+<ul>
+<li><a href="#stdunique_ptrt">std::unique_ptr&#x3C;T[]></a></li>
+<li><a href="#stduniqueptr---stdsharedptr">std::unique<em>ptr -> std::shared</em>ptr</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#use-stdshared_ptr-for-shared-ownership-resource-management">Use std::shared_ptr for shared-ownership resource management</a></p>
+<ul>
+<li><a href="#sharedfromthis">shared<em>from</em>this</a></li>
+<li><a href="#stdshared_ptrt">std::shared_ptr&#x3C;T[]></a></li>
+</ul>
+</li>
+<li><a href="#use-stdweakptr-for-stdsharedptr-like-pointers-that-can-dangle">Use std::weak<em>ptr for std::shared</em>ptr-like pointers that can dangle</a></li>
+<li>
+<p><a href="#prefer-stdmakeunique-and-stdmakeshared-to-direct-use-of-new">Prefer std::make<em>unique and std::make</em>shared to direct use of new</a></p>
+<ul>
+<li><a href="#%D0%BE%D0%B3%D1%80%D0%B0%D0%BD%D0%B8%D1%87%D0%B5%D0%BD%D0%B8%D1%8F">Ограничения</a></li>
+</ul>
+</li>
+<li><a href="#when-using-the-pimpl-idiom-define-special-member-function-in-the-implementation-file">When using the Pimpl Idiom, define special member function in the implementation file</a></li>
+<li><a href="#understand-stdmove-and-stdforward">Understand std::move and std::forward</a></li>
+<li><a href="#distinquish-universal-references-from-rvalue-references">Distinquish universal references from rvalue references</a></li>
+<li>
+<p><a href="#use-stdmove-on-rvalue-references-stdforward-on-universal-references">Use std::move on rvalue references, std::forward on universal references</a></p>
+<ul>
+<li><a href="#return-stdmove-%D0%BD%D0%B5-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D1%82-%D0%B4%D0%BB%D1%8F-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85-%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D1%85">return std::move не работает для локальных переменных</a></li>
+</ul>
+</li>
+<li><a href="#avoid-overloading-on-universal-references">Avoid overloading on universal references</a></li>
+<li>
+<p><a href="#familiarize-yourself-with-alternatives-to-overloading-on-universal-references">Familiarize yourself with alternatives to overloading on universal references</a></p>
+<ul>
+<li><a href="#using-tag-dispatch">Using tag dispatch</a></li>
+<li><a href="#constraining-templates-that-take-universal-references">Constraining templates that take universal references</a></li>
+<li><a href="#trade-off">Trade-off</a></li>
+</ul>
+</li>
+<li><a href="#understand-reference-collapsing">Understand reference collapsing</a></li>
+<li><a href="#assume-that-move-operations-are-not-present-not-cheap-and-not-used">Assume that move operations are not present, not cheap, and not used</a></li>
+<li><a href="#avoid-default-capture-modes">Avoid default capture modes</a></li>
+<li><a href="#use-init-capture-to-move-objects-into-closures">Use init capture to move objects into closures</a></li>
+<li><a href="#use-decltype-on-auto-parameters-to-stdforward-them">Use decltype on auto&#x26;&#x26; parameters to std::forward them</a></li>
+<li><a href="#prefer-lambdas-to-stdbind">Prefer lambdas to std::bind</a></li>
+<li><a href="#prefer-task-based-programming-to-thread-based">Prefer task-based programming to thread-based</a></li>
+<li><a href="#specify-stdlaunchasync-if-asynchronicity-is-essential">Specify std::launch::async if asynchronicity is essential</a></li>
+<li><a href="#make-stdthreads-unjoinable-on-all-paths">Make std::threads unjoinable on all paths</a></li>
+<li><a href="#be-aware-of-varying-thread-handle-destructor-behavior">Be aware of varying thread handle destructor behavior</a></li>
+<li><a href="#consider-void-futures-for-one-shot-event-communication">Consider void futures for one-shot event communication</a></li>
+<li><a href="#use-stdatomic-for-concurrency-volatile-for-special-memory">Use std::atomic for concurrency, volatile for special memory</a></li>
+<li><a href="#consider-pass-by-value-for-copyable-parameters-that-are-cheap-to-move-and-always-copied">Consider pass by value for copyable parameters that are cheap to move and always copied</a></li>
+<li><a href="#consider-emplacement-instead-of-insertion">Consider emplacement instead of insertion</a></li>
+</ul>
+</div>
 <h2 id="вывод-типов-через-auto" style="position:relative;"><a href="#%D0%B2%D1%8B%D0%B2%D0%BE%D0%B4-%D1%82%D0%B8%D0%BF%D0%BE%D0%B2-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-auto" aria-label="вывод типов через auto permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Вывод типов через auto</h2>
 <p>Тип для <code class="language-text">auto</code> выводится так же, как и для шаблонов. В том выводе типов у нас есть определение шаблона и его вызов:</p>
 <div class="gatsby-highlight" data-language="clike"><pre class="language-clike"><code class="language-clike">template<span class="token operator">&lt;</span>typename T<span class="token operator">></span>
