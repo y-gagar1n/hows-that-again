@@ -3,13 +3,16 @@ title: "xv6"
 path: "/blog/books/xv6"
 ---
 
+# xv6
+
+```toc
+from-heading: 2
+```
+
 [Комментарии к исходному коду](https://pdos.csail.mit.edu/6.828/2018/xv6/book-rev11.pdf)
 [Еще комментарии](https://github.com/YehudaShapira/xv6-explained/blob/master/Explanations.md)
 
 [Исходный код](https://pdos.csail.mit.edu/6.828/2018/xv6/xv6-rev11.pdf)
-
-
-# xv6
 
 Важное замечание для начала: во всех ассемблерах UNIX, включая используемый здесь, команда mov имеет следующий синтаксис: `MOV src dest`.
 

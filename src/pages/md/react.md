@@ -4,6 +4,10 @@ path: "/blog/react"
 ---
 # React
 
+```toc
+from-heading: 2
+```
+
 Разница между React.createClass и extends Component: <https://toddmotto.com/react-create-class-versus-component/>
 
 ## Installation

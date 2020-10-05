@@ -3,6 +3,12 @@ title: "Linux API"
 path: "/blog/linux-api"
 ---
 
+# Linux API
+
+```toc
+exclude: Linux API
+```
+
 # Работа с аргументами запуска
 
 ```cpp

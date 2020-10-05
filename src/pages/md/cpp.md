@@ -3,6 +3,12 @@ title: "C++"
 path: "/blog/cpp"
 ---
 
+#C++
+
+```toc
+exclude: C\+\+
+```
+
 [Spiral rule](http://c-faq.com/decl/spiral.anderson.html)
 
 # Suggestions for C++ programmers (C++11 features)

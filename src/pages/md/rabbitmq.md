@@ -4,6 +4,10 @@ path: "/blog/rabbitmq"
 ---
 # RabbitMQ
 
+```toc
+from-heading: 2
+```
+
 ![Architecture](rabbitmq-architecture.png)
 
 Отличия от Кафки смотреть в [статье про Кафку](/blog/kafka)

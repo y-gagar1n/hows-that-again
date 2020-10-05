@@ -5,6 +5,10 @@ path: "/blog/kotlin"
 
 # Kotlin
 
+```toc
+from-heading: 2
+```
+
 Полная грамматика языка: https://kotlinlang.org/docs/reference/grammar.html
 Полная документация: https://kotlinlang.org/docs/kotlin-docs.pdf
 

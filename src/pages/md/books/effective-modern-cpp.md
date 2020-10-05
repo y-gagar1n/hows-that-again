@@ -5,6 +5,10 @@ path: "/blog/books/effective-modern-cpp"
 
 # Effective Modern C++
 
+```toc
+from-heading: 2
+```
+
 ## Вывод типов через auto
 
 Тип для `auto` выводится так же, как и для шаблонов. В том выводе типов у нас есть определение шаблона и его вызов:

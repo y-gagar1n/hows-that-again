@@ -3,6 +3,12 @@ title: "How Linux works"
 path: "/blog/books/how-linux-works"
 ---
 
+# How Linux works
+
+```toc
+exclude: How Linux works
+```
+
 # Disks, files
 
 ## Партиционирование диска

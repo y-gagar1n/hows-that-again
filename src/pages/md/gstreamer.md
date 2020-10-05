@@ -5,6 +5,10 @@ path: "/blog/gstreamer"
 
 # Gstreamer
 
+```toc
+from-heading: 2
+```
+
 https://habr.com/ru/post/251427/
 
 ```cpp

@@ -3,6 +3,12 @@ title: "computer-organization-and-design"
 path: "/blog/books/computer-organization-and-design"
 ---
 
+# Computer organization and design
+
+```toc
+exclude: Computer organization and design
+```
+
 Источники: 
 
 - [Computer Organization and Design MIPS Edition](https://www.amazon.com/Computer-Organization-Design-MIPS-Architecture/dp/0124077269)

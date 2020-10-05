@@ -5,6 +5,10 @@ path: "/blog/books/designing-data-intensive-applications"
 
 # Designing Data-Intensive Applications
 
+```toc
+from-heading: 2
+```
+
 ## Data Models and Query Languages
 
 ### Документная модель данных

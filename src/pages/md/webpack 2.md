@@ -4,6 +4,10 @@ path: "/blog/webpack 2"
 ---
 # Webpack
 
+```toc
+from-heading: 2
+```
+
 ## Пример настройки webpack для реакта:
 
 ```shell

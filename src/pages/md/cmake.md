@@ -4,6 +4,10 @@ path: "/blog/cmake"
 ---
 # CMake
 
+```toc
+from-heading: 2
+```
+
 Туториал: https://cliutils.gitlab.io/modern-cmake/
 
 Набор популярных хелперов: https://github.com/CLIUtils/cmake (добавляется в проект командой `set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})`)

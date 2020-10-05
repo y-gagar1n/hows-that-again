@@ -3,6 +3,12 @@ title: "Linux debugging"
 path: "/blog/linux-debugging"
 ---
 
+# Linux debugging tools
+
+```toc
+exclude: Linux debugging tools
+```
+
 # strace
 
 Выводит все системные вызовы программы. Пример запуска:

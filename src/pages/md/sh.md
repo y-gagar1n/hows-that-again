@@ -4,6 +4,9 @@ path: "/blog/sh"
 ---
 # sh
 
+```toc
+from-heading: 2
+```
 
 ## Parameter expansion
 

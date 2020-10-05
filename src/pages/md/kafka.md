@@ -4,6 +4,10 @@ path: "/blog/kafka"
 ---
 # Kafka
 
+```toc
+from-heading: 2
+```
+
 ```
 I thought that since Kafka was a system optimized for writing, 
 using a writer’s name would make sense. I had taken a lot of 
